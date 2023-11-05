@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
             inputX = moveSpeed;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             rb.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
         }

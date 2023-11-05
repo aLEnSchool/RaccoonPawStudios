@@ -619,6 +619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   rollSpeed: 7
+  jumpForce: 7
 --- !u!212 &1135945600
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -792,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b3b873bdd67114881b0cad72b32ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1135945597}
+  target: {fileID: 1135945601}
 --- !u!114 &1460709339
 MonoBehaviour:
   m_ObjectHideFlags: 0
