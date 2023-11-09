@@ -35,6 +35,15 @@ public class PlayerController : MonoBehaviour
             inputX = moveSpeed;
         }
 
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            inputX = 0;
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            inputX = 0;
+        }
+
         if (Input.GetKeyDown(KeyCode.W) && (!jumping))
         {
             rb.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
@@ -44,11 +53,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Movement
-        Vector2 movementX = new Vector2(inputX, 0.0f); 
-        movementX = movementX *Time.deltaTime;
-        transform.Translate(movementX);
-        //transform.position += new Vector3(inputX, 0f, 0f);
-        inputX = 0f;
+        rb.velocity = new Vector2(inputX, rb.velocity.y);
     }
 
     // check if the player has jumped once
