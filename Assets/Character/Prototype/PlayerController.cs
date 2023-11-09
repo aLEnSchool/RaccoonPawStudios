@@ -5,9 +5,9 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 0.1f;
-    public float rollSpeed = 0.2f;
-    public float jumpForce = 10f;
+    private float moveSpeed = 7f;
+    private float rollSpeed = 0.2f;
+    private float jumpForce = 10f;
 
     private float inputX;
     private Rigidbody2D rb;
@@ -26,25 +26,25 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //Inputs
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             inputX = -moveSpeed;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             inputX = moveSpeed;
         }
 
-        if (Input.GetKeyUp(KeyCode.A))
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             inputX = 0;
         }
-        if (Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             inputX = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.W) && (!jumping))
+        if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping))
         {
             rb.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
 
