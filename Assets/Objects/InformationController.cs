@@ -6,6 +6,8 @@ public class InformationController : MonoBehaviour
 {
     private SpriteRenderer sprite;
 
+    public SpriteRenderer popupSprite;
+
     private bool inRange;
     private bool interact;
 
@@ -13,6 +15,7 @@ public class InformationController : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        popupSprite.enabled = false;
 
         inRange = false; interact = false;
     }
@@ -34,7 +37,7 @@ public class InformationController : MonoBehaviour
             if (interact)
             {
                 Debug.Log("Player Interacting");
-                sprite.color = Color.cyan;
+                popupSprite.enabled = true;
             }
             else
             {
@@ -57,6 +60,7 @@ public class InformationController : MonoBehaviour
             Debug.Log("Player Out");
             inRange = false;
             interact = false;
+            popupSprite.enabled = false;
         }
     }
 }
