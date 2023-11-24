@@ -34,14 +34,15 @@ public class InformationController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && inRange) 
         {
-            if (interact)
+            if (!interact)
             {
-                Debug.Log("Player Interacting");
-                popupSprite.enabled = true;
+                interact = true;
+                setVisible();
             }
             else
             {
-                interact = true;
+                interact = false;
+                setInvisible();
             }
         }
     }
@@ -60,7 +61,16 @@ public class InformationController : MonoBehaviour
             Debug.Log("Player Out");
             inRange = false;
             interact = false;
-            popupSprite.enabled = false;
         }
+    }
+    protected void setVisible()
+    {
+        Debug.Log("Items are Visible");
+        popupSprite.enabled = true;
+    }
+    protected void setInvisible()
+    {
+        Debug.Log("Items are Invisible");
+        popupSprite.enabled = false;
     }
 }
