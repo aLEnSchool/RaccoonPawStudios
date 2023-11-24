@@ -47,6 +47,7 @@ public class InformationController : MonoBehaviour
         }
     }
 
+    /*--  Trigger Events --*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player") {
@@ -61,13 +62,19 @@ public class InformationController : MonoBehaviour
             Debug.Log("Player Out");
             inRange = false;
             interact = false;
+            setInvisible();
         }
     }
+
+
+    /*--  Popup Functions  --*/
+    //Sets All popUp sprites visible
     protected void setVisible()
     {
         Debug.Log("Items are Visible");
         popupSprite.enabled = true;
     }
+    //Sets All popUp sprites invisible
     protected void setInvisible()
     {
         Debug.Log("Items are Invisible");
