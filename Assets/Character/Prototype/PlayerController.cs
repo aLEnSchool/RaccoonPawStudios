@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerController : MonoBehaviour
 {
-    private float moveSpeed = 7f;
-    private float rollSpeed = 0.2f;
-    private float jumpForce = 10f;
+    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float rollSpeed = 0.2f;
+    [SerializeField] private float jumpForce = 10f;
 
     private float inputX;
     private Rigidbody2D rb;
 
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
+
+    private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
 
     // Start is called before the first frame update
     void Start()
@@ -50,10 +53,30 @@ public class PlayerController : MonoBehaviour
 
             jumpCount += 1;
             jumping = checkJump(1); // check how many jumps have been done
+
+            playHatAnimation = true; // allow the hat floating down animation to be played
         }
 
         //Movement
         rb.velocity = new Vector2(inputX, rb.velocity.y);
+
+        // have the hat float down
+        if(rb.velocity.y < 0 && playHatAnimation) // if the hat is moving downwards
+        {
+            StartCoroutine(hatFloatingDownAnimation());
+            playHatAnimation = false;
+        }
+
+
+        //**** code from my game dev group for movement below ****
+
+        //float targetSpeed = horizontal * speed;                                                         //Get the desired desired velocity
+        //float speedDif = targetSpeed - rb.velocity.x;                                                   //Get the difference between the current velocity and our desired velocity
+        //float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : decceleration;              //If the absolute value of the tharget speed is greater than 0.1 set accel rate to accel
+        
+        //float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);   //calculate the movement
+
+        //rb.AddForce(movement * Vector2.right);
     }
 
     // check if the player has jumped once
@@ -76,6 +99,17 @@ public class PlayerController : MonoBehaviour
             // reset jump variables
             jumping = false;
             jumpCount = 0;
+        }
+    }
+
+    // function to slowly decrease the speed at which the hat is falling, to be used after a jump
+    private IEnumerator hatFloatingDownAnimation()
+    {
+        for(int i = 0; i < 10; i++)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + 1.0f);
+            yield return new WaitForSeconds(0.1f);
+            //Debug.Log("coroutine called, y value: " + rb.velocity.y);
         }
     }
 }
