@@ -7,6 +7,7 @@ public class InformationController : MonoBehaviour
     private SpriteRenderer sprite;
 
     public SpriteRenderer popupSprite;
+    private SpriteRenderer[] childrenPopUps;
 
     private bool inRange;
     private bool interact;
@@ -15,8 +16,11 @@ public class InformationController : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        popupSprite.enabled = false;
+        getChildrenSprites();
+        printChildrenSprites();
 
+        setInvisible();
+        
         inRange = false; interact = false;
     }
 
@@ -73,11 +77,47 @@ public class InformationController : MonoBehaviour
     {
         Debug.Log("Items are Visible");
         popupSprite.enabled = true;
+        for (int i = 0; i < childrenPopUps.Length; i++)
+        {
+            if (i == 0)
+            {
+                i = i;
+            }
+            else
+            {
+                childrenPopUps[i].enabled = true;
+            }
+        }
     }
     //Sets All popUp sprites invisible
     protected void setInvisible()
     {
         Debug.Log("Items are Invisible");
         popupSprite.enabled = false;
+        for (int i = 0; i < childrenPopUps.Length; i++)
+        {
+            if (i == 0)
+            {
+                i = i;
+            }
+            else
+            {
+                childrenPopUps[i].enabled = false;
+            }
+        }
+    }
+
+    //Gets all children Sprites
+    protected void getChildrenSprites()
+    {
+        childrenPopUps = sprite.GetComponentsInChildren<SpriteRenderer>(true);
+    }
+    //Print all children Sprites collected
+    protected void printChildrenSprites()
+    {
+        for (int i = 0;i < childrenPopUps.Length - 1; i++)
+        {
+            Debug.Log(childrenPopUps[i]);
+        }
     }
 }
