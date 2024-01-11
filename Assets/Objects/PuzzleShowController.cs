@@ -70,6 +70,5 @@ public class PuzzleShowController : MonoBehaviour
         }
     }
 
-
     /*--  Popup Functions  --*/
 }
