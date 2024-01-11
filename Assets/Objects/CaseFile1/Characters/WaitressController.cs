@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class WaitressController : MonoBehaviour
 {
+    public Customer3Controller claye;
 
-    //VoiceLines
+    //Voice Lines
     private string[] voiceLines;
     private int voiceLineIndex;
     public GameObject dialogBox;
@@ -34,6 +35,14 @@ public class WaitressController : MonoBehaviour
             {
                 Debug.Log(voiceLines[voiceLineIndex]);
 
+                if (claye.causingScene)
+                {
+                    voiceLineIndex = 2;
+                }
+                else
+                {
+                    voiceLineIndex = 0;
+                }
 
                 //Voice Line Output
                 dialogBox.SetActive(true);
@@ -53,12 +62,17 @@ public class WaitressController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        inRange = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = false;
+            Debug.Log(voiceLines[1]);
+            dialogBox.SetActive(false);
+        }
     }
 
     /*-- Functions --*/
     private void InitializeVoiceLines()
     {
-        voiceLines = new string[1] { "Hi, would you like anything?"};
+        voiceLines = new string[3] { "Hi, would you like anything?", "Okay... Bye!", "Oh Let me tend to this customer"};
     }
 }

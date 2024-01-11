@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Customer3Controller : MonoBehaviour
 {
+    //Variables
+    public bool causingScene;
+
     //Voice Lines
     private string[] voiceLines;
     private int voiceLineIndex;
@@ -16,8 +19,10 @@ public class Customer3Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        causingScene = false;
         inRange = false;
 
+        //Voice Line Initialize
         InitializeVoiceLines();
         voiceLineIndex = 0;
         dialogBox.SetActive(false);
@@ -35,6 +40,7 @@ public class Customer3Controller : MonoBehaviour
                 if (voiceLineIndex >= 2)
                 {
                     voiceLineIndex = 2;
+                    causingScene = true;
                 }
 
                 //Voice Line Output
@@ -57,9 +63,12 @@ public class Customer3Controller : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        inRange = false;
-        Debug.Log(voiceLines[3]);
-        dialogBox.SetActive(false);
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = false;
+            Debug.Log(voiceLines[3]);
+            dialogBox.SetActive(false);
+        }
     }
 
     /*-- Functions --*/

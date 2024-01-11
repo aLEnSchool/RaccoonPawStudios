@@ -1805,6 +1805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30552f53e6a29440ae82d04e0470011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  causingScene: 0
   dialogBox: {fileID: 418540270}
   dialogOutput: {fileID: 862894544}
 --- !u!1 &614182943
@@ -5233,6 +5234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b6bd0cbcb49ddf47aa490545652bd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  claye: {fileID: 520063316}
   dialogBox: {fileID: 1427347529}
   dialogOutput: {fileID: 1703991447}
 --- !u!1 &1703991445
