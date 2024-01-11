@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Customer3Controller : MonoBehaviour
 {
+    //Voice Lines
     private string[] voiceLines;
     private int voiceLineIndex;
-
+    public GameObject dialogBox;
+    public TMP_Text dialogOutput;
+    
     private bool inRange;
 
     // Start is called before the first frame update
@@ -16,6 +20,7 @@ public class Customer3Controller : MonoBehaviour
 
         InitializeVoiceLines();
         voiceLineIndex = 0;
+        dialogBox.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,12 +31,17 @@ public class Customer3Controller : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E)) 
             {
                 Debug.Log(voiceLines[voiceLineIndex]);
-                voiceLineIndex++;
 
                 if (voiceLineIndex >= 2)
                 {
                     voiceLineIndex = 2;
                 }
+
+                //Voice Line Output
+                dialogBox.SetActive(true);
+                dialogOutput.text = voiceLines[voiceLineIndex];
+
+                voiceLineIndex++;
             }
         }
     }
@@ -48,6 +58,7 @@ public class Customer3Controller : MonoBehaviour
     {
         inRange = false;
         Debug.Log(voiceLines[3]);
+        dialogBox.SetActive(false);
     }
 
     private void InitializeVoiceLines()
