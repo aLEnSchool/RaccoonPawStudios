@@ -46,6 +46,7 @@ public class Customer3Controller : MonoBehaviour
         }
     }
 
+    /*-- Trigger Events --*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -61,6 +62,7 @@ public class Customer3Controller : MonoBehaviour
         dialogBox.SetActive(false);
     }
 
+    /*-- Functions --*/
     private void InitializeVoiceLines()
     {
         voiceLines = new string[4] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food..." };

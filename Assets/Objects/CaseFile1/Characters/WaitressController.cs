@@ -22,13 +22,27 @@ public class WaitressController : MonoBehaviour
 
         InitializeVoiceLines();
         voiceLineIndex = 0;
+        dialogBox.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (inRange)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log(voiceLines[voiceLineIndex]);
+
+
+                //Voice Line Output
+                dialogBox.SetActive(true);
+                dialogOutput.text = voiceLines[voiceLineIndex];
+            }
+        }
     }
+
+    /*-- Trigger Events --*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -40,9 +54,9 @@ public class WaitressController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         inRange = false;
-        Debug.Log(voiceLines[3]);
     }
 
+    /*-- Functions --*/
     private void InitializeVoiceLines()
     {
         voiceLines = new string[1] { "Hi, would you like anything?"};
