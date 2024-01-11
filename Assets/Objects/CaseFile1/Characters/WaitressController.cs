@@ -6,6 +6,7 @@ using UnityEngine;
 public class WaitressController : MonoBehaviour
 {
     public Customer3Controller claye;
+    public bool cookBusy;
 
     //Voice Lines
     private string[] voiceLines;
@@ -19,6 +20,8 @@ public class WaitressController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cookBusy = false;
+
         inRange = false;
 
         InitializeVoiceLines();
@@ -38,6 +41,7 @@ public class WaitressController : MonoBehaviour
                 if (claye.causingScene)
                 {
                     voiceLineIndex = 2;
+                    cookBusy = true;
                 }
                 else
                 {
