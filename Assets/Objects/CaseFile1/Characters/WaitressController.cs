@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WaitressController : MonoBehaviour
@@ -8,7 +9,9 @@ public class WaitressController : MonoBehaviour
     //VoiceLines
     private string[] voiceLines;
     private int voiceLineIndex;
-    
+    public GameObject dialogBox;
+    public TMP_Text dialogOutput;
+
     private bool inRange;
 
 
@@ -42,6 +45,6 @@ public class WaitressController : MonoBehaviour
 
     private void InitializeVoiceLines()
     {
-        voiceLines = new string[4] { "I WANT FOOD!", "GET ME FOOD", "FOOOOOOOD!", "food..." };
+        voiceLines = new string[1] { "Hi, would you like anything?"};
     }
 }
