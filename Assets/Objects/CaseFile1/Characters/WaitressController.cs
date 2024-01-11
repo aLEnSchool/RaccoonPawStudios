@@ -8,9 +8,11 @@ public class WaitressController : MonoBehaviour
     public Customer3Controller claye;
     public bool cookBusy;
 
-    //Voice Lines
+    //Voice Lines Variables
     private string[] voiceLines;
     private int voiceLineIndex;
+
+    //Dialog Box Variables
     public GameObject dialogBox;
     public TMP_Text dialogOutput;
 
@@ -38,6 +40,7 @@ public class WaitressController : MonoBehaviour
             {
                 Debug.Log(voiceLines[voiceLineIndex]);
 
+                //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
                 if (claye.causingScene)
                 {
                     voiceLineIndex = 2;
@@ -77,6 +80,13 @@ public class WaitressController : MonoBehaviour
     /*-- Functions --*/
     private void InitializeVoiceLines()
     {
-        voiceLines = new string[3] { "Hi, would you like anything?", "Okay... Bye!", "Oh Let me tend to this customer"};
+        voiceLines = new string[3] { "Hi, would you like anything?", "Okay... Bye!", "Oh Let me tend to this customer" };
     }
+
+    /*
+    //Waitress Getting Claye's Order Event
+    private void GettingClayesOrder() 
+    {
+
+    }*/
 }

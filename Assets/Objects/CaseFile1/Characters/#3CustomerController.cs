@@ -8,9 +8,11 @@ public class Customer3Controller : MonoBehaviour
     //Variables
     public bool causingScene;
 
-    //Voice Lines
+    //Voice Lines Variables
     private string[] voiceLines;
     private int voiceLineIndex;
+
+    //Dialog Box Variables
     public GameObject dialogBox;
     public TMP_Text dialogOutput;
     
@@ -37,6 +39,7 @@ public class Customer3Controller : MonoBehaviour
             {
                 Debug.Log(voiceLines[voiceLineIndex]);
 
+                //If on last voice line, repeat
                 if (voiceLineIndex >= 2)
                 {
                     voiceLineIndex = 2;
@@ -47,7 +50,7 @@ public class Customer3Controller : MonoBehaviour
                 dialogBox.SetActive(true);
                 dialogOutput.text = voiceLines[voiceLineIndex];
 
-                voiceLineIndex++;
+                voiceLineIndex++; //Next Voice Line
             }
         }
     }
