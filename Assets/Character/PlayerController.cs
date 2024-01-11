@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
+    private bool flipped = true;   // bool for flipping the graphic
 
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
 
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         inputX = 0;
         rb = GetComponent<Rigidbody2D>();
+        flipped = false;
     }
 
     // Update is called once per frame
@@ -41,10 +43,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             inputX = 0;
+            flipped = false;
         }
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             inputX = 0;
+            flipped = false;
         }
 
         if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping))
@@ -111,5 +115,16 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             //Debug.Log("coroutine called, y value: " + rb.velocity.y);
         }
+    }
+
+    private void flip()
+    {
+        Vector3 flippedVect = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+        if (!flipped)
+        {
+            gameObject.transform.localScale = flippedVect;
+            flipped = true;
+        }
+        
     }
 }
