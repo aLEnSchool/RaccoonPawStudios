@@ -69,6 +69,4 @@ public class PuzzleShowController : MonoBehaviour
             puzzle.SetActive(false);
         }
     }
-
-    /*--  Popup Functions  --*/
 }
