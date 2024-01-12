@@ -13,11 +13,14 @@ public class PlayerController : MonoBehaviour
     private float inputX;
     private Rigidbody2D rb;
 
+    float horiMove = 0f;
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
     private bool facingRight = true;   // check which direction the player is facing
 
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
+
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +32,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //Inputs
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             inputX = -moveSpeed;
+            animator.SetFloat("Speed", moveSpeed);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             inputX = moveSpeed;
+            animator.SetFloat("Speed", moveSpeed);
         }
 
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
@@ -61,8 +67,16 @@ public class PlayerController : MonoBehaviour
         //Movement
         rb.velocity = new Vector2(inputX, rb.velocity.y);
 
+        //horiMove = Input.GetAxisRaw("Horizontal") * 40f; 
+
         // have the hat float down
-        if(rb.velocity.y < 0 && playHatAnimation) // if the hat is moving downwards
+        if (rb.velocity.x == 0) // if the hat isn't
+        {
+            animator.SetFloat("Speed", 0);
+        }
+
+        // have the hat float down
+        if (rb.velocity.y < 0 && playHatAnimation) // if the hat is moving downwards
         {
             StartCoroutine(hatFloatingDownAnimation());
             playHatAnimation = false;

@@ -18,6 +18,7 @@ public class Customer3Controller : MonoBehaviour
     
     private bool inRange;
 
+
     // Start is called before the first frame update
     void Start()
     {
