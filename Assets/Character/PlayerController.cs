@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
+    private bool facingRight = true;   // check which direction the player is facing
 
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
 
@@ -68,6 +69,18 @@ public class PlayerController : MonoBehaviour
         }
 
 
+        // flip character graphic
+        if(inputX > 0 && !facingRight) // if player is going right but graphic is facing left
+        {
+            flip();
+            facingRight = true;
+        }
+        else if(inputX < 0 && facingRight) // if player is going left but facing right
+        {
+            flip();
+            facingRight = false;
+        }
+
         //**** code from my game dev group for movement below ****
 
         //float targetSpeed = horizontal * speed;                                                         //Get the desired desired velocity
@@ -111,5 +124,10 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             //Debug.Log("coroutine called, y value: " + rb.velocity.y);
         }
+    }
+
+    private void flip()
+    {
+        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
     }
 }
