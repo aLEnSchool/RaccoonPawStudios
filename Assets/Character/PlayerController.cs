@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
-    private bool flipped = true;   // bool for flipping the graphic
+    private bool facingRight = true;   // check which direction the player is facing
 
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
 
@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     {
         inputX = 0;
         rb = GetComponent<Rigidbody2D>();
-        flipped = false;
     }
 
     // Update is called once per frame
@@ -43,12 +42,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             inputX = 0;
-            flipped = false;
         }
         if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
         {
             inputX = 0;
-            flipped = false;
         }
 
         if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping))
@@ -71,6 +68,18 @@ public class PlayerController : MonoBehaviour
             playHatAnimation = false;
         }
 
+
+        // flip character graphic
+        if(inputX > 0 && !facingRight) // if player is going right but graphic is facing left
+        {
+            flip();
+            facingRight = true;
+        }
+        else if(inputX < 0 && facingRight) // if player is going left but facing right
+        {
+            flip();
+            facingRight = false;
+        }
 
         //**** code from my game dev group for movement below ****
 
@@ -119,12 +128,6 @@ public class PlayerController : MonoBehaviour
 
     private void flip()
     {
-        Vector3 flippedVect = new Vector3(-gameObject.transform.localScale.x, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
-        if (!flipped)
-        {
-            gameObject.transform.localScale = flippedVect;
-            flipped = true;
-        }
-        
+        transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
     }
 }
