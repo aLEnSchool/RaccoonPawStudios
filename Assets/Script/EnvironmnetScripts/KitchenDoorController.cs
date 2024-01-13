@@ -29,7 +29,7 @@ public class KitchenDoorController : MonoBehaviour
     void Update()
     {
         if (Sadie.cookBusy)
-        {
+        {   
             //TP TO KITCHEN
         }
         else
