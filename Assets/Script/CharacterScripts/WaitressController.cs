@@ -7,6 +7,7 @@ public class WaitressController : MonoBehaviour
 {
     public Customer3Controller claye;
     public bool cookBusy;
+    public bool talkedToPlayer;
 
     //Voice Lines Variables
     private string[] voiceLines;
@@ -23,6 +24,7 @@ public class WaitressController : MonoBehaviour
     void Start()
     {
         cookBusy = false;
+        talkedToPlayer = false;
 
         inRange = false;
 
@@ -44,6 +46,7 @@ public class WaitressController : MonoBehaviour
                 if (claye.causingScene)
                 {
                     voiceLineIndex = 2;
+                    talkedToPlayer = true;
                     cookBusy = true;
                 }
                 else
