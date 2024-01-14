@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Customer3Controller : MonoBehaviour
 {
-    //Variables
+    public WaitressController Sadie;    
+
+    //Bool Variables
     public bool causingScene;
 
     //Voice Lines Variables
@@ -26,7 +28,7 @@ public class Customer3Controller : MonoBehaviour
 
         //Voice Line Initialize
         InitializeVoiceLines();
-        voiceLineIndex = 0;
+        voiceLineIndex = -1;
         dialogBox.SetActive(false);
     }
 
@@ -37,20 +39,28 @@ public class Customer3Controller : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E)) 
             {
-                Debug.Log(voiceLines[voiceLineIndex]);
+                
 
                 //If on last voice line, repeat
-                if (voiceLineIndex >= 2)
+                if (voiceLineIndex < 2)
+                {
+                    voiceLineIndex++; //Next Voice Line
+                }
+                if (voiceLineIndex == 2)
                 {
                     voiceLineIndex = 2;
                     causingScene = true;
                 }
+                //If Scene was caused, Claye shall be eating allowing player to go through bag
+                if (causingScene && Sadie.talkedToPlayer)
+                {
+                    voiceLineIndex = 4;
+                }
 
                 //Voice Line Output
+                Debug.Log(voiceLines[voiceLineIndex]);
                 dialogBox.SetActive(true);
                 dialogOutput.text = voiceLines[voiceLineIndex];
-
-                voiceLineIndex++; //Next Voice Line
             }
         }
     }
@@ -77,6 +87,6 @@ public class Customer3Controller : MonoBehaviour
     /*-- Functions --*/
     private void InitializeVoiceLines()
     {
-        voiceLines = new string[4] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food..." };
+        voiceLines = new string[5] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food...", "nom nom nom" };
     }
 }
