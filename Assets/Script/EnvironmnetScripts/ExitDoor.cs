@@ -33,6 +33,10 @@ public class ExitDoor : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = true;
+
+            // change colour when intersected
+            //gameObject.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+
         }
     }
 

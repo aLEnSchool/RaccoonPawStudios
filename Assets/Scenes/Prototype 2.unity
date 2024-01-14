@@ -3683,6 +3683,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1486233422}
   yPos: 0
+  exitDoor: {fileID: 1632839845}
+  player: {fileID: 1486233417}
 --- !u!1 &947777377
 GameObject:
   m_ObjectHideFlags: 0
@@ -6943,7 +6945,7 @@ GameObject:
   - component: {fileID: 1632839845}
   - component: {fileID: 1632839844}
   m_Layer: 0
-  m_Name: door bathroom
+  m_Name: doorExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
