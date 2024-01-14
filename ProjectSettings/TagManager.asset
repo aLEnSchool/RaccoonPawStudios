@@ -7,6 +7,10 @@ TagManager:
   - Floor
   - Object
   - Rest
+  - Lantern
+  - Glue
+  - Lighter
+  - Lantern With Glue
   layers:
   - Default
   - TransparentFX
