@@ -5,12 +5,16 @@ using UnityEngine;
 
 public class ObjectController : MonoBehaviour
 {
+    private SpriteRenderer sprite; // For Testing
+
     private bool objectPickedUp;
     private bool inRange;
 
     // Start is called before the first frame update
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
+
         objectPickedUp = false;
         inRange = false;
     }
@@ -38,6 +42,25 @@ public class ObjectController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = true;
+        }
+
+        //Lantern Gets Clue collision
+        if (transform.tag == "Lantern")
+        {
+            if (collision.transform.tag == "Glue")
+            {
+                transform.tag = "Lantern With Glue";
+                sprite.color = Color.red;
+            }
+        }
+        //Lantern Gets lit
+        if (transform.tag == "Lantern With Glue")
+        {
+            if (collision.transform.tag == "Lighter")
+            {
+                transform.tag = "Lit Lantern";
+                sprite.color = Color.yellow;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
