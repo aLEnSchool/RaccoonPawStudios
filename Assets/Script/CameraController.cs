@@ -15,6 +15,7 @@ public class Came : MonoBehaviour
     {
         yPos = 0f;
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {

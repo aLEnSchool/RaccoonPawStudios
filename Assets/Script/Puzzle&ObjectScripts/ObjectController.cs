@@ -8,6 +8,7 @@ public class ObjectController : MonoBehaviour
     private SpriteRenderer sprite; // For Testing
 
     private bool objectPickedUp;
+    private bool doorRange;
     private bool inRange;
 
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class ObjectController : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
 
         objectPickedUp = false;
+        doorRange = false;
         inRange = false;
     }
 
@@ -30,7 +32,7 @@ public class ObjectController : MonoBehaviour
                     pickUp();
                 }
             }
-            else if (objectPickedUp)
+            else if (objectPickedUp && doorRange == false)
             {
                 dropItem();
             }
@@ -42,6 +44,10 @@ public class ObjectController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = true;
+            if (collision.gameObject.tag == "Door")
+            {
+
+            }
         }
 
         //Lantern Gets Clue collision
@@ -63,6 +69,15 @@ public class ObjectController : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Door")
+        {
+            doorRange=true;
+        }    
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
