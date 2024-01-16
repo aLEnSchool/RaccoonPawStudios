@@ -28,6 +28,7 @@ public class Came : MonoBehaviour
             yPos = -15.5f;
             // change the player position to be in the next room
             player.transform.position = new Vector3(-5.935f, -18f, -0.52f);
+            exitDoor.exitRoom = false;
         }
     }
 }

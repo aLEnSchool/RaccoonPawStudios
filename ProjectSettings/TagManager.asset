@@ -7,14 +7,11 @@ TagManager:
   - Floor
   - Object
   - Rest
-<<<<<<< Updated upstream
+  - Door
+  - Lighter
   - Lantern
   - Glue
-  - Lighter
   - Lantern With Glue
-=======
-  - Door
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
