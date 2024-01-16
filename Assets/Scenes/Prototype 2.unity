@@ -6868,7 +6868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e357b04a71ed2479d845696e66baf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockerPuzzle: {fileID: 0}
+  lockerPuzzle: {fileID: 1220603108}
 --- !u!61 &1563619772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8091,7 +8091,7 @@ GameObject:
   - component: {fileID: 1876788466}
   m_Layer: 0
   m_Name: kitchenDoors
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

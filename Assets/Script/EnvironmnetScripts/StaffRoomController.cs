@@ -31,7 +31,7 @@ public class StaffRoomController : MonoBehaviour
             //Show Puzzle
             lockerPuzzle.SetActive(true);
 
-            sprite.color = new Color(161f, 161f, 161f);
+            sprite.color = new Color(161, 161, 161);
         }
     }
 }
