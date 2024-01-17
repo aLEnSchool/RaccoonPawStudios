@@ -1414,8 +1414,8 @@ Transform:
   - {fileID: 991732035}
   - {fileID: 1563619769}
   - {fileID: 204339362}
-  - {fileID: 2025402033}
   - {fileID: 1220603110}
+  - {fileID: 2025402033}
   - {fileID: 615349090}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3742,7 +3742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &615349090
 Transform:
   m_ObjectHideFlags: 0
@@ -4913,9 +4913,11 @@ GameObject:
   m_Component:
   - component: {fileID: 794830499}
   - component: {fileID: 794830500}
+  - component: {fileID: 794830502}
+  - component: {fileID: 794830501}
   m_Layer: 0
   m_Name: door_WC
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4987,6 +4989,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &794830501
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794830498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.833711, y: 23.66}
+    newSize: {x: 14.833711, y: 23.66}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.833711, y: 23.66}
+  m_EdgeRadius: 0
+--- !u!114 &794830502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794830498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102c3bed0e356e5499a31bcfae9ed42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitRoom: 0
 --- !u!1 &817392408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5506,12 +5566,12 @@ MonoBehaviour:
   target: {fileID: 1486233422}
   yPos: 0
   exitDoor: {fileID: 1632839845}
-  exitBackToDiner: {fileID: 1214039306}
+  exitBackToDiner: {fileID: 1214039308}
   kitchenDoor: {fileID: 1876788465}
   kitchenToDiner: {fileID: 1518089083}
-  player: {fileID: 1486233417}
   doorToAlley: {fileID: 2025402034}
   exitAlley: {fileID: 1379371420}
+  player: {fileID: 1486233417}
 --- !u!1 &947777377
 GameObject:
   m_ObjectHideFlags: 0
@@ -7514,7 +7574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214039305}
   - component: {fileID: 1214039304}
-  - component: {fileID: 1214039306}
+  - component: {fileID: 1214039308}
   - component: {fileID: 1214039307}
   m_Layer: 0
   m_Name: door_toDiner
@@ -7590,19 +7650,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 201429117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1214039306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1214039303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feaf4991f8ca2584d815cd724de9a70c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  exitRoom: 0
 --- !u!61 &1214039307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7648,6 +7695,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.009999, y: 23.701218}
   m_EdgeRadius: 0
+--- !u!114 &1214039308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214039303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102c3bed0e356e5499a31bcfae9ed42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exitRoom: 0
 --- !u!1 &1218475278
 GameObject:
   m_ObjectHideFlags: 0
@@ -9526,7 +9586,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1518089078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f3584cf35c1dbc46bf2205a3e0e4ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: 102c3bed0e356e5499a31bcfae9ed42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   exitRoom: 0

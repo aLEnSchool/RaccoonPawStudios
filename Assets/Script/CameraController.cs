@@ -9,15 +9,16 @@ public class Came : MonoBehaviour
     public float yPos = 0f;
 
     [SerializeField] private ExitDoor exitDoor; // to access exit door script
-    [SerializeField] private ExitBackToDiner exitBackToDiner; // To access Diner from Hallway script
+    [SerializeField] private ExitDoor exitBackToDiner; // To access Diner from Hallway script
     
     [SerializeField] private KitchenDoorController kitchenDoor; // To access Kitchen from Diner script
-    [SerializeField] private ExitKitchenToDiner kitchenToDiner; //To access Diner from Kitchen script
-
-    [SerializeField] private GameObject player; // to access player location
+    [SerializeField] private ExitDoor kitchenToDiner; //To access Diner from Kitchen script
 
     [SerializeField] private ExitDoor doorToAlley;
     [SerializeField] private ExitDoor exitAlley;
+
+    [SerializeField] private GameObject player; // to access player location
+
 
     private void Start()
     {
