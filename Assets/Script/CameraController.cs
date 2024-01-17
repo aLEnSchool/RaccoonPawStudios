@@ -6,9 +6,11 @@ using UnityEngine.UIElements;
 public class Came : MonoBehaviour
 {
     public Transform target;
-    public float yPos=0f;
+    public float yPos = 0f;
 
     [SerializeField] private ExitDoor exitDoor; // to access exit door script
+    [SerializeField] private ExitBackToDiner exitBackToDiner; // To access Exit door back To Diner script
+
     [SerializeField] private GameObject player; // to access player location
 
     private void Start()
@@ -29,6 +31,17 @@ public class Came : MonoBehaviour
             player.transform.position = new Vector3(-5.935f, -18f, -0.52f);
 
             exitDoor.exitRoom = false; //turn off so not constantly tp
+        }
+
+        //if the player wants to go from hallway back to diner
+        if (exitBackToDiner.exitRoom)
+        {
+            // change camera position to the diner
+            yPos = 0f;
+            // change the player position to be in the diner
+            player.transform.position = new Vector3(95.4f, -2.5f, -0.52f);
+
+            exitBackToDiner.exitRoom = false; //turn off so not constantly tp
         }
     }
 }

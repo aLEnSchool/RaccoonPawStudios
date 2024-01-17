@@ -6,14 +6,14 @@ public class StaffRoomController : MonoBehaviour
 {
     private SpriteRenderer sprite;
 
-    public GameObject lockerPuzzle;
+    public GameObject darkness;
 
     // Start is called before the first frame update
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
 
-        lockerPuzzle.SetActive(false);    
+        darkness.SetActive(true);    
     }
 
     // Update is called once per frame
@@ -27,9 +27,9 @@ public class StaffRoomController : MonoBehaviour
         if (collision.transform.tag == "Lantern With Glue")
         {
             //Show Puzzle
-            lockerPuzzle.SetActive(true);
+            darkness.SetActive(false);
 
-            sprite.color = Color.blue;
+            //sprite.color = Color.blue;
         }
     }
 }
