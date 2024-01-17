@@ -83,7 +83,7 @@ public class WaitressController : MonoBehaviour
     /*-- Functions --*/
     private void InitializeVoiceLines()
     {
-        voiceLines = new string[3] { "Hi, would you like anything?", "Okay... Bye!", "Oh Let me tend to this customer" };
+        voiceLines = new string[3] { "Hi, I'm waiting to see if anyone needs anything", "Okay... Bye!", "Oh Let me tend to this customer!" };
     }
 
     /*
