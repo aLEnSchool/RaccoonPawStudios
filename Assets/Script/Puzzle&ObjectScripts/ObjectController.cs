@@ -9,6 +9,7 @@ public class ObjectController : MonoBehaviour
 
     private bool objectPickedUp;
     private bool inRange;
+    private bool doorRange;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class ObjectController : MonoBehaviour
 
         objectPickedUp = false;
         inRange = false;
+        doorRange = false;
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class ObjectController : MonoBehaviour
                     pickUp();
                 }
             }
-            else if (objectPickedUp)
+            else if (objectPickedUp && !doorRange)
             {
                 dropItem();
             }
@@ -42,6 +44,10 @@ public class ObjectController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = true;
+        }
+        if (collision.gameObject.tag == "Door")
+        {
+            doorRange = true;
         }
 
         //Lantern Gets Clue collision
@@ -68,6 +74,10 @@ public class ObjectController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = false;
+        }
+        if (collision.gameObject.tag == "Door")
+        {
+            doorRange = false;
         }
     }
 
