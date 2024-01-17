@@ -9,12 +9,16 @@ public class Came : MonoBehaviour
     public float yPos = 0f;
 
     [SerializeField] private ExitDoor exitDoor; // to access exit door script
-    [SerializeField] private ExitBackToDiner exitBackToDiner; // To access Diner from Hallway script
+    [SerializeField] private ExitDoor exitBackToDiner; // To access Diner from Hallway script
     
     [SerializeField] private KitchenDoorController kitchenDoor; // To access Kitchen from Diner script
-    [SerializeField] private ExitKitchenToDiner kitchenToDiner; //To access Diner from Kitchen script
+    [SerializeField] private ExitDoor kitchenToDiner; //To access Diner from Kitchen script
+
+    [SerializeField] private ExitDoor doorToAlley;
+    [SerializeField] private ExitDoor exitAlley;
 
     [SerializeField] private GameObject player; // to access player location
+
 
     private void Start()
     {
@@ -69,6 +73,28 @@ public class Came : MonoBehaviour
             player.transform.position = new Vector3(59f, -2.5f, -0.52f);
 
             kitchenToDiner.exitRoom = false; //turn off so not constantly tp
+        }
+
+        // Between staff room and alley
+        // Exit staff room and go into alley
+        if (doorToAlley.exitRoom)
+        {
+            // change camera position to the alley
+            yPos = -48.5f;
+            // change the player position to be in the alley
+            player.transform.position = new Vector3(-4.6f, -51.9f, -0.52f);
+
+            doorToAlley.exitRoom = false;
+        }
+        // Exit alley go back into staff room
+        if (exitAlley.exitRoom)
+        {
+            // change camera position to the alley
+            yPos = -15.5f;
+            // change the player position to be in the alley
+            player.transform.position = new Vector3(35.04f, -18.4f, -0.52f);
+
+            exitAlley.exitRoom = false;
         }
     }
 }
