@@ -8,12 +8,20 @@ public class BookController : MonoBehaviour
     private int maxPageCount;
 
     private GameObject[] book;
+    public GameObject page1;
+    public GameObject page2;
+    public GameObject page3;
+    public GameObject page4;
+    public GameObject page5;
+    public GameObject page6;
 
     // Start is called before the first frame update
     void Start()
     {
         pageIndex = 0;
-        maxPageCount = 5;
+        maxPageCount = 6;
+
+        bookSetup();
     }
 
     // Update is called once per frame
@@ -48,5 +56,17 @@ public class BookController : MonoBehaviour
         {
             pageIndex = maxPageCount;
         }
+    }
+
+    private void bookSetup()
+    {
+        book = new GameObject[maxPageCount];
+        book[0] = page1;
+        book[1] = page2;
+        book[2] = page3;
+        book[3] = page4;
+        book[4] = page5;
+        book[5] = page6;
+        
     }
 }

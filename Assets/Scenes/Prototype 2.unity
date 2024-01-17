@@ -1681,6 +1681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 281819781}
   - component: {fileID: 281819783}
+  - component: {fileID: 281819784}
   - component: {fileID: 281819782}
   m_Layer: 5
   m_Name: CookBook
@@ -1748,6 +1749,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281819780}
   m_CullTransparentMesh: 1
+--- !u!114 &281819784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281819780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b26127f21441e542a5ae0320a48f831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  page1: {fileID: 0}
+  page2: {fileID: 0}
+  page3: {fileID: 0}
+  page4: {fileID: 0}
+  page5: {fileID: 0}
+  page6: {fileID: 0}
 --- !u!1 &296968906
 GameObject:
   m_ObjectHideFlags: 0
