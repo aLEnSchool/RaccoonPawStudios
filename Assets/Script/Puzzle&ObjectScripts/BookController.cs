@@ -29,33 +29,32 @@ public class BookController : MonoBehaviour
     {
         for (int i = 0; i < maxPageCount; i++)
         {
-            if (i == pageIndex)
-            {
-                //book[pageIndex].SetActive(true);
-            }
-            else
-            {
-                //book[pageIndex].SetActive(false);
-            }
+            book[i].SetActive(false);
         }
+
+        book[pageIndex].SetActive(true);
     }
 
-    private void leftButton() 
+
+
+    public void leftButton() 
     {
         pageIndex--;
         if (pageIndex <= 0)
         {
             pageIndex = 0;
         }
+        Debug.Log(pageIndex);
     }
 
-    private void rightButton()
+    public void rightButton()
     {
         pageIndex++;
-        if (pageIndex >= maxPageCount)
+        if (pageIndex >= maxPageCount-1)
         {
-            pageIndex = maxPageCount;
+            pageIndex = maxPageCount-1;
         }
+        Debug.Log(pageIndex);
     }
 
     private void bookSetup()
@@ -67,6 +66,7 @@ public class BookController : MonoBehaviour
         book[3] = page4;
         book[4] = page5;
         book[5] = page6;
-        
+
+        Debug.Log(book);
     }
 }
