@@ -8,6 +8,7 @@ public class KitchenDoorController : MonoBehaviour
     public WaitressController Sadie;
 
     private bool inRange;
+    public bool exitRoom;
 
     private string voiceLine;
 
@@ -20,6 +21,7 @@ public class KitchenDoorController : MonoBehaviour
     void Start()
     {
         inRange = false;
+        exitRoom = false;
 
         dialogBox.SetActive(false);
         voiceLine = "Can't come in here, it's restricted";
@@ -29,8 +31,15 @@ public class KitchenDoorController : MonoBehaviour
     void Update()
     {
         if (Sadie.cookBusy)
-        {   
+        {
             //TP TO KITCHEN
+            if (inRange)
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    exitRoom = true;
+                }
+            }
         }
         else
         {
