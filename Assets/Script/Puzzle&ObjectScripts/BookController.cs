@@ -8,12 +8,20 @@ public class BookController : MonoBehaviour
     private int maxPageCount;
 
     private GameObject[] book;
+    public GameObject page1;
+    public GameObject page2;
+    public GameObject page3;
+    public GameObject page4;
+    public GameObject page5;
+    public GameObject page6;
 
     // Start is called before the first frame update
     void Start()
     {
         pageIndex = 0;
-        maxPageCount = 5;
+        maxPageCount = 6;
+
+        bookSetup();
     }
 
     // Update is called once per frame
@@ -21,32 +29,44 @@ public class BookController : MonoBehaviour
     {
         for (int i = 0; i < maxPageCount; i++)
         {
-            if (i == pageIndex)
-            {
-                //book[pageIndex].SetActive(true);
-            }
-            else
-            {
-                //book[pageIndex].SetActive(false);
-            }
+            book[i].SetActive(false);
         }
+
+        book[pageIndex].SetActive(true);
     }
 
-    private void leftButton() 
+
+
+    public void leftButton() 
     {
         pageIndex--;
         if (pageIndex <= 0)
         {
             pageIndex = 0;
         }
+        Debug.Log(pageIndex);
     }
 
-    private void rightButton()
+    public void rightButton()
     {
         pageIndex++;
-        if (pageIndex >= maxPageCount)
+        if (pageIndex >= maxPageCount-1)
         {
-            pageIndex = maxPageCount;
+            pageIndex = maxPageCount-1;
         }
+        Debug.Log(pageIndex);
+    }
+
+    private void bookSetup()
+    {
+        book = new GameObject[maxPageCount];
+        book[0] = page1;
+        book[1] = page2;
+        book[2] = page3;
+        book[3] = page4;
+        book[4] = page5;
+        book[5] = page6;
+
+        Debug.Log(book);
     }
 }
