@@ -26,10 +26,12 @@ public class StaffRoomController : MonoBehaviour
     {
         if (collision.transform.tag == "Lantern With Glue")
         {
+            Debug.Log("Show Insides of Room");
+
             //Show Puzzle
             lockerPuzzle.SetActive(true);
 
-            sprite.color = Color.blue;
+            sprite.color = new Color(161, 161, 161);
         }
     }
 }

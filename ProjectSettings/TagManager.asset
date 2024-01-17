@@ -7,9 +7,10 @@ TagManager:
   - Floor
   - Object
   - Rest
+  - Door
+  - Lighter
   - Lantern
   - Glue
-  - Lighter
   - Lantern With Glue
   layers:
   - Default
