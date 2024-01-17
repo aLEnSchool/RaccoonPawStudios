@@ -3522,7 +3522,7 @@ SpriteRenderer:
   m_Size: {x: 18.390001, y: 31.56976}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &790687994
@@ -4661,7 +4661,7 @@ SpriteRenderer:
   m_Size: {x: 18.390001, y: 31.56976}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1025116103
@@ -8215,7 +8215,7 @@ GameObject:
   - component: {fileID: 1876788466}
   m_Layer: 0
   m_Name: kitchenDoors
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
