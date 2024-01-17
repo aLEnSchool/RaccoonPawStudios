@@ -9,7 +9,10 @@ public class Came : MonoBehaviour
     public float yPos = 0f;
 
     [SerializeField] private ExitDoor exitDoor; // to access exit door script
-    [SerializeField] private ExitBackToDiner exitBackToDiner; // To access Exit door back To Diner script
+    [SerializeField] private ExitBackToDiner exitBackToDiner; // To access Diner from Hallway script
+    
+    [SerializeField] private KitchenDoorController kitchenDoor; // To access Kitchen from Diner script
+    [SerializeField] private ExitKitchenToDiner kitchenToDiner; //To access Diner from Kitchen script
 
     [SerializeField] private GameObject player; // to access player location
 
@@ -23,6 +26,7 @@ public class Came : MonoBehaviour
         this.transform.position = new Vector3(target.position.x, yPos, this.transform.position.z);
 
 
+        /*-- Hallway TP --*/
         // if the player exits the door at the end
         if (exitDoor.exitRoom) { 
             // change camera position to the new room
@@ -42,6 +46,29 @@ public class Came : MonoBehaviour
             player.transform.position = new Vector3(95.4f, -2.5f, -0.52f);
 
             exitBackToDiner.exitRoom = false; //turn off so not constantly tp
+        }
+
+        /*-- Kitchen TP --*/
+        //if the player wants to go from diner to kitchen
+        if (kitchenDoor.exitRoom)
+        {
+            // change camera position to the diner
+            yPos = -31.5f;
+            // change the player position to be in the diner
+            player.transform.position = new Vector3(-3f, -34f, -0.52f);
+
+            kitchenDoor.exitRoom = false; //turn off so not constantly tp
+        }
+
+        //if the player wants to go from hallway back to diner
+        if (kitchenToDiner.exitRoom)
+        {
+            // change camera position to the diner
+            yPos = 0f;
+            // change the player position to be in the diner
+            player.transform.position = new Vector3(59f, -2.5f, -0.52f);
+
+            kitchenToDiner.exitRoom = false; //turn off so not constantly tp
         }
     }
 }
