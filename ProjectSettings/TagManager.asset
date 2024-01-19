@@ -11,6 +11,8 @@ TagManager:
   - Glue
   - Lighter
   - Lantern With Glue
+  - Door
+  - Bench
   layers:
   - Default
   - TransparentFX

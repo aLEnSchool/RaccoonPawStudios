@@ -6,7 +6,7 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 7f;
+    [SerializeField] private float moveSpeed = 9f;
     [SerializeField] private float rollSpeed = 0.2f;
     [SerializeField] private float jumpForce = 10f;
 
@@ -15,6 +15,13 @@ public class PlayerController : MonoBehaviour
 
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
+
+    // jumping on the bench
+    [SerializeField] private float jumpForceBench = 5f;
+    private bool jumpingBench = false;   // check whether the player has jumped
+    private int jumpCountBench = 0;      // counter for double jump
+    private bool fromFloor = true;
+
     private bool facingRight = true;   // check which direction the player is facing
 
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
@@ -48,15 +55,36 @@ public class PlayerController : MonoBehaviour
             inputX = 0;
         }
 
+        // jumping on floor
         if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping))
         {
-            rb.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
+            if (!fromFloor) // jumping off the bench
+            {
+                rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
+                Debug.Log("jumped from bench");
+            }
+            else // jumping off the floor
+            {
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                Debug.Log("jumped from floor");
+            }
+            
 
             jumpCount += 1;
             jumping = checkJump(1); // check how many jumps have been done
 
             playHatAnimation = true; // allow the hat floating down animation to be played
         }
+        // jumping on bench
+        //if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))
+        //{
+        //    rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
+
+        //    jumpCountBench += 1;
+        //    jumpingBench = checkJump(1); // check how many jumps have been done
+
+        //    playHatAnimation = true; // allow the hat floating down animation to be played
+        //}
 
         //Movement
         rb.velocity = new Vector2(inputX, rb.velocity.y);
@@ -112,6 +140,16 @@ public class PlayerController : MonoBehaviour
             // reset jump variables
             jumping = false;
             jumpCount = 0;
+
+            fromFloor = true; // jumped from floor
+        }
+        else if (collision.gameObject.tag == "Bench")
+        {
+            // reset jump variables
+            jumping = false;
+            jumpCount = 0;
+
+            fromFloor = false; // jumped from bench
         }
     }
 
