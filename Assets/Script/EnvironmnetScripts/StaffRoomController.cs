@@ -8,12 +8,19 @@ public class StaffRoomController : MonoBehaviour
 
     public GameObject darkness;
 
+    public GameObject doorToAlley;
+    public GameObject lockerInteraction;
+
     // Start is called before the first frame update
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
 
-        darkness.SetActive(true);    
+        darkness.SetActive(true);
+
+        // hide interactions that are in the darkness
+        doorToAlley.SetActive(false);
+        lockerInteraction.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,7 +33,11 @@ public class StaffRoomController : MonoBehaviour
     {
         if (collision.transform.tag == "Lantern With Glue")
         {
+
             //Show Puzzle
+            doorToAlley.SetActive(true);
+            lockerInteraction.SetActive(true);
+
             darkness.SetActive(false);
 
             //sprite.color = Color.blue;
