@@ -5894,6 +5894,7 @@ MonoBehaviour:
   doorToAlley: {fileID: 2025402034}
   exitAlley: {fileID: 1379371420}
   player: {fileID: 1486233417}
+  screenFade: {fileID: 1394565055}
 --- !u!1 &947777377
 GameObject:
   m_ObjectHideFlags: 0
@@ -9163,7 +9164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2786151d377296f459e866687f0cef1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackScreen: {fileID: 1394565056}
 --- !u!114 &1394565056
 MonoBehaviour:
   m_ObjectHideFlags: 0
