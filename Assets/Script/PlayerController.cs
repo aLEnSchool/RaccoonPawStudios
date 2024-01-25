@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // jumping on floor
-        if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping))
+        if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping) || Input.GetKeyDown(KeyCode.Space) && (!jumping))
         {
             if (!fromFloor) // jumping off the bench
             {
