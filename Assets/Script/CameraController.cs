@@ -19,6 +19,7 @@ public class Came : MonoBehaviour
 
     [SerializeField] private GameObject player; // to access player location
 
+    [SerializeField] private FadeToBlack screenFade;
 
     private void Start()
     {
@@ -32,13 +33,17 @@ public class Came : MonoBehaviour
 
         /*-- Hallway TP --*/
         // if the player exits the door at the end
-        if (exitDoor.exitRoom) { 
+        if (exitDoor.exitRoom) {
+
+            screenFade.fadeOut(); // fade to black
+            
             // change camera position to the new room
             yPos = -15.5f;
             // change the player position to be in the next room
             player.transform.position = new Vector3(-5.935f, -18f, -0.52f);
 
             exitDoor.exitRoom = false; //turn off so not constantly tp
+            //screenFade.fadeIn(); // fade in
         }
 
         //if the player wants to go from hallway back to diner
