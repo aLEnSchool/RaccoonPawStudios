@@ -31,6 +31,7 @@ public class Came : MonoBehaviour
         this.transform.position = new Vector3(target.position.x, yPos, this.transform.position.z);
 
 
+        // fade to black doesn't work anymore if user spams e on the keyboard
         /*-- Hallway TP --*/
         // if the player exits the door at the end
         if (exitDoor.exitRoom) 
