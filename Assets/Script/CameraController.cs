@@ -33,73 +33,75 @@ public class Came : MonoBehaviour
 
         /*-- Hallway TP --*/
         // if the player exits the door at the end
-        if (exitDoor.exitRoom) {
-
-            screenFade.fadeOut(); // fade to black
-            
-            // change camera position to the new room
-            yPos = -15.5f;
-            // change the player position to be in the next room
-            player.transform.position = new Vector3(-5.935f, -18f, -0.52f);
-
-            exitDoor.exitRoom = false; //turn off so not constantly tp
-            //screenFade.fadeIn(); // fade in
+        if (exitDoor.exitRoom) 
+        {
+            StartCoroutine(switchRooms(-15.5f, new Vector3(-5.935f, -18f, -0.52f), exitDoor));
         }
 
         //if the player wants to go from hallway back to diner
         if (exitBackToDiner.exitRoom)
         {
-            // change camera position to the diner
-            yPos = 0f;
-            // change the player position to be in the diner
-            player.transform.position = new Vector3(95.4f, -2.5f, -0.52f);
-
-            exitBackToDiner.exitRoom = false; //turn off so not constantly tp
+            StartCoroutine(switchRooms(0f, new Vector3(95.4f, -2.5f, -0.52f), exitBackToDiner));
         }
 
         /*-- Kitchen TP --*/
         //if the player wants to go from diner to kitchen
         if (kitchenDoor.exitRoom)
         {
-            // change camera position to the diner
-            yPos = -31.5f;
-            // change the player position to be in the diner
-            player.transform.position = new Vector3(-3f, -34f, -0.52f);
-
-            kitchenDoor.exitRoom = false; //turn off so not constantly tp
+            StartCoroutine(switchRoomToKitchen(-31.5f, new Vector3(-3f, -34f, -0.52f), kitchenDoor));
         }
 
         //if the player wants to go from hallway back to diner
         if (kitchenToDiner.exitRoom)
         {
-            // change camera position to the diner
-            yPos = 0f;
-            // change the player position to be in the diner
-            player.transform.position = new Vector3(59f, -2.5f, -0.52f);
-
-            kitchenToDiner.exitRoom = false; //turn off so not constantly tp
+            StartCoroutine(switchRooms(0f, new Vector3(59f, -2.5f, -0.52f), kitchenToDiner));
         }
 
         // Between staff room and alley
         // Exit staff room and go into alley
         if (doorToAlley.exitRoom)
         {
-            // change camera position to the alley
-            yPos = -48.5f;
-            // change the player position to be in the alley
-            player.transform.position = new Vector3(-4.6f, -51.9f, -0.52f);
-
-            doorToAlley.exitRoom = false;
+            StartCoroutine(switchRooms(-48.5f, new Vector3(-4.6f, -51.9f, -0.52f), doorToAlley));
         }
         // Exit alley go back into staff room
         if (exitAlley.exitRoom)
         {
-            // change camera position to the alley
-            yPos = -15.5f;
-            // change the player position to be in the alley
-            player.transform.position = new Vector3(35.04f, -18.4f, -0.52f);
-
-            exitAlley.exitRoom = false;
+            StartCoroutine(switchRooms(-15.5f, new Vector3(35.04f, -18.4f, -0.52f), exitAlley));
         }
+    }
+
+    // 
+    private IEnumerator switchRooms(float yPosition, Vector3 playerPosition, ExitDoor door)
+    {
+        StartCoroutine(screenFade.fadeOut()); // fade to black
+
+        yield return new WaitForSeconds(0.5f);
+
+        // change camera position to the new room
+        yPos = yPosition;
+        // change the player position to be in the next room
+        player.transform.position = playerPosition;
+        door.exitRoom = false; //turn off so not constantly tp
+
+        yield return new WaitForSeconds(0.5f);
+
+        StartCoroutine(screenFade.fadeIn()); // fade in
+    }
+
+    private IEnumerator switchRoomToKitchen(float yPosition, Vector3 playerPosition, KitchenDoorController door)
+    {
+        StartCoroutine(screenFade.fadeOut()); // fade to black
+
+        yield return new WaitForSeconds(0.5f);
+
+        // change camera position to the new room
+        yPos = yPosition;
+        // change the player position to be in the next room
+        player.transform.position = playerPosition;
+        door.exitRoom = false; //turn off so not constantly tp
+
+        yield return new WaitForSeconds(0.5f);
+
+        StartCoroutine(screenFade.fadeIn()); // fade in
     }
 }
