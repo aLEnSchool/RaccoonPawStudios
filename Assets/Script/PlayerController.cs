@@ -61,12 +61,10 @@ public class PlayerController : MonoBehaviour
             if (!fromFloor) // jumping off the bench
             {
                 rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
-                Debug.Log("jumped from bench");
             }
             else // jumping off the floor
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                Debug.Log("jumped from floor");
             }
             
 
