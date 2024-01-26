@@ -5285,6 +5285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitRoom: 0
+  fadeToBlack: {fileID: 0}
 --- !u!1 &817392408
 GameObject:
   m_ObjectHideFlags: 0
@@ -8065,6 +8066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitRoom: 0
+  fadeToBlack: {fileID: 0}
 --- !u!1 &1218475278
 GameObject:
   m_ObjectHideFlags: 0
@@ -8986,6 +8988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitRoom: 0
+  fadeToBlack: {fileID: 0}
 --- !u!1 &1386088283
 GameObject:
   m_ObjectHideFlags: 0
@@ -9128,7 +9131,7 @@ GameObject:
   - component: {fileID: 1394565055}
   m_Layer: 5
   m_Name: Black Screen
-  m_TagString: Untagged
+  m_TagString: BlackScreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9164,6 +9167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2786151d377296f459e866687f0cef1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isSwitchingRooms: 0
 --- !u!114 &1394565056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10274,6 +10278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitRoom: 0
+  fadeToBlack: {fileID: 0}
 --- !u!1 &1522580948
 GameObject:
   m_ObjectHideFlags: 0
@@ -11290,6 +11295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitRoom: 0
+  fadeToBlack: {fileID: 0}
 --- !u!1 &1704832143
 GameObject:
   m_ObjectHideFlags: 0
@@ -12996,6 +13002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitRoom: 0
+  fadeToBlack: {fileID: 0}
 --- !u!61 &2025402035
 BoxCollider2D:
   m_ObjectHideFlags: 0

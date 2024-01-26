@@ -6,30 +6,25 @@ using UnityEngine.UI;
 public class FadeToBlack : MonoBehaviour
 {
 
-    //[SerializeField] private Image blackScreen;
+    public bool isSwitchingRooms;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        isSwitchingRooms = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            StartCoroutine(fadeOut());
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            StartCoroutine(fadeIn());
-        }
+        
     }
 
     // fade out: screen turns to black
     public IEnumerator fadeOut()
     {
+        isSwitchingRooms = true; // started to fade out
+
         Color screenColor = gameObject.GetComponent<Image>().color;
         float fadeAmount;
 
@@ -39,7 +34,8 @@ public class FadeToBlack : MonoBehaviour
 
             screenColor = new Color(screenColor.r, screenColor.g, screenColor.b, fadeAmount);
             gameObject.GetComponent<Image>().color = screenColor;
-            yield return null;
+            //yield return null;
+            yield return new WaitForSeconds(0.001f);
         }
         Debug.Log("fade out pls");
 
@@ -57,9 +53,11 @@ public class FadeToBlack : MonoBehaviour
 
             screenColor = new Color(screenColor.r, screenColor.g, screenColor.b, fadeAmount);
             gameObject.GetComponent<Image>().color = screenColor;
-            yield return null;
+            //yield return null;
+            yield return new WaitForSeconds(0.001f);
         }
 
+        isSwitchingRooms = false; // finished fading back in
     }
 }
 
