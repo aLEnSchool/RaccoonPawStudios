@@ -20,6 +20,15 @@ public class NotepadController : MonoBehaviour
     void Update()
     {
         notepad_Background.gameObject.SetActive(notepadShown);
+
+        if (notepadShown )
+        {
+            PlayerController.instance.canMove = false;
+        }
+        else
+        {
+            PlayerController.instance.canMove = true;
+        }
     }
 
     public void showingNotepad()
