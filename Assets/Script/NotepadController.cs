@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NotepadController : MonoBehaviour
-{   
-    private bool notepadShown;
+{
+    public bool notepadShown;
 
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,10 @@ public class NotepadController : MonoBehaviour
         transform.gameObject.SetActive(notepadShown);
     }
 
-    private void showingNotepad()
+    public void showingNotepad()
     {
+        Debug.Log(notepadShown);
+
         if (notepadShown)
         {
             notepadShown=false;
