@@ -13,6 +13,7 @@ TagManager:
   - Lantern With Glue
   - Door
   - Bench
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

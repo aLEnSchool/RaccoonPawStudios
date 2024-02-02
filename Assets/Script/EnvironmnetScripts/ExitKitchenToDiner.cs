@@ -7,11 +7,15 @@ public class ExitKitchenToDiner : MonoBehaviour
     private bool inRange;
     public bool exitRoom;
 
+    GameObject blackScreen;
+
     // Start is called before the first frame update
     void Start()
     {
         inRange = false;
         exitRoom = false;
+
+        blackScreen = GameObject.FindWithTag("BlackScreen");
     }
 
     // Update is called once per frame
@@ -19,7 +23,7 @@ public class ExitKitchenToDiner : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms)) // if user presses E, and not in the middle of switching rooms
             {
                 // Change camera to the next room
                 exitRoom = true;
