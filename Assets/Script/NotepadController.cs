@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class NotepadController : MonoBehaviour
 {
+    [SerializeField] private GameObject notepad_Background;
     public bool notepadShown;
+
+    public bool notepadHidden; 
 
     // Start is called before the first frame update
     void Start()
     {
         notepadShown = false;
+        notepad_Background.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.gameObject.SetActive(notepadShown);
+        notepad_Background.gameObject.SetActive(notepadShown);
     }
 
     public void showingNotepad()
