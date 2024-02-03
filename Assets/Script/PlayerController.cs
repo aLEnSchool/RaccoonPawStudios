@@ -6,12 +6,15 @@ using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     [SerializeField] private float moveSpeed = 9f;
     [SerializeField] private float rollSpeed = 0.2f;
     [SerializeField] private float jumpForce = 10f;
 
     private float inputX;
     private Rigidbody2D rb;
+    public bool canMove;
 
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
@@ -26,53 +29,80 @@ public class PlayerController : MonoBehaviour
 
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         inputX = 0;
         rb = GetComponent<Rigidbody2D>();
+        canMove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Inputs
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+
+        if (canMove)
         {
-            inputX = -moveSpeed;
-        }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            inputX = moveSpeed;
+            //Inputs
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                inputX = -moveSpeed;
+            }
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                inputX = moveSpeed;
+            }
+
+            // jumping on floor
+            if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping) || Input.GetKeyDown(KeyCode.Space) && (!jumping))
+            {
+                if (!fromFloor) // jumping off the bench
+                {
+                    rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
+                }
+                else // jumping off the floor
+                {
+                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                }
+
+
+                jumpCount += 1;
+                jumping = checkJump(1); // check how many jumps have been done
+
+                playHatAnimation = true; // allow the hat floating down animation to be played
+            }
+
+            if (Input.GetKeyUp(KeyCode.A) && jumping)
+            {
+                Debug.Log("ADDING FORCE");
+                rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
+            }
+            if (Input.GetKeyUp(KeyCode.D) && jumping)
+            {
+                Debug.Log("ADDING FORCE");
+                rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
+            }
         }
 
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
+        if (Input.GetKeyUp(KeyCode.A) && !jumping || Input.GetKeyUp(KeyCode.LeftArrow) && !jumping)
         {
             inputX = 0;
         }
-        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
+        if (Input.GetKeyUp(KeyCode.D) && !jumping || Input.GetKeyUp(KeyCode.RightArrow) && !jumping)
         {
             inputX = 0;
         }
 
-        // jumping on floor
-        if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping) || Input.GetKeyDown(KeyCode.Space) && (!jumping))
-        {
-            if (!fromFloor) // jumping off the bench
-            {
-                rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
-            }
-            else // jumping off the floor
-            {
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            }
-            
-
-            jumpCount += 1;
-            jumping = checkJump(1); // check how many jumps have been done
-
-            playHatAnimation = true; // allow the hat floating down animation to be played
+        if (!jumping && fromFloor) {
+            inputX = 0;
         }
+
+
         // jumping on bench
         //if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))
         //{
