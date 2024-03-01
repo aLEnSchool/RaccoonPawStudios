@@ -28,7 +28,7 @@ public class Customer3Controller : MonoBehaviour
 
         //Voice Line Initialize
         InitializeVoiceLines();
-        voiceLineIndex = -1;
+        voiceLineIndex = 0;
         dialogBox.SetActive(false);
     }
 
@@ -39,18 +39,8 @@ public class Customer3Controller : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E)) 
             {
-                
+                dialogBox.SetActive(true);
 
-                //If on last voice line, repeat
-                if (voiceLineIndex < 2)
-                {
-                    voiceLineIndex++; //Next Voice Line
-                }
-                if (voiceLineIndex == 2)
-                {
-                    voiceLineIndex = 2;
-                    causingScene = true;
-                }
                 //If Scene was caused, Claye shall be eating allowing player to go through bag
                 if (causingScene && Sadie.talkedToPlayer)
                 {
@@ -59,7 +49,6 @@ public class Customer3Controller : MonoBehaviour
 
                 //Voice Line Output
                 Debug.Log(voiceLines[voiceLineIndex]);
-                dialogBox.SetActive(true);
                 dialogOutput.text = voiceLines[voiceLineIndex];
             }
         }
@@ -90,8 +79,19 @@ public class Customer3Controller : MonoBehaviour
         voiceLines = new string[5] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food...", "nom nom nom" };
     }
 
-    private void ContinueDialog()
+    public void ContinueDialog()
     {
+        dialogOutput.text = voiceLines[voiceLineIndex];
 
+        //If on last voice line, repeat
+        if (voiceLineIndex < 2)
+        {
+            voiceLineIndex++; //Next Voice Line
+        }
+        if (voiceLineIndex == 2)
+        {
+            voiceLineIndex = 2;
+            causingScene = true;
+        }
     }
 }
