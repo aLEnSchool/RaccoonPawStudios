@@ -15,7 +15,9 @@ public class Customer3Controller : MonoBehaviour
     private int voiceLineIndex;
 
     //Dialog Box Variables
+    [Header("Dialog Variables",order =1)]
     public GameObject dialogBox;
+    public GameObject dialogButton;
     public TMP_Text dialogOutput;
     
     private bool inRange;
@@ -45,6 +47,7 @@ public class Customer3Controller : MonoBehaviour
                 if (causingScene && Sadie.talkedToPlayer)
                 {
                     voiceLineIndex = 4;
+                    dialogButton.SetActive(false);
                 }
 
                 //Voice Line Output
@@ -76,13 +79,11 @@ public class Customer3Controller : MonoBehaviour
     /*-- Functions --*/
     private void InitializeVoiceLines()
     {
-        voiceLines = new string[5] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food...", "nom nom nom" };
+        voiceLines = new string[5] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food...", "NOM NOM NOM" };
     }
 
     public void ContinueDialog()
     {
-        dialogOutput.text = voiceLines[voiceLineIndex];
-
         //If on last voice line, repeat
         if (voiceLineIndex < 2)
         {
@@ -92,6 +93,8 @@ public class Customer3Controller : MonoBehaviour
         {
             voiceLineIndex = 2;
             causingScene = true;
+            dialogButton.SetActive(false);
         }
+        dialogOutput.text = voiceLines[voiceLineIndex];
     }
 }

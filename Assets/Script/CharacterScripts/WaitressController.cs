@@ -14,6 +14,7 @@ public class WaitressController : MonoBehaviour
     private int voiceLineIndex;
 
     //Dialog Box Variables
+    [Header("Dialog Variables", order = 1)]
     public GameObject dialogBox;
     public TMP_Text dialogOutput;
 
@@ -41,10 +42,22 @@ public class WaitressController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log(voiceLines[voiceLineIndex]);
+                dialogBox.SetActive(true);
+
+                //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
+                if (claye.causingScene)
+                {
+                    voiceLineIndex = 2;
+                    talkedToPlayer = true;
+                    cookBusy = true;
+                }
+                else
+                {
+                    voiceLineIndex = 0;
+                }
 
                 //Voice Line Output
-                dialogBox.SetActive(true);
-                //dialogOutput.text = voiceLines[voiceLineIndex];
+                dialogOutput.text = voiceLines[voiceLineIndex];
             }
         }
     }
