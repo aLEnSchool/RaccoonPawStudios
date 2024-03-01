@@ -89,4 +89,9 @@ public class Customer3Controller : MonoBehaviour
     {
         voiceLines = new string[5] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food...", "nom nom nom" };
     }
+
+    private void ContinueDialog()
+    {
+
+    }
 }
