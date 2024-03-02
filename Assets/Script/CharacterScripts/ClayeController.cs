@@ -11,16 +11,26 @@ public class Customer3Controller : MonoBehaviour
     public bool causingScene;
 
     //Voice Lines Variables
-    private string[] voiceLines;
-    private int voiceLineIndex;
+    public string[] voiceLines;
+    /*= new string[5] {"I WANT FOOD!",
+            "GET ME FOOD",
+            "FOOOOOOOD!",
+            "food...", 
+            "NOM NOM NOM"};*/
+    private int voiceLineIndex = 0;
 
     //Dialog Box Variables
     [Header("Dialog Variables",order =1)]
     public GameObject dialogBox;
     public GameObject dialogButton;
-    public TMP_Text dialogOutput;
+    public TextMeshProUGUI dialogOutput;
     
     private bool inRange;
+
+    [Header("Typewriter Variables", order = 1)]
+    [SerializeField] float timeBtwnChars;
+    [SerializeField] float timeBtwnWords;
+    int i = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +39,11 @@ public class Customer3Controller : MonoBehaviour
         inRange = false;
 
         //Voice Line Initialize
-        InitializeVoiceLines();
-        voiceLineIndex = 0;
+        //InitializeVoiceLines();
+        //voiceLineIndex = 0;
         dialogBox.SetActive(false);
+
+        EndCheck();
     }
 
     // Update is called once per frame
@@ -42,6 +54,7 @@ public class Customer3Controller : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E)) 
             {
                 dialogBox.SetActive(true);
+                //EndCheck();
 
                 //If Scene was caused, Claye shall be eating allowing player to go through bag
                 if (causingScene && Sadie.talkedToPlayer)
@@ -51,8 +64,9 @@ public class Customer3Controller : MonoBehaviour
                 }
 
                 //Voice Line Output
-                Debug.Log(voiceLines[voiceLineIndex]);
+                //Debug.Log(voiceLines[voiceLineIndex]);
                 dialogOutput.text = voiceLines[voiceLineIndex];
+                EndCheck();
             }
         }
     }
@@ -82,12 +96,14 @@ public class Customer3Controller : MonoBehaviour
         voiceLines = new string[5] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food...", "NOM NOM NOM" };
     }
 
+    //When button clicked, next dialog will show
     public void ContinueDialog()
     {
         //If on last voice line, repeat
         if (voiceLineIndex < 2)
         {
             voiceLineIndex++; //Next Voice Line
+            //EndCheck();
         }
         if (voiceLineIndex == 2)
         {
@@ -95,6 +111,40 @@ public class Customer3Controller : MonoBehaviour
             causingScene = true;
             dialogButton.SetActive(false);
         }
+        EndCheck();
         dialogOutput.text = voiceLines[voiceLineIndex];
+    }
+    public void EndCheck()
+    {
+        if (i <= voiceLineIndex)
+        {
+            dialogOutput.text = voiceLines[voiceLineIndex];
+            StartCoroutine(TextVisible());
+        }
+    }
+
+    //Typewriter effect for dialog shown
+    private IEnumerator TextVisible()
+    {
+        //dialogOutput = voiceLines[voiceLineIndex];
+        dialogOutput.ForceMeshUpdate();
+        int totalVisibleCharacters = dialogOutput.textInfo.characterCount;
+        int counter = 0;
+
+        while (true)
+        {
+            int visibleCount = counter % (totalVisibleCharacters + 1);
+            dialogOutput.maxVisibleCharacters = visibleCount;
+
+            if (visibleCount >= totalVisibleCharacters)
+            {
+                i += 1;
+                Invoke("EndCheck", timeBtwnWords);
+                break;
+            }
+
+            counter += 1;
+            yield return new WaitForSeconds(timeBtwnChars);
+        }
     }
 }

@@ -10428,9 +10428,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sadie: {fileID: 296968910}
   causingScene: 0
+  voiceLines:
+  - I want food
+  - Fooooood
+  - Get that waitress to get me my food!
+  - fooooooood.......
+  - NOM NOM NOM
   dialogBox: {fileID: 8826455600140564636}
   dialogButton: {fileID: 4485216921908075135}
   dialogOutput: {fileID: 314640128669738064}
+  _textMeshPro: {fileID: 0}
+  timeBtwnChars: 0.05
+  timeBtwnWords: 0.1
 --- !u!1 &1594643679
 GameObject:
   m_ObjectHideFlags: 0
@@ -14168,7 +14177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &7792646240272344616
 CanvasRenderer:
   m_ObjectHideFlags: 0
