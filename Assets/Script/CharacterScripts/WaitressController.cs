@@ -14,6 +14,7 @@ public class WaitressController : MonoBehaviour
     private int voiceLineIndex;
 
     //Dialog Box Variables
+    [Header("Dialog Variables", order = 1)]
     public GameObject dialogBox;
     public TMP_Text dialogOutput;
 
@@ -41,6 +42,7 @@ public class WaitressController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log(voiceLines[voiceLineIndex]);
+                dialogBox.SetActive(true);
 
                 //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
                 if (claye.causingScene)
@@ -55,7 +57,6 @@ public class WaitressController : MonoBehaviour
                 }
 
                 //Voice Line Output
-                dialogBox.SetActive(true);
                 dialogOutput.text = voiceLines[voiceLineIndex];
             }
         }
@@ -86,10 +87,20 @@ public class WaitressController : MonoBehaviour
         voiceLines = new string[3] { "Hi, I'm waiting to see if anyone needs anything", "Okay... Bye!", "Oh Let me tend to this customer!" };
     }
 
-    /*
-    //Waitress Getting Claye's Order Event
-    private void GettingClayesOrder() 
+    public void ContinueDialog()
     {
-
-    }*/
+        dialogOutput.text = voiceLines[voiceLineIndex];
+        
+        //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
+        if (claye.causingScene)
+        {
+            voiceLineIndex = 2;
+            talkedToPlayer = true;
+            cookBusy = true;
+        }
+        else
+        {
+            voiceLineIndex = 0;
+        }
+    }
 }
