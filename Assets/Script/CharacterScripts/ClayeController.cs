@@ -12,11 +12,6 @@ public class Customer3Controller : MonoBehaviour
 
     //Voice Lines Variables
     public string[] voiceLines;
-    /*= new string[5] {"I WANT FOOD!",
-            "GET ME FOOD",
-            "FOOOOOOOD!",
-            "food...", 
-            "NOM NOM NOM"};*/
     private int voiceLineIndex = 0;
 
     //Dialog Box Variables
@@ -91,10 +86,10 @@ public class Customer3Controller : MonoBehaviour
     }
 
     /*-- Functions --*/
-    private void InitializeVoiceLines()
+    /* private void InitializeVoiceLines()
     {
         voiceLines = new string[5] {"I WANT FOOD!","GET ME FOOD","FOOOOOOOD!","food...", "NOM NOM NOM" };
-    }
+    }*/
 
     //When button clicked, next dialog will show
     public void ContinueDialog()

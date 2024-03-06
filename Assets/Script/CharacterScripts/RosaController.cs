@@ -2,16 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class WaitressController : MonoBehaviour
+public class RosaController : MonoBehaviour
 {
-
-    //Event Variables
-    public Customer3Controller claye;
-    public bool cookBusy;
-    public bool talkedToPlayer;
-
     //Voice Lines Variables
     public string[] voiceLines;
     private int voiceLineIndex;
@@ -29,19 +22,13 @@ public class WaitressController : MonoBehaviour
 
     private bool inRange;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        cookBusy = false;
-        talkedToPlayer = false;
-
         inRange = false;
 
-        //InitializeVoiceLines();
-        //voiceLineIndex = 0;
         dialogBox.SetActive(false);
-       
+
         EndCheck();
     }
 
@@ -52,20 +39,8 @@ public class WaitressController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-               // Debug.Log(voiceLines[voiceLineIndex]);
+                // Debug.Log(voiceLines[voiceLineIndex]);
                 dialogBox.SetActive(true);
-
-                //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
-                if (claye.causingScene)
-                {
-                    voiceLineIndex = 2;
-                    talkedToPlayer = true;
-                    cookBusy = true;
-                }
-                else
-                {
-                    voiceLineIndex = 0;
-                }
 
                 //Voice Line Output
                 dialogOutput.text = voiceLines[voiceLineIndex];
@@ -74,45 +49,10 @@ public class WaitressController : MonoBehaviour
         }
     }
 
-    /*-- Trigger Events --*/
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            inRange = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            inRange = false;
-            Debug.Log(voiceLines[1]);
-            dialogBox.SetActive(false);
-        }
-    }
-
-    /*-- Functions --*/
-    /*private void InitializeVoiceLines()
-    {
-        voiceLines = new string[3] { "Hi, I'm waiting to see if anyone needs anything", "Okay... Bye!", "Oh Let me tend to this customer!" };
-    }*/
-
     //When button clicked, next dialog will show
     public void ContinueDialog()
     {
-        //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
-        if (claye.causingScene)
-        {
-            voiceLineIndex = 2;
-            talkedToPlayer = true;
-            cookBusy = true;
-        }
-        else
-        {
-            voiceLineIndex = 0;
-        }
+        voiceLineIndex++;
 
         //Voice Line Output
         EndCheck();
