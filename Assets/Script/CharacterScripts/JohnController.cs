@@ -40,12 +40,32 @@ public class JohnController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 // Debug.Log(voiceLines[voiceLineIndex]);
+                //dialogButton.SetActive(false);
                 dialogBox.SetActive(true);
 
                 //Voice Line Output
                 dialogOutput.text = voiceLines[voiceLineIndex];
                 EndCheck();
             }
+            dialogButton.SetActive(false);
+        }
+    }
+
+    /*-- Trigger Events --*/
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = false;
+            dialogBox.SetActive(false);
         }
     }
 

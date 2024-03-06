@@ -45,6 +45,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!jumping && fromFloor)
+        {
+            inputX = 0;
+        }
 
         if (canMove)
         {
@@ -97,11 +101,6 @@ public class PlayerController : MonoBehaviour
         {
             inputX = 0;
         }
-
-        /*if (!jumping && fromFloor) {
-            inputX = 0;
-        }*/
-
 
         // jumping on bench
         //if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))

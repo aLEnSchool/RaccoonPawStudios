@@ -106,6 +106,7 @@ public class Customer3Controller : MonoBehaviour
             causingScene = true;
             dialogButton.SetActive(false);
         }
+
         EndCheck();
         dialogOutput.text = voiceLines[voiceLineIndex];
     }

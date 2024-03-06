@@ -49,10 +49,35 @@ public class FrannieController : MonoBehaviour
             }
         }
     }
+
+    /*-- Trigger Events --*/
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = false;
+            dialogBox.SetActive(false);
+        }
+    }
+
+
     //When button clicked, next dialog will show
     public void ContinueDialog()
     {
         voiceLineIndex++;
+
+        if (voiceLineIndex == 1)
+        {
+            dialogButton.SetActive(false);
+        }
 
         //Voice Line Output
         EndCheck();
