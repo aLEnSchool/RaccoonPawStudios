@@ -98,9 +98,9 @@ public class PlayerController : MonoBehaviour
             inputX = 0;
         }
 
-        if (!jumping && fromFloor) {
+        /*if (!jumping && fromFloor) {
             inputX = 0;
-        }
+        }*/
 
 
         // jumping on bench
