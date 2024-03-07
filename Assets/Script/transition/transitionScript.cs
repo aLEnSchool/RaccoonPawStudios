@@ -10,7 +10,14 @@ public class transitionScript : MonoBehaviour
 
     [Header("Texts", order = 0)]
     [SerializeField] TextMeshProUGUI caseText;
-    [SerializeField] TextMeshProUGUI descriptionText;
+    [SerializeField] TextMeshProUGUI descriptionText1;
+    [SerializeField] TextMeshProUGUI descriptionText2;
+    [SerializeField] TextMeshProUGUI descriptionText3;
+    [SerializeField] TextMeshProUGUI descriptionText4;
+    [SerializeField] TextMeshProUGUI descriptionText5;
+    [SerializeField] TextMeshProUGUI descriptionText6;
+    [SerializeField] TextMeshProUGUI descriptionText7;
+    [SerializeField] TextMeshProUGUI descriptionText8;
     [SerializeField] TextMeshProUGUI continueText;
     private TextMeshProUGUI[] allTexts;
 
@@ -23,9 +30,16 @@ public class transitionScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        allTexts = new TextMeshProUGUI[3]{ caseText, descriptionText, continueText};
+        allTexts = new TextMeshProUGUI[10]{ caseText, descriptionText1, descriptionText2, descriptionText3, descriptionText4, descriptionText5, descriptionText6, descriptionText7, descriptionText8, continueText };
 
-        descriptionText.gameObject.SetActive(false);
+        descriptionText1.gameObject.SetActive(false);
+        descriptionText2.gameObject.SetActive(false);
+        descriptionText3.gameObject.SetActive(false);
+        descriptionText4.gameObject.SetActive(false);
+        descriptionText5.gameObject.SetActive(false);
+        descriptionText6.gameObject.SetActive(false);
+        descriptionText7.gameObject.SetActive(false);
+        descriptionText8.gameObject.SetActive(false);   
         continueText.gameObject.SetActive(false);
 
         goThroughTexts();
