@@ -45,6 +45,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!jumping && fromFloor)
+        {
+            inputX = 0;
+        }
 
         if (canMove)
         {
@@ -98,11 +102,6 @@ public class PlayerController : MonoBehaviour
             inputX = 0;
         }
 
-        /*if (!jumping && fromFloor) {
-            inputX = 0;
-        }*/
-
-
         // jumping on bench
         //if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))
         //{
@@ -118,7 +117,7 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(inputX, rb.velocity.y);
 
         // have the hat float down
-        if(rb.velocity.y < 0 && playHatAnimation) // if the hat is moving downwards
+        if (rb.velocity.y < 0 && playHatAnimation) // if the hat is moving downwards
         {
             StartCoroutine(hatFloatingDownAnimation());
             playHatAnimation = false;
@@ -126,12 +125,12 @@ public class PlayerController : MonoBehaviour
 
 
         // flip character graphic
-        if(inputX > 0 && !facingRight) // if player is going right but graphic is facing left
+        if (inputX > 0 && !facingRight) // if player is going right but graphic is facing left
         {
             flip();
             facingRight = true;
         }
-        else if(inputX < 0 && facingRight) // if player is going left but facing right
+        else if (inputX < 0 && facingRight) // if player is going left but facing right
         {
             flip();
             facingRight = false;
@@ -142,7 +141,7 @@ public class PlayerController : MonoBehaviour
         //float targetSpeed = horizontal * speed;                                                         //Get the desired desired velocity
         //float speedDif = targetSpeed - rb.velocity.x;                                                   //Get the difference between the current velocity and our desired velocity
         //float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : decceleration;              //If the absolute value of the tharget speed is greater than 0.1 set accel rate to accel
-        
+
         //float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);   //calculate the movement
 
         //rb.AddForce(movement * Vector2.right);
@@ -184,7 +183,7 @@ public class PlayerController : MonoBehaviour
     // function to slowly decrease the speed at which the hat is falling, to be used after a jump
     private IEnumerator hatFloatingDownAnimation()
     {
-        for(int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + 1.0f);
             yield return new WaitForSeconds(0.1f);
