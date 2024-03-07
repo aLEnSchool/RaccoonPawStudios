@@ -29,6 +29,8 @@ public class ClayeTutorialController : MonoBehaviour
 
         dialogBox.SetActive(false);
 
+        //dialogOutput.text = voiceLines[voiceLineIndex];
+
         EndCheck();
     }
 
@@ -72,7 +74,7 @@ public class ClayeTutorialController : MonoBehaviour
     {
         voiceLineIndex++;
 
-        if (voiceLineIndex == 1)
+        if (voiceLineIndex == 2)
         {
             dialogButton.SetActive(false);
         }
