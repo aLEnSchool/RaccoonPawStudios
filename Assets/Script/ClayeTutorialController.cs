@@ -3,60 +3,89 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TutorialController : MonoBehaviour
-{   
-    //Voice Line Variables
-    [Header("Voice Lines", order = 1)]
-    public string voiceLine;
-    private int voiceLineIndex = 1;
+public class ClayeTutorialController : MonoBehaviour
+{
+    //Voice Lines Variables
+    public string[] voiceLines;
+    private int voiceLineIndex;
+
+    //Dialog Box Variables
+    [Header("Dialog Variables", order = 1)]
     public GameObject dialogBox;
     public TMP_Text dialogOutput;
-    //public GameObject dialogButton;
+    public GameObject dialogButton;
 
     [Header("Typewriter Variables", order = 2)]
     [SerializeField] float timeBtwnChars;
     [SerializeField] float timeBtwnWords;
     int i = 0;
 
+    private bool inRange;
+
     // Start is called before the first frame update
     void Start()
     {
-        dialogBox.gameObject.SetActive(false);
+        inRange = false;
+
+        dialogBox.SetActive(false);
+
+        EndCheck();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (transform.tag == "JumpEvent")
+        if (inRange)
         {
-            if (collision.gameObject.tag == "Player")
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Need to Jump");
-                dialogOutput.text = voiceLine;
-                dialogBox.gameObject.SetActive(true);
+                // Debug.Log(voiceLines[voiceLineIndex]);
+                dialogBox.SetActive(true);
+
+                //Voice Line Output
+                dialogOutput.text = voiceLines[voiceLineIndex];
+                EndCheck();
             }
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+
+    /*-- Trigger Events --*/
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        dialogBox.gameObject.SetActive(false);
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = true;
+        }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            inRange = false;
+            dialogBox.SetActive(false);
+        }
+    }
+
+    //When button clicked, next dialog will show
     public void ContinueDialog()
     {
+        voiceLineIndex++;
+
+        if (voiceLineIndex == 1)
+        {
+            dialogButton.SetActive(false);
+        }
+
+        //Voice Line Output
         EndCheck();
-        dialogOutput.text = voiceLine;
+        dialogOutput.text = voiceLines[voiceLineIndex];
     }
     public void EndCheck()
     {
         if (i <= voiceLineIndex)
         {
-            dialogOutput.text = voiceLine;
+            dialogOutput.text = voiceLines[voiceLineIndex];
             StartCoroutine(TextVisible());
         }
     }
@@ -86,3 +115,4 @@ public class TutorialController : MonoBehaviour
         }
     }
 }
+

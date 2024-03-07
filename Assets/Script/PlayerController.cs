@@ -83,12 +83,12 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.A) && jumping)
             {
-                Debug.Log("ADDING FORCE");
+                //Debug.Log("ADDING FORCE");
                 rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
             }
             if (Input.GetKeyUp(KeyCode.D) && jumping)
             {
-                Debug.Log("ADDING FORCE");
+                //Debug.Log("ADDING FORCE");
                 rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
             }
         }
