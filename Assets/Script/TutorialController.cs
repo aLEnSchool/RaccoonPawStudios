@@ -32,15 +32,13 @@ public class TutorialController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (transform.tag == "JumpEvent")
-        {
             if (collision.gameObject.tag == "Player")
             {
                 Debug.Log("Need to Jump");
                 dialogOutput.text = voiceLine;
                 dialogBox.gameObject.SetActive(true);
+                //EndCheck();
             }
-        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
