@@ -20,7 +20,7 @@ public class WaitressController : MonoBehaviour
     [Header("Dialog Variables", order = 1)]
     public GameObject dialogBox;
     public TMP_Text dialogOutput;
-    public GameObject dialogButton;
+    //public GameObject dialogButton;
 
     [Header("Typewriter Variables", order = 2)]
     [SerializeField] float timeBtwnChars;
@@ -37,6 +37,8 @@ public class WaitressController : MonoBehaviour
         talkedToPlayer = false;
 
         inRange = false;
+
+        dialogOutput.text = voiceLines[voiceLineIndex];
 
         //InitializeVoiceLines();
         //voiceLineIndex = 0;
@@ -58,6 +60,7 @@ public class WaitressController : MonoBehaviour
                 //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
                 if (claye.causingScene)
                 {
+                    //dialogButton.SetActive(false);
                     voiceLineIndex = 2;
                     talkedToPlayer = true;
                     cookBusy = true;
@@ -65,6 +68,7 @@ public class WaitressController : MonoBehaviour
                 else
                 {
                     voiceLineIndex = 0;
+                    //dialogButton.SetActive(false);
                 }
 
                 //Voice Line Output
@@ -105,6 +109,7 @@ public class WaitressController : MonoBehaviour
         //If claye is causing a scene, cook will be busy; allowing player to enter kitchen
         if (claye.causingScene)
         {
+            //dialogButton.SetActive(false);
             voiceLineIndex = 2;
             talkedToPlayer = true;
             cookBusy = true;
@@ -112,6 +117,7 @@ public class WaitressController : MonoBehaviour
         else
         {
             voiceLineIndex = 0;
+            //dialogButton.SetActive(false);
         }
 
         //Voice Line Output

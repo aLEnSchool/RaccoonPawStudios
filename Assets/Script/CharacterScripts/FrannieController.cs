@@ -27,6 +27,8 @@ public class FrannieController : MonoBehaviour
     void Start()
     {
         inRange = false;
+        
+        dialogOutput.text = voiceLines[voiceLineIndex];
 
         dialogBox.SetActive(false);
 

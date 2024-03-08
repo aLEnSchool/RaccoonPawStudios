@@ -32,6 +32,15 @@ public class BookController : MonoBehaviour
             book[i].SetActive(false);
         }
 
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            rightButton();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            leftButton();
+        }
+
         book[pageIndex].SetActive(true);
     }
 

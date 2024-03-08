@@ -29,7 +29,7 @@ public class ClayeTutorialController : MonoBehaviour
 
         dialogBox.SetActive(false);
 
-        //dialogOutput.text = voiceLines[voiceLineIndex];
+        dialogOutput.text = voiceLines[voiceLineIndex];
 
         EndCheck();
     }
