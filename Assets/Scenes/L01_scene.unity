@@ -4377,8 +4377,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18855, y: 1.3005, z: 0}
-    m_Extent: {x: 4.64235, y: 3.5669003, z: 0}
+    m_Center: {x: 0.18600011, y: 1.3011501, z: 0}
+    m_Extent: {x: 4.6450996, y: 3.56375, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8069,8 +8069,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17610002, y: 2.0240002, z: 0}
-    m_Extent: {x: 2.23, y: 2.3451, z: 0}
+    m_Center: {x: 0.17550004, y: 2.02245, z: 0}
+    m_Extent: {x: 2.2345, y: 2.33665, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -9561,8 +9561,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.022950053, y: 1.3635, z: 0}
-    m_Extent: {x: 2.3231502, y: 1.995, z: 0}
+    m_Center: {x: -0.027249932, y: 1.37365, z: 0}
+    m_Extent: {x: 2.32135, y: 1.99765, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -10731,8 +10731,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19229984, y: 1.30485, z: 0}
-    m_Extent: {x: 4.6548, y: 3.56455, z: 0}
+    m_Center: {x: 0.18994999, y: 1.2982999, z: 0}
+    m_Extent: {x: 4.64745, y: 3.5674, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15349,6 +15349,7 @@ GameObject:
   - component: {fileID: 1486233420}
   - component: {fileID: 1486233419}
   - component: {fileID: 1486233418}
+  - component: {fileID: 1486233423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -15445,6 +15446,7 @@ MonoBehaviour:
   jumpForce: 10
   canMove: 0
   jumpForceBench: 5
+  animator: {fileID: 1486233423}
 --- !u!212 &1486233421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15512,6 +15514,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1486233423
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486233417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10220710bc9b34d4cbec26e4952463d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1487855537
 GameObject:
   m_ObjectHideFlags: 0
@@ -19896,8 +19919,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3273997, y: 1.3001499, z: 0}
-    m_Extent: {x: 8.1682, y: 2.10115, z: 0}
+    m_Center: {x: 7.32695, y: 1.29895, z: 0}
+    m_Extent: {x: 8.16195, y: 2.10275, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55

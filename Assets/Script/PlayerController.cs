@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
 
+    public Animator animator;
+
     private void Awake()
     {
         instance = this;
@@ -45,6 +47,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // sprite animations
+        if ((inputX > 0.01 || inputX < -0.01) && !jumping)
+        {
+            animator.SetBool("Walking", true);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
+        }
+        
+
+
         if (!jumping && fromFloor)
         {
             inputX = 0;
