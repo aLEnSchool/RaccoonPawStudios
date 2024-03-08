@@ -49,6 +49,7 @@ public class ToCaseController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inRange = false;
+            popUp.SetActive(false);
         }
     }
 
