@@ -89,6 +89,7 @@ public class ObjectController : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         transform.SetParent(player.transform);
+        transform.position = new Vector2(player.transform.position.x+1.5f, player.transform.position.y);
     }
 
     private void dropItem()
