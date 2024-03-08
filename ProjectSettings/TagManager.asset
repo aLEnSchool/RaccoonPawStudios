@@ -16,6 +16,7 @@ TagManager:
   - BlackScreen
   - JumpEvent
   - DontDestroy
+  - Lit Lantern
   layers:
   - Default
   - TransparentFX
