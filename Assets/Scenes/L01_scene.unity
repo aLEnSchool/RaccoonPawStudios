@@ -2725,7 +2725,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.4356024}
+  m_Offset: {x: 0, y: -0.36613402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2736,7 +2736,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.1287952}
+  m_Size: {x: 1, y: 0.26773196}
   m_EdgeRadius: 0
 --- !u!212 &309967607
 SpriteRenderer:
@@ -3496,7 +3496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &366830862
 Transform:
   m_ObjectHideFlags: 0
@@ -3507,7 +3507,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.388, y: -0.396, z: -0.05}
-  m_LocalScale: {x: 0.21897613, y: 0.21698545, z: 0.29835498}
+  m_LocalScale: {x: 0.76865, y: 0.7616623, z: 1.0472857}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 595721209}
@@ -3892,8 +3892,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18469977, y: 1.2979999, z: 0}
-    m_Extent: {x: 4.6493998, y: 3.5607, z: 0}
+    m_Center: {x: 0.18930006, y: 1.2978501, z: 0}
+    m_Extent: {x: 4.6552, y: 3.56955, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4893,7 +4893,6 @@ GameObject:
   - component: {fileID: 595721213}
   - component: {fileID: 595721212}
   - component: {fileID: 595721211}
-  - component: {fileID: 595721210}
   m_Layer: 0
   m_Name: CodeLockPuzzleButton
   m_TagString: Untagged
@@ -4910,26 +4909,13 @@ Transform:
   m_GameObject: {fileID: 595721208}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.66, y: -17.173, z: -2.89}
-  m_LocalScale: {x: 2.5561, y: 2.18033, z: 1.7867}
+  m_LocalPosition: {x: 9.446, y: -18.157, z: -2.89}
+  m_LocalScale: {x: 0.6315075, y: 0.5386702, z: 0.44142038}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 366830862}
   m_Father: {fileID: 336120375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &595721210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595721208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 366830861}
 --- !u!61 &595721211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5028,9 +5014,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: b4ea69c00b119d3438c4fa929665b494, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.2985048, g: 0.49056602, b: 0.3308767, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7253,7 +7239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &760964636
 Transform:
   m_ObjectHideFlags: 0
@@ -7597,8 +7583,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17329991, y: 2.0151, z: 0}
-    m_Extent: {x: 2.2305999, y: 2.3393998, z: 0}
+    m_Center: {x: 0.18754995, y: 2.0149498, z: 0}
+    m_Extent: {x: 2.23065, y: 2.33535, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8912,7 +8898,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: dc32f97cfdf108b4bab6c3f740ca2841, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9089,8 +9075,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.021900058, y: 1.3642001, z: 0}
-    m_Extent: {x: 2.3198, y: 1.9963, z: 0}
+    m_Center: {x: -0.02699995, y: 1.36975, z: 0}
+    m_Extent: {x: 2.3236, y: 2.00425, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -10259,8 +10245,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19289994, y: 1.3063, z: 0}
-    m_Extent: {x: 4.6441, y: 3.5644999, z: 0}
+    m_Center: {x: 0.19919991, y: 1.3009999, z: 0}
+    m_Extent: {x: 4.6484003, y: 3.5644, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -12164,7 +12150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: dc32f97cfdf108b4bab6c3f740ca2841, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -19205,8 +19191,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3266997, y: 1.3024501, z: 0}
-    m_Extent: {x: 8.171, y: 2.1005502, z: 0}
+    m_Center: {x: 7.31845, y: 1.29825, z: 0}
+    m_Extent: {x: 8.16185, y: 2.09705, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
