@@ -31,7 +31,22 @@ public class StaffRoomController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Lantern With Glue")
+        if (collision.transform.tag == "Lit Lantern")
+        {
+
+            //Show Puzzle
+            doorToAlley.SetActive(true);
+            lockerInteraction.SetActive(true);
+
+            darkness.SetActive(false);
+
+            //sprite.color = Color.blue;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Lit Lantern")
         {
 
             //Show Puzzle
