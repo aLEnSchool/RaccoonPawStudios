@@ -6,6 +6,8 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour
 {
     private SpriteRenderer sprite; // For Testing
+    [SerializeField] private GameObject unlitLantern;
+    [SerializeField] private GameObject litLantern;
 
     private bool objectPickedUp;
     private bool inRange;
@@ -51,21 +53,33 @@ public class ObjectController : MonoBehaviour
         }
 
         //Lantern Gets Clue collision
-        if (transform.tag == "Lantern")
-        {
-            if (collision.transform.tag == "Glue")
-            {
-                transform.tag = "Lantern With Glue";
-                sprite.color = Color.red;
-            }
-        }
+        //if (transform.tag == "Lantern")
+        //{
+        //    if (collision.transform.tag == "Glue")
+        //    {
+        //        transform.tag = "Lantern With Glue";
+        //        sprite.color = Color.red;
+        //    }
+        //}
+        ////Lantern Gets lit
+        //if (transform.tag == "Lantern With Glue")
+        //{
+        //    if (collision.transform.tag == "Lighter")
+        //    {
+        //        transform.tag = "Lit Lantern";
+        //        sprite.color = Color.yellow;
+        //    }
+        //}
+
         //Lantern Gets lit
-        if (transform.tag == "Lantern With Glue")
+        if (transform.tag == "Lantern")
         {
             if (collision.transform.tag == "Lighter")
             {
                 transform.tag = "Lit Lantern";
-                sprite.color = Color.yellow;
+
+                litLantern.SetActive(true);
+                unlitLantern.SetActive(false);
             }
         }
     }
