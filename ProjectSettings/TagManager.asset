@@ -15,6 +15,7 @@ TagManager:
   - Bench
   - BlackScreen
   - JumpEvent
+  - DontDestroy
   layers:
   - Default
   - TransparentFX

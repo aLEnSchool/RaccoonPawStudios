@@ -256,8 +256,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.53054994, y: -2.4482, z: 0}
-    m_Extent: {x: 1.7966499, y: 3.1978, z: 0}
+    m_Center: {x: 0.52494997, y: -2.4542, z: 0}
+    m_Extent: {x: 1.7994499, y: 3.2027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2056,8 +2056,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.38715, y: -2.45785, z: 0}
-    m_Extent: {x: 1.53795, y: 3.1968498, z: 0}
+    m_Center: {x: -0.38640004, y: -2.44625, z: 0}
+    m_Extent: {x: 1.5334, y: 3.19905, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2621,8 +2621,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.38559997, y: -2.4484499, z: 0}
-    m_Extent: {x: 1.5293, y: 3.19365, z: 0}
+    m_Center: {x: -0.38084996, y: -2.4487, z: 0}
+    m_Extent: {x: 1.54275, y: 3.1936998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2703,8 +2703,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.39005, y: -2.45865, z: 0}
-    m_Extent: {x: 1.53455, y: 3.20185, z: 0}
+    m_Center: {x: -0.38384998, y: -2.4538002, z: 0}
+    m_Extent: {x: 1.53895, y: 3.1984, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2785,8 +2785,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.38525003, y: -2.4480002, z: 0}
-    m_Extent: {x: 1.5459499, y: 3.2021, z: 0}
+    m_Center: {x: -0.38055003, y: -2.45635, z: 0}
+    m_Extent: {x: 1.53405, y: 3.19815, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3911,8 +3911,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5236, y: -2.4479501, z: 0}
-    m_Extent: {x: 1.7994, y: 3.20285, z: 0}
+    m_Center: {x: 0.52615, y: -2.4507499, z: 0}
+    m_Extent: {x: 1.79215, y: 3.20325, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3993,8 +3993,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.52675, y: -2.44625, z: 0}
-    m_Extent: {x: 1.80105, y: 3.1981502, z: 0}
+    m_Center: {x: 0.52274996, y: -2.45305, z: 0}
+    m_Extent: {x: 1.79195, y: 3.20065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4157,8 +4157,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.5227, y: -2.4555, z: 0}
-    m_Extent: {x: 1.7995, y: 3.1964, z: 0}
+    m_Center: {x: 0.5235, y: -2.4485, z: 0}
+    m_Extent: {x: 1.7985001, y: 3.2004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4569,8 +4569,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.011299998, y: 0.14905, z: 0}
-    m_Extent: {x: 1.0022, y: 0.85525, z: 0}
+    m_Center: {x: 0.0038500428, y: 0.1471, z: 0}
+    m_Extent: {x: 1.01215, y: 0.8542, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5071,6 +5071,7 @@ GameObject:
   - component: {fileID: 1718224064}
   - component: {fileID: 1718224063}
   - component: {fileID: 1718224062}
+  - component: {fileID: 1718224066}
   - component: {fileID: 1718224065}
   m_Layer: 0
   m_Name: Door
@@ -5205,6 +5206,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20.48, y: 20.48}
   m_EdgeRadius: 0
+--- !u!114 &1718224066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718224061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837c9e917d27f674789df6eb5ca9a285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1719203058
 GameObject:
   m_ObjectHideFlags: 0
