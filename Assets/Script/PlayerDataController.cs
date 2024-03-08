@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerDataController : MonoBehaviour
 {
-
-
     [Header("CaseFile1 Variables", order = 0)]
     static GameObject[] CaseFile1;
     //Characters
