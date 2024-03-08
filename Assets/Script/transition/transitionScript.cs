@@ -58,7 +58,7 @@ public class transitionScript : MonoBehaviour
             EndCheck(allTexts[voiceLineIndex]);
         }
 
-        if (voiceLineIndex > 8)
+        if (voiceLineIndex > 9)
         {
             Debug.Log("Go to next Scene");
             playertemp.GetComponent<PlayerDataController>().nextScene();
