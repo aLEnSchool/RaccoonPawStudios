@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerDataController : MonoBehaviour
 {
-
-
-    [Header("CaseFile1 Variables", order = 0)]
+    /*[Header("CaseFile1 Variables", order = 0)]
     static GameObject[] CaseFile1;
     //Characters
     //static string[] character_Casefile1;
@@ -22,11 +21,14 @@ public class PlayerDataController : MonoBehaviour
     static bool lighterDiscovered = false;
     static bool knifeDiscovered = false;
     static bool mercuryDiscovered = false;
-    static bool glassesDiscovered = false;
+    static bool glassesDiscovered = false;*/
+
+    static int sceneIndex;
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+        sceneIndex = 0;
     }
 
     // Start is called before the first frame update
@@ -41,5 +43,25 @@ public class PlayerDataController : MonoBehaviour
         
     }
 
-
+    public void nextScene()
+    {
+        Debug.Log("Loading next scene");
+        sceneIndex++;
+        if (sceneIndex == 1)
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
+        if (sceneIndex == 2)
+        {
+            SceneManager.LoadScene("Transition");
+        }
+        if (sceneIndex == 3)
+        {
+            SceneManager.LoadScene("L01_scene");
+        }
+        if (sceneIndex == 4)
+        {
+            SceneManager.LoadScene("CaseFileScreen");
+        }
+    }
 }

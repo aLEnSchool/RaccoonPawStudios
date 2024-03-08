@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class transitionScript : MonoBehaviour
 {
+    public GameObject playertemp;
     public string[] voiceLines;
     private int voiceLineIndex = 0;
 
@@ -26,6 +27,10 @@ public class transitionScript : MonoBehaviour
     [SerializeField] float timeBtwnChars;
     [SerializeField] float timeBtwnWords;
     int i = 0;
+    private void Awake()
+    {
+        playertemp = GameObject.FindGameObjectWithTag("DontDestroy");
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +58,11 @@ public class transitionScript : MonoBehaviour
             EndCheck(allTexts[voiceLineIndex]);
         }
 
+        if (voiceLineIndex > 8)
+        {
+            Debug.Log("Go to next Scene");
+            playertemp.GetComponent<PlayerDataController>().nextScene();
+        }
 
     }
 
