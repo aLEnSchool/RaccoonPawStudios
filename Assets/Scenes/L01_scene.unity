@@ -1986,8 +1986,6 @@ GameObject:
   - component: {fileID: 186324548}
   - component: {fileID: 186324547}
   - component: {fileID: 186324546}
-  - component: {fileID: 186324545}
-  - component: {fileID: 186324544}
   m_Layer: 0
   m_Name: diner_table (2)
   m_TagString: Bench
@@ -2010,96 +2008,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1135619715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &186324544
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186324542}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 6.9026346, y: 0.52190727}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.6438198, y: 0.59756863}
-  m_EdgeRadius: 0
---- !u!61 &186324545
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186324542}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: -6.982945, y: 0.70709836}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.4158564, y: 0.49655747}
-  m_EdgeRadius: 0
 --- !u!251 &186324546
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2151,7 +2059,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10223055, y: 3.3941202}
+  m_Offset: {x: 0.19731545, y: 3.3941202}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2162,7 +2070,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.571574, y: 0.5767498}
+  m_Size: {x: 8.004204, y: 0.5767498}
   m_EdgeRadius: 0
 --- !u!212 &186324548
 SpriteRenderer:
@@ -4293,8 +4201,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19289994, y: 1.3006499, z: 0}
-    m_Extent: {x: 4.6486998, y: 3.56685, z: 0}
+    m_Center: {x: 0.18965006, y: 1.3033001, z: 0}
+    m_Extent: {x: 4.64955, y: 3.5659, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -5731,7 +5639,6 @@ GameObject:
   - component: {fileID: 597601578}
   - component: {fileID: 597601577}
   - component: {fileID: 597601576}
-  - component: {fileID: 597601575}
   m_Layer: 0
   m_Name: diner_table (1)
   m_TagString: Bench
@@ -5754,51 +5661,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1135619715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &597601575
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597601573}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
-  m_UsedByComposite: 0
-  m_Offset: {x: 6.9026346, y: 0.52190727}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.6438198, y: 0.59756863}
-  m_EdgeRadius: 0
 --- !u!61 &597601576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5895,7 +5757,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10223055, y: 3.3941202}
+  m_Offset: {x: -0.8785161, y: 3.3941202}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5906,7 +5768,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.571574, y: 0.5767498}
+  m_Size: {x: 8.610081, y: 0.5767498}
   m_EdgeRadius: 0
 --- !u!212 &597601579
 SpriteRenderer:
@@ -5987,7 +5849,7 @@ Transform:
   m_GameObject: {fileID: 610978038}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 109.4, y: -290, z: 5.2}
+  m_LocalPosition: {x: 272.8, y: -315.5, z: 5.2}
   m_LocalScale: {x: 4.9304953, y: 4.9304953, z: 4.9304953}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8220,8 +8082,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17970002, y: 2.0239499, z: 0}
-    m_Extent: {x: 2.2361999, y: 2.34565, z: 0}
+    m_Center: {x: 0.17320001, y: 2.0191498, z: 0}
+    m_Extent: {x: 2.2336001, y: 2.33885, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -9796,8 +9658,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.021899939, y: 1.37235, z: 0}
-    m_Extent: {x: 2.3292, y: 1.99945, z: 0}
+    m_Center: {x: -0.02065003, y: 1.3628, z: 0}
+    m_Extent: {x: 2.3211498, y: 1.9964, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11099,8 +10961,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19074988, y: 1.2955, z: 0}
-    m_Extent: {x: 4.6480503, y: 3.5733001, z: 0}
+    m_Center: {x: 0.19334984, y: 1.29885, z: 0}
+    m_Extent: {x: 4.64185, y: 3.57165, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -20768,8 +20630,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.32855, y: 1.29155, z: 0}
-    m_Extent: {x: 8.160049, y: 2.09805, z: 0}
+    m_Center: {x: 7.32895, y: 1.28935, z: 0}
+    m_Extent: {x: 8.15545, y: 2.09925, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
