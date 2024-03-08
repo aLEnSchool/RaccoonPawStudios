@@ -67,7 +67,7 @@ public class Came : MonoBehaviour
         // Exit alley go back into staff room
         if (exitAlley.exitRoom)
         {
-            StartCoroutine(switchRooms(-15.5f, new Vector3(35.04f, -18.4f, -0.52f), exitAlley));
+            StartCoroutine(switchRooms(-15.5f, new Vector3(21.79f, -18.4f, -0.52f), exitAlley));
         }
     }
 
