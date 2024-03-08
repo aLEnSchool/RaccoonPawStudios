@@ -52,10 +52,10 @@ public class Came : MonoBehaviour
             StartCoroutine(switchRoomToKitchen(-31.5f, new Vector3(-3f, -34f, -0.52f), kitchenDoor));
         }
 
-        //if the player wants to go from hallway back to diner
+        //if the player wants to go from kitchen back to diner
         if (kitchenToDiner.exitRoom)
         {
-            StartCoroutine(switchRooms(0f, new Vector3(59f, -2.5f, -0.52f), kitchenToDiner));
+            StartCoroutine(switchRooms(0f, new Vector3(41.63f, -2.5f, -0.52f), kitchenToDiner));
         }
 
         // Between staff room and alley

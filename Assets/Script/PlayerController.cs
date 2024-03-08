@@ -103,15 +103,15 @@ public class PlayerController : MonoBehaviour
         }
 
         // jumping on bench
-        //if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))
-        //{
-        //    rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
+        if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))
+        {
+            rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
 
-        //    jumpCountBench += 1;
-        //    jumpingBench = checkJump(1); // check how many jumps have been done
+            jumpCountBench += 1;
+            jumpingBench = checkJump(1); // check how many jumps have been done
 
-        //    playHatAnimation = true; // allow the hat floating down animation to be played
-        //}
+            playHatAnimation = true; // allow the hat floating down animation to be played
+        }
 
         //Movement
         rb.velocity = new Vector2(inputX, rb.velocity.y);
