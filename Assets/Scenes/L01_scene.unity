@@ -1027,7 +1027,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.6563188}
+  m_Offset: {x: 0, y: 1.46}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4377,8 +4377,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19330001, y: 1.29805, z: 0}
-    m_Extent: {x: 4.6517, y: 3.5731502, z: 0}
+    m_Center: {x: 0.19124985, y: 1.30145, z: 0}
+    m_Extent: {x: 4.64925, y: 3.56835, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8145,8 +8145,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18005002, y: 2.02955, z: 0}
-    m_Extent: {x: 2.2242498, y: 2.33915, z: 0}
+    m_Center: {x: 0.18139994, y: 2.02105, z: 0}
+    m_Extent: {x: 2.2378001, y: 2.33435, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -9637,8 +9637,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.018950105, y: 1.36225, z: 0}
-    m_Extent: {x: 2.3294501, y: 1.99695, z: 0}
+    m_Center: {x: -0.02849996, y: 1.3738, z: 0}
+    m_Extent: {x: 2.3207998, y: 1.9949, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -10940,8 +10940,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19585013, y: 1.29555, z: 0}
-    m_Extent: {x: 4.6480503, y: 3.57275, z: 0}
+    m_Center: {x: 0.18690014, y: 1.3019, z: 0}
+    m_Extent: {x: 4.6531, y: 3.5682, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15904,6 +15904,7 @@ GameObject:
   - component: {fileID: 1486233420}
   - component: {fileID: 1486233419}
   - component: {fileID: 1486233418}
+  - component: {fileID: 1486233423}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -15974,7 +15975,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 50.8, y: 47.004883}
+    oldSize: {x: 50.80593, y: 44.48}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16000,6 +16001,7 @@ MonoBehaviour:
   jumpForce: 10
   canMove: 0
   jumpForceBench: 5
+  animator: {fileID: 1486233423}
 --- !u!212 &1486233421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16067,6 +16069,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1486233423
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486233417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 10220710bc9b34d4cbec26e4952463d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1487855537
 GameObject:
   m_ObjectHideFlags: 0
@@ -20585,8 +20608,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3346, y: 1.29725, z: 0}
-    m_Extent: {x: 8.16, y: 2.10555, z: 0}
+    m_Center: {x: 7.32935, y: 1.2969999, z: 0}
+    m_Extent: {x: 8.16565, y: 2.0967, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
