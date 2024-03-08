@@ -17515,8 +17515,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   voiceLines:
-  - Oh... Hi... hehehe
-  - I was with my husband... I have no idea where he is though
+  - Oh... Hi... Finally enjoying a date with my husband.
+  - My husband did dissappear somewhere... he has been tired since the accident
   dialogBox: {fileID: 1346836021}
   dialogOutput: {fileID: 743218743}
   dialogButton: {fileID: 2033203476}
