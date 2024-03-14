@@ -11,15 +11,15 @@ public class BookController : MonoBehaviour
     public GameObject page1;
     public GameObject page2;
     public GameObject page3;
-    public GameObject page4;
-    public GameObject page5;
-    public GameObject page6;
+    //public GameObject page4;
+    //public GameObject page5;
+    //public GameObject page6;
 
     // Start is called before the first frame update
     void Start()
     {
         pageIndex = 0;
-        maxPageCount = 6;
+        maxPageCount = 3;
 
         bookSetup();
     }
@@ -72,9 +72,9 @@ public class BookController : MonoBehaviour
         book[0] = page1;
         book[1] = page2;
         book[2] = page3;
-        book[3] = page4;
-        book[4] = page5;
-        book[5] = page6;
+        //book[3] = page4;
+        //book[4] = page5;
+        //book[5] = page6;
 
         Debug.Log(book);
     }
