@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
 using Ink.Runtime;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -86,6 +87,25 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(ExitDialogueMode());
         }
     }
+
+    public Ink.Runtime.Object GetVariableState(string variableName)
+    {
+        Ink.Runtime.Object variableValue = null;
+        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
+        if (variableValue == null)
+        {
+            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
+        }
+        return variableValue;
+    }
+
+    // This method will get called anytime the application exits.
+    // Depending on your game, you may want to save variable state in other places.
+    public void OnApplicationQuit()
+    {
+        dialogueVariables.SaveVariables();
+    }
+
 }
 
 

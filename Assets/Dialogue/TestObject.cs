@@ -1,8 +1,9 @@
-using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
+using TMPro;
+using Ink.Runtime;
+using UnityEngine.EventSystems;
 
 public class TestObject : MonoBehaviour
 {
@@ -61,16 +62,16 @@ public class TestObject : MonoBehaviour
         Ink.Runtime.Object variableValue = DialogueManager.GetInstance().GetVariableState(variableName);
 
         // Ensure the variable exists and is of type Bool
-        if (variableValue != null && variableValue is Ink.Runtime.Bool)
+        if (variableValue != null && variableValue is Ink.Runtime.BoolValue)
         {
             // Modify the variable value
-            ((Ink.Runtime.Bool)variableValue).value = newValue;
+            ((Ink.Runtime.BoolValue)variableValue).value = newValue;
 
             // Update the variable in the DialogueVariables instance
-            dialogueManager.dialogueVariables.variables[variableName] = variableValue;
+            DialogueManager.GetInstance().dialogueVariables.variables[variableName] = variableValue;
 
             // Save the updated variables (optional)
-            dialogueManager.dialogueVariables.SaveVariables();
+            DialogueManager.GetInstance().dialogueVariables.SaveVariables();
         }
         else
         {
