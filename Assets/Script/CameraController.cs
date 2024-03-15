@@ -17,6 +17,9 @@ public class Came : MonoBehaviour
     [SerializeField] private ExitDoor doorToAlley;
     [SerializeField] private ExitDoor exitAlley;
 
+    [SerializeField] private WCDoorController doorToWC;
+    [SerializeField] private ExitDoor exitWC;
+
     [SerializeField] private GameObject player; // to access player location
 
     [SerializeField] private FadeToBlack screenFade;
@@ -68,6 +71,16 @@ public class Came : MonoBehaviour
         if (exitAlley.exitRoom)
         {
             StartCoroutine(switchRooms(-15.5f, new Vector3(21.79f, -18.4f, -0.52f), exitAlley));
+        }
+
+        // Hallway to WC
+        if (doorToWC.exitRoom) // from hallway to WC
+        {
+            StartCoroutine(switchRooms(-48.5f, new Vector3(0.37f, -68.98f, -0.52f), doorToAlley));
+        }
+        if(exitWC.exitRoom) // from WC to hallway
+        {
+            StartCoroutine(switchRooms(-15.5f, new Vector3(5.43f, -18.4f, -0.52f), exitAlley));
         }
     }
 
