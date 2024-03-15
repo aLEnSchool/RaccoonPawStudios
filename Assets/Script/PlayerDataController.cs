@@ -26,6 +26,8 @@ public class PlayerDataController : MonoBehaviour
     static bool glassesDiscovered = false;*/
 
     public static int sceneIndex;
+    public bool itemTest;
+
 
     private void Awake()
     {
@@ -37,7 +39,7 @@ public class PlayerDataController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        itemTest = false;
     }
 
     // Update is called once per frame
