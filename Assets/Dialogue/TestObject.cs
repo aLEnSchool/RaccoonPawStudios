@@ -22,7 +22,7 @@ public class TestObject : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                itemEvent();
+                //itemEvent();
                 pickUp();
             }
         }
@@ -50,32 +50,34 @@ public class TestObject : MonoBehaviour
     {
         Debug.Log("Item PickedUp");
     }
-
-    private void itemEvent()
-    {
-        PlayerDataController.instance.itemTest = true;
-
-        string variableName = "your_boolean_variable"; // Change this to the name of your boolean variable
-        bool newValue = true; // Change this to the new value you want to assign to the variable
-
-        // Get the current value of the variable
-        Ink.Runtime.Object variableValue = DialogueManager.GetInstance().GetVariableState(variableName);
-
-        // Ensure the variable exists and is of type Bool
-        if (variableValue != null && variableValue is Ink.Runtime.BoolValue)
+    /*
+        private void itemEvent()
         {
-            // Modify the variable value
-            ((Ink.Runtime.BoolValue)variableValue).value = newValue;
+            PlayerDataController.instance.itemTest = true;
 
-            // Update the variable in the DialogueVariables instance
-            DialogueManager.GetInstance().dialogueVariables.variables[variableName] = variableValue;
+            string variableName = "your_boolean_variable"; // Change this to the name of your boolean variable
+            bool newValue = true; // Change this to the new value you want to assign to the variable
 
-            // Save the updated variables (optional)
-            DialogueManager.GetInstance().dialogueVariables.SaveVariables();
+            // Get the current value of the variable
+            Ink.Runtime.Object variableValue = DialogueManager.GetInstance().GetVariableState(variableName);
+
+            // Ensure the variable exists and is of type Bool
+            if (variableValue != null && variableValue is Ink.Runtime.BoolValue)
+            {
+                // Modify the variable value
+                ((Ink.Runtime.BoolValue)variableValue).value = newValue;
+
+                // Update the variable in the DialogueVariables instance
+                DialogueManager.GetInstance().dialogueVariables.variables[variableName] = variableValue;
+
+                // Save the updated variables (optional)
+                DialogueManager.GetInstance().dialogueVariables.SaveVariables();
+            }
+            else
+            {
+                Debug.LogError("Variable not found or not of type Bool: " + variableName);
+            }
         }
-        else
-        {
-            Debug.LogError("Variable not found or not of type Bool: " + variableName);
-        }
-    }
+    */
 }
+

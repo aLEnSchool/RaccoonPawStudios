@@ -1,4 +1,4 @@
-INCLUDE event_variables.ink
+INCLUDE event_variables.ink 
 
 { itemPickedUp == false: ->notTriggered | ->Triggered}
 === notTriggered ===

@@ -1,1 +1,2 @@
-VAR itemPickedUp = false
+VAR itemPickedUp = true
+

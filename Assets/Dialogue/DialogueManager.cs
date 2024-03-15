@@ -7,8 +7,8 @@ using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
-    [Header("Load Globals JSON")]
-    [SerializeField] private TextAsset loadGlobalsJSON;
+   /* [Header("Load Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;*/
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
 
-    public DialogueVariables dialogueVariables;
+   // public DialogueVariables dialogueVariables;
 
 
     private void Awake()
@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
 
-        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
+        //dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     public static DialogueManager GetInstance()
@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(ExitDialogueMode());
         }
     }
-
+/*
     public Ink.Runtime.Object GetVariableState(string variableName)
     {
         Ink.Runtime.Object variableValue = null;
@@ -105,6 +105,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueVariables.SaveVariables();
     }
+*/
 
 }
 
