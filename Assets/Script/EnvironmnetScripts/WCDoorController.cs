@@ -6,6 +6,11 @@ public class WCDoorController : MonoBehaviour
 {
     private bool inRange;
     public bool exitRoom;
+    private bool knobInDoor;
+
+    [SerializeField] private GameObject doorWithKnob;
+    [SerializeField] private GameObject doorNoKnob;
+    [SerializeField] private GameObject doorknob;
 
     GameObject blackScreen;
 
@@ -14,6 +19,10 @@ public class WCDoorController : MonoBehaviour
     {
         inRange = false;
         exitRoom = false;
+        knobInDoor = false;
+
+        doorWithKnob.SetActive(false);
+        doorNoKnob.SetActive(true);
 
         blackScreen = GameObject.FindWithTag("BlackScreen");
     }
@@ -25,8 +34,16 @@ public class WCDoorController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms)) // if user presses E, and not in the middle of switching rooms
             {
-                // Change camera to the next room
-                exitRoom = true;
+                if (knobInDoor) // if player brought missing doorknob to door
+                {
+                    // Change camera to the next room
+                    exitRoom = true;
+                }
+                else
+                {
+                    // display "cannot enter" message
+                    Debug.Log("cannot enter, there is no doorknob");
+                }
             }
         }
     }
@@ -41,6 +58,15 @@ public class WCDoorController : MonoBehaviour
             // change colour when intersected
             //gameObject.GetComponent<MeshRenderer>().material.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
+        }
+
+        if(collision.gameObject.tag == "Doorknob"){
+            knobInDoor = true;
+
+            // put knob back in door
+            doorWithKnob.SetActive(true);
+            doorNoKnob.SetActive(false);
+            doorknob.SetActive(false);
         }
     }
 

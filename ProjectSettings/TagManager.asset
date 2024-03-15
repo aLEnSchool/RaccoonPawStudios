@@ -17,6 +17,7 @@ TagManager:
   - JumpEvent
   - DontDestroy
   - Lit Lantern
+  - Doorknob
   layers:
   - Default
   - TransparentFX

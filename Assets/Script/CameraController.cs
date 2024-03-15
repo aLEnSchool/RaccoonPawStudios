@@ -76,11 +76,11 @@ public class Came : MonoBehaviour
         // Hallway to WC
         if (doorToWC.exitRoom) // from hallway to WC
         {
-            StartCoroutine(switchRooms(-48.5f, new Vector3(0.37f, -68.98f, -0.52f), doorToAlley));
+            StartCoroutine(switchRoomToWC(-66.92f, new Vector3(0.37f, -68.98f, -0.52f), doorToWC));
         }
         if(exitWC.exitRoom) // from WC to hallway
         {
-            StartCoroutine(switchRooms(-15.5f, new Vector3(5.43f, -18.4f, -0.52f), exitAlley));
+            StartCoroutine(switchRooms(-15.5f, new Vector3(5.43f, -18.4f, -0.52f), exitWC));
         }
     }
 
@@ -103,6 +103,23 @@ public class Came : MonoBehaviour
     }
 
     private IEnumerator switchRoomToKitchen(float yPosition, Vector3 playerPosition, KitchenDoorController door)
+    {
+        StartCoroutine(screenFade.fadeOut()); // fade to black
+
+        yield return new WaitForSeconds(0.5f);
+
+        // change camera position to the new room
+        yPos = yPosition;
+        // change the player position to be in the next room
+        player.transform.position = playerPosition;
+        door.exitRoom = false; //turn off so not constantly tp
+
+        yield return new WaitForSeconds(0.5f);
+
+        StartCoroutine(screenFade.fadeIn()); // fade in
+    }
+
+    private IEnumerator switchRoomToWC(float yPosition, Vector3 playerPosition, WCDoorController door)
     {
         StartCoroutine(screenFade.fadeOut()); // fade to black
 
