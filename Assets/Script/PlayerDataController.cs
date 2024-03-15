@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDataController : MonoBehaviour
 {
+    public static PlayerDataController instance;
+
     /*[Header("CaseFile1 Variables", order = 0)]
     static GameObject[] CaseFile1;
     //Characters
@@ -23,11 +25,12 @@ public class PlayerDataController : MonoBehaviour
     static bool mercuryDiscovered = false;
     static bool glassesDiscovered = false;*/
 
-    static int sceneIndex;
+    public static int sceneIndex;
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        instance = this;
+        DontDestroyOnLoad(instance.gameObject);
         sceneIndex = 0;
     }
 

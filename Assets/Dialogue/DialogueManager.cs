@@ -60,7 +60,7 @@ public class DialogueManager : MonoBehaviour
     private IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
-
+       
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -79,3 +79,5 @@ public class DialogueManager : MonoBehaviour
         }
     }
 }
+
+
