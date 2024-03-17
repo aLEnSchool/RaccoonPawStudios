@@ -1,6 +1,6 @@
 INCLUDE event_variables.ink
 
-{ objectPickedUp == true: ->notTriggered | ->Triggered}
+{ objectPickedUp == false: ->notTriggered | ->Triggered}
 
 === notTriggered ===
 This is a test
