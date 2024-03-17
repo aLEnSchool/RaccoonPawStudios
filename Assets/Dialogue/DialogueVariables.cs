@@ -8,7 +8,7 @@ public class DialogueVariables
 {
     public Dictionary<string, Ink.Runtime.Object> variables { get; private set; }
 
-    private Story globalVariablesStory;
+    public Story globalVariablesStory;
     private const string saveVariablesKey = "INK_VARIABLES";
 
     public DialogueVariables(TextAsset loadGlobalsJSON) 
@@ -56,7 +56,7 @@ public class DialogueVariables
         story.variablesState.variableChangedEvent -= VariableChanged;
     }
 
-    private void VariableChanged(string name, Ink.Runtime.Object value) 
+    public void VariableChanged(string name, Ink.Runtime.Object value) 
     {
         // only maintain variables that were initialized from the globals ink file
         if (variables.ContainsKey(name)) 

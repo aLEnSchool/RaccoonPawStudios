@@ -98,6 +98,11 @@ public class DialogueManager : MonoBehaviour
         }
         return variableValue;
     }
+    /*
+    public void changeItemPickedUp()
+    {
+        currentStory.variablesState["itemPickUp"] = true;
+    }*/
 
     // This method will get called anytime the application exits.
     // Depending on your game, you may want to save variable state in other places.

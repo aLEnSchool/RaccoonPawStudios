@@ -1,11 +1,10 @@
 INCLUDE event_variables.ink
 
-{ objectPickedUp == false: ->notTriggered | ->Triggered}
-
+{itemPickedUp == true: ->Triggered | ->notTriggered}
 === notTriggered ===
 This is a test
 Here's another line
-I want rocks
+I want rocks : {itemPickedUp}
 ->DONE
 
 === Triggered ===
@@ -13,7 +12,6 @@ Now interacted with thing
 Yup
 It worky
 -> DONE
-
-=== function objectPickedUp(pickUp) ===
-~itemPickedUp = pickUp
-~return itemPickedUp
+    
+== function changeItemPickedUp(value) ==
+    ~itemPickedUp = value
