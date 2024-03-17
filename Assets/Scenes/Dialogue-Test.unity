@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115748148}
   - component: {fileID: 115748149}
+  - component: {fileID: 115748150}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -167,8 +168,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327cc47ac734dcf4da257a563a13b82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadGlobalsJSON: {fileID: 4900000, guid: a3ac7662fdac886488923146b2354b4a, type: 3}
   dialoguePanel: {fileID: 191843570}
   dialogueText: {fileID: 1375776388}
+  dialogueVariables: {fileID: 0}
+--- !u!114 &115748150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115748147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0261e8371816fe46890d0c329489d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &173249462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fd1fe93db7e694dac93f1122b7c9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemTest: 0
 --- !u!1 &1685535109
 GameObject:
   m_ObjectHideFlags: 0

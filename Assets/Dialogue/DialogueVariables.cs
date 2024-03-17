@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
-public class DialogueVariables
+public class DialogueVariables 
 {
     public Dictionary<string, Ink.Runtime.Object> variables { get; private set; }
 
