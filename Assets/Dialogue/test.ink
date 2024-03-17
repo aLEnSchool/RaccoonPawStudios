@@ -1,6 +1,6 @@
 INCLUDE event_variables.ink
 
-{ itemPickedUp == false: ->notTriggered | ->Triggered}
+{ objectPickedUp == false: ->notTriggered | ->Triggered}
 
 === notTriggered ===
 This is a test
@@ -13,3 +13,7 @@ Now interacted with thing
 Yup
 It worky
 -> DONE
+
+=== function objectPickedUp(pickUp) ===
+~itemPickedUp = pickUp
+~return itemPickedUp

@@ -8,6 +8,7 @@ using UnityEngine.EventSystems;
 public class TestObject : MonoBehaviour
 {
     private bool inRange;
+    public 
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,12 @@ public class TestObject : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                itemEvent();
                 pickUp();
             }
+        }
+        if (PlayerDataController.instance.itemTest)
+        {
+            Debug.Log("Item has once been picked up");
         }
     }
 
@@ -35,9 +39,6 @@ public class TestObject : MonoBehaviour
         {
             Debug.Log("Player ENter");
             inRange = true;
-        }
-        if (PlayerDataController.instance.itemTest) {
-            Debug.Log("Item has once been picked up");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -55,11 +56,5 @@ public class TestObject : MonoBehaviour
         PlayerDataController.instance.itemTest = true;
     }
 
-    private void itemEvent()
-    {
-        string variableName = "itemPickedUp"; // Change this to the name of your boolean variable
-        bool newValue = true; // Change this to the new value you want to assign to the variable
 
-        
-    }
 }
