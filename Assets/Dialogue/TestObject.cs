@@ -36,6 +36,9 @@ public class TestObject : MonoBehaviour
             Debug.Log("Player ENter");
             inRange = true;
         }
+        if (PlayerDataController.instance.itemTest) {
+            Debug.Log("Item has once been picked up");
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -49,12 +52,11 @@ public class TestObject : MonoBehaviour
     private void pickUp()
     {
         Debug.Log("Item PickedUp");
+        PlayerDataController.instance.itemTest = true;
     }
 
     private void itemEvent()
     {
-        PlayerDataController.instance.itemTest = true;
-
         string variableName = "your_boolean_variable"; // Change this to the name of your boolean variable
         bool newValue = true; // Change this to the new value you want to assign to the variable
 
