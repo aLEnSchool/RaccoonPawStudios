@@ -4064,7 +4064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1327773779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6657,7 +6657,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e569f26cd9df274ba165d617364ad88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceLine: I would rather not soak myself in this puddle
+  voiceLine: This box is blocking my path. When I was kid, I used to live in a box
+    like this...
   dialogBox: {fileID: 8507786253963801232}
   dialogOutput: {fileID: 590454892462960220}
   timeBtwnChars: 0.05
