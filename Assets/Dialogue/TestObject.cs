@@ -56,10 +56,11 @@ public class TestObject : MonoBehaviour
         if (DialogueManager.GetInstance().currentStory != null)
         {
             // Modifying the variable "itemPickedUp" to false        
-            //DialogueManager.GetInstance().currentStory.EvaluateFunction("changeItemPickedUp", true);
-            //DialogueManager.GetInstance().currentStory.variablesState["itemPickedUp"] = true;
+            DialogueManager.GetInstance().currentStory.EvaluateFunction("changeItemPickedUp", true);
+            DialogueManager.GetInstance().currentStory.variablesState["itemPickedUp"] = true;
+            DialogueManager.GetInstance().dialogueVariables.globalVariablesStory.variablesState["itemPickedUp"] = true;
             //DialogueManager.GetInstance().changeItemPickedUp();
-           // DialogueManager.GetInstance().dialogueVariables.VariableChanged("itemPickedUp", Ink.Runtime.BoolValue.Equals(true));
+            //DialogueManager.GetInstance().dialogueVariables.VariableChanged("itemPickedUp", Ink.Runtime.BoolValue.Equals(true));
 
             Debug.Log("Item Picked Up");
         }
