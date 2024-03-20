@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class dialogueTrigger : MonoBehaviour
 {
-    [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
-
+    [Header("Ink Files")]
+    [SerializeField] private TextAsset itemPickedUp;
+    [SerializeField] private TextAsset itemNotPickedUp;
+    
     private bool playerInRange;
 
     private void Awake()
@@ -20,11 +21,17 @@ public class dialogueTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //Debug.Log(inkJSON.text);
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-            }
-               
+                if (PlayerDataController.instance.itemTest)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(itemPickedUp);
+                }
+                else
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(itemNotPickedUp);
+                }
+            }          
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collider)

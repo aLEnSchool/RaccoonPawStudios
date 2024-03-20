@@ -19,8 +19,6 @@ public class DialogueManager : MonoBehaviour
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
 
-    public DialogueVariables dialogueVariables;
-
 
     private void Awake()
     {
@@ -29,8 +27,6 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
         instance = this;
-
-        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     public static DialogueManager GetInstance()
@@ -87,30 +83,6 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(ExitDialogueMode());
         }
     }
-
-    public Ink.Runtime.Object GetVariableState(string variableName)
-    {
-        Ink.Runtime.Object variableValue = null;
-        dialogueVariables.variables.TryGetValue(variableName, out variableValue);
-        if (variableValue == null)
-        {
-            Debug.LogWarning("Ink Variable was found to be null: " + variableName);
-        }
-        return variableValue;
-    }
-    /*
-    public void changeItemPickedUp()
-    {
-        currentStory.variablesState["itemPickUp"] = true;
-    }*/
-
-    // This method will get called anytime the application exits.
-    // Depending on your game, you may want to save variable state in other places.
-    public void OnApplicationQuit()
-    {
-        dialogueVariables.SaveVariables();
-    }
-
 }
 
 
