@@ -46,28 +46,7 @@ public class TestObject : MonoBehaviour
 
     private void pickUp()
     {
-        //Debug.Log("Item Picked Up"); 
         PlayerDataController.instance.itemTest = true;
-
-        // Accessing DialogueManager instance
-        //DialogueManager dialogueManager = DialogueManager.GetInstance();
-
-        // Checking if currentStory is not null
-        if (DialogueManager.GetInstance().currentStory != null)
-        {
-            // Modifying the variable "itemPickedUp" to false        
-            DialogueManager.GetInstance().currentStory.EvaluateFunction("changeItemPickedUp", true);
-            DialogueManager.GetInstance().currentStory.variablesState["itemPickedUp"] = true;
-            DialogueManager.GetInstance().dialogueVariables.globalVariablesStory.variablesState["itemPickedUp"] = true;
-            //DialogueManager.GetInstance().changeItemPickedUp();
-            //DialogueManager.GetInstance().dialogueVariables.VariableChanged("itemPickedUp", Ink.Runtime.BoolValue.Equals(true));
-
-            Debug.Log("Item Picked Up");
-        }
-        else
-        {
-            Debug.LogWarning("Current story is null. Make sure it's set properly.");
-        }
     }
 
 
