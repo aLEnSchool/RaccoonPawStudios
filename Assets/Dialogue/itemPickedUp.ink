@@ -1,3 +1,2 @@
-Item pick up
-it works
-yay
+this is the item pickup
+hehehehehe it works

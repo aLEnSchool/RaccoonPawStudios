@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Transition.unity
     guid: 84b8a844da2bdf84088e4b7e2fde84e2
   - enabled: 1
-    path: Assets/Scenes/L01_scene.unity
+    path: Assets/Scenes/L01_scene_old.unity
     guid: b436932624490fa4683124bf90abf93c
   - enabled: 1
     path: Assets/Scenes/CaseFileScreen.unity
