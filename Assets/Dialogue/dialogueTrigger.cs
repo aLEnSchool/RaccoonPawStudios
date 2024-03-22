@@ -31,6 +31,11 @@ public class dialogueTrigger : MonoBehaviour
                 }
             }          
         }
+        
+        /*if(!playerInRange && DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            DialogueManager.GetInstance().ExitDialogueMode();
+        }*/
 
     }
 

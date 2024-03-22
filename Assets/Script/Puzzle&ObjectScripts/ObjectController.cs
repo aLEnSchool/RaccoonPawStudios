@@ -9,7 +9,7 @@ public class ObjectController : MonoBehaviour
     [SerializeField] private GameObject unlitLantern;
     [SerializeField] private GameObject litLantern;
 
-    private bool objectPickedUp;
+    public bool objectPickedUp;
     private bool inRange;
     private bool doorRange;
 
@@ -28,11 +28,11 @@ public class ObjectController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (inRange) { 
-                if (!objectPickedUp)
-                {
+            if (inRange && !objectPickedUp) { 
+                //if (!objectPickedUp)
+                //{
                     pickUp();
-                }
+                //}
             }
             else if (objectPickedUp && !doorRange)
             {
@@ -52,25 +52,6 @@ public class ObjectController : MonoBehaviour
             doorRange = true;
         }
 
-        //Lantern Gets Clue collision
-        //if (transform.tag == "Lantern")
-        //{
-        //    if (collision.transform.tag == "Glue")
-        //    {
-        //        transform.tag = "Lantern With Glue";
-        //        sprite.color = Color.red;
-        //    }
-        //}
-        ////Lantern Gets lit
-        //if (transform.tag == "Lantern With Glue")
-        //{
-        //    if (collision.transform.tag == "Lighter")
-        //    {
-        //        transform.tag = "Lit Lantern";
-        //        sprite.color = Color.yellow;
-        //    }
-        //}
-
         //Lantern Gets lit
         if (transform.tag == "Lantern")
         {
@@ -83,6 +64,7 @@ public class ObjectController : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -104,6 +86,8 @@ public class ObjectController : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         transform.SetParent(player.transform);
         transform.position = new Vector2(player.transform.position.x+1.5f, player.transform.position.y);
+
+        gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
     private void dropItem()
@@ -114,5 +98,7 @@ public class ObjectController : MonoBehaviour
 
         GameObject restingPlace = GameObject.FindGameObjectWithTag("Rest");
         transform.SetParent(restingPlace.transform);
+
+        gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 }
