@@ -17,6 +17,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator portraitAnimator;
 
+    [Header("Typewriter Effect")]
+    [SerializeField] private float typingSpeed = 0.05f;
+    private Coroutine displayLineCoroutine;
+
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
 
@@ -95,7 +99,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
             PlayerController.instance.canMove = true;
 
             changeProfilePic(currentStory.currentTags);
@@ -103,6 +111,17 @@ public class DialogueManager : MonoBehaviour
         else
         {
             StartCoroutine(ExitDialogueMode());
+        }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = "";
+
+        foreach (char letter in line.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 }
