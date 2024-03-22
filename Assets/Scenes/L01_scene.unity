@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18659997, y: 1.29645, z: 0}
-    m_Extent: {x: 4.6535997, y: 3.57155, z: 0}
+    m_Center: {x: 0.18659997, y: 1.29965, z: 0}
+    m_Extent: {x: 4.649, y: 3.56585, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4403,8 +4403,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19180012, y: 1.2971, z: 0}
-    m_Extent: {x: 4.6418, y: 3.5698, z: 0}
+    m_Center: {x: 0.19404984, y: 1.2997001, z: 0}
+    m_Extent: {x: 4.64225, y: 3.56, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4746,8 +4746,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19665003, y: 1.3017999, z: 0}
-    m_Extent: {x: 4.65135, y: 3.5653, z: 0}
+    m_Center: {x: 0.19464993, y: 1.302, z: 0}
+    m_Extent: {x: 4.6517496, y: 3.5702, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -5421,7 +5421,9 @@ GameObject:
   - component: {fileID: 528704166}
   - component: {fileID: 528704165}
   - component: {fileID: 528704167}
-  m_Layer: 0
+  - component: {fileID: 528704169}
+  - component: {fileID: 528704168}
+  m_Layer: 6
   m_Name: Open_lighter.
   m_TagString: Lighter
   m_Icon: {fileID: 0}
@@ -5489,7 +5491,7 @@ Transform:
   m_GameObject: {fileID: 528704162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.677, y: 3.55, z: 0}
+  m_LocalPosition: {x: 35.677, y: 3.627, z: 0}
   m_LocalScale: {x: 0.03261724, y: 0.03261724, z: 0.03261724}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5528,7 +5530,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.2688446, y: 1.2605224}
+  m_Offset: {x: -2.562601, y: 0.43323326}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5539,7 +5541,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 32.14451, y: 33.39124}
+  m_Size: {x: 26.48515, y: 34.086956}
   m_EdgeRadius: 0
 --- !u!114 &528704166
 MonoBehaviour:
@@ -5568,6 +5570,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlight_border: {fileID: 1734448082}
+--- !u!61 &528704168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528704162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 55
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 72
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 50.8, y: 47.004883}
+    newSize: {x: 50.8, y: 47.004883}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 50.8, y: 47.004883}
+  m_EdgeRadius: 0
+--- !u!50 &528704169
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528704162}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &537198786
 GameObject:
   m_ObjectHideFlags: 0
@@ -8860,8 +8934,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17974997, y: 2.01295, z: 0}
-    m_Extent: {x: 2.23175, y: 2.3389502, z: 0}
+    m_Center: {x: 0.18085003, y: 2.01315, z: 0}
+    m_Extent: {x: 2.23265, y: 2.33765, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -10735,8 +10809,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.024699926, y: 1.3683, z: 0}
-    m_Extent: {x: 2.3227, y: 2.0002, z: 0}
+    m_Center: {x: -0.019499898, y: 1.3608999, z: 0}
+    m_Extent: {x: 2.3274999, y: 1.9965, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11363,7 +11437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034225875}
   - component: {fileID: 1034225876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Lit Lantern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11721,8 +11795,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18374991, y: 1.3021, z: 0}
-    m_Extent: {x: 4.6497498, y: 3.5648, z: 0}
+    m_Center: {x: 0.18630004, y: 1.2955501, z: 0}
+    m_Extent: {x: 4.6520004, y: 3.56865, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -13805,7 +13879,9 @@ GameObject:
   - component: {fileID: 1260383306}
   - component: {fileID: 1260383305}
   - component: {fileID: 1260383307}
-  m_Layer: 0
+  - component: {fileID: 1260383309}
+  - component: {fileID: 1260383308}
+  m_Layer: 6
   m_Name: Lantern.
   m_TagString: Lantern
   m_Icon: {fileID: 0}
@@ -13862,7 +13938,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11608267, y: 1.0430474}
+  m_Offset: {x: 0.29285955, y: 1.0430622}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13873,7 +13949,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.276896, y: 16.57528}
+  m_Size: {x: 15.226993, y: 21.525421}
   m_EdgeRadius: 0
 --- !u!114 &1260383306
 MonoBehaviour:
@@ -13902,6 +13978,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlight_border: {fileID: 1660853807}
+--- !u!61 &1260383308
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260383302}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 55
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 72
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.088391304, y: 1.5026991}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 50.8, y: 47.004883}
+    newSize: {x: 50.8, y: 47.004883}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10.315193, y: 16.773872}
+  m_EdgeRadius: 0
+--- !u!50 &1260383309
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260383302}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1268596217
 GameObject:
   m_ObjectHideFlags: 0
@@ -18255,7 +18403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623848469}
   - component: {fileID: 1623848470}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Unlit Lantern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18748,7 +18896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1660853808}
   - component: {fileID: 1660853809}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Unlit Lantern (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19350,7 +19498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734448083}
   - component: {fileID: 1734448084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Open_lighter. (1)
   m_TagString: Lighter
   m_Icon: {fileID: 0}
@@ -21025,7 +21173,7 @@ GameObject:
   - component: {fileID: 1861619699}
   - component: {fileID: 1861619701}
   - component: {fileID: 1861619700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: doorknob
   m_TagString: Doorknob
   m_Icon: {fileID: 0}
@@ -21173,7 +21321,7 @@ BoxCollider2D:
     m_Bits: 55
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -21594,8 +21742,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3307, y: 1.2959499, z: 0}
-    m_Extent: {x: 8.1599, y: 2.10635, z: 0}
+    m_Center: {x: 7.3274, y: 1.2943, z: 0}
+    m_Extent: {x: 8.1558, y: 2.1001, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55

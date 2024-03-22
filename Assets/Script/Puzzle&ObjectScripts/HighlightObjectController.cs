@@ -17,6 +17,14 @@ public class HighlightObjectController : MonoBehaviour
     void Update()
     {
         highlight_border.SetActive(inRange);
+
+        if(gameObject.layer == 6)
+        {
+            if (gameObject.GetComponent<ObjectController>().objectPickedUp)
+            {
+                highlight_border.SetActive(false);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -9,7 +9,7 @@ public class ObjectController : MonoBehaviour
     [SerializeField] private GameObject unlitLantern;
     [SerializeField] private GameObject litLantern;
 
-    private bool objectPickedUp;
+    public bool objectPickedUp;
     private bool inRange;
     private bool doorRange;
 
@@ -87,7 +87,6 @@ public class ObjectController : MonoBehaviour
         transform.SetParent(player.transform);
         transform.position = new Vector2(player.transform.position.x+1.5f, player.transform.position.y);
 
-        //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
