@@ -12,8 +12,6 @@ public class ObjectController : MonoBehaviour
     private bool objectPickedUp;
     private bool inRange;
     private bool doorRange;
-    private bool objectOnGround; // to make object fall to the ground
-    private bool objectDropped;
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +21,6 @@ public class ObjectController : MonoBehaviour
         objectPickedUp = false;
         inRange = false;
         doorRange = false;
-        objectOnGround = true;
-        objectDropped = true;
     }
 
     // Update is called once per frame
@@ -32,25 +28,16 @@ public class ObjectController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (inRange) { 
-                if (!objectPickedUp)
-                {
+            if (inRange && !objectPickedUp) { 
+                //if (!objectPickedUp)
+                //{
                     pickUp();
-                }
+                //}
             }
             else if (objectPickedUp && !doorRange)
             {
                 dropItem();
             }
-        }
-    }
-
-    // make object fall to the ground once it's dropped
-    private void FixedUpdate()
-    {
-        if (!objectOnGround)
-        {
-            //gameObject.transform.position += new Vector3(0, -0.08f, 0);
         }
     }
 
@@ -76,12 +63,6 @@ public class ObjectController : MonoBehaviour
                 unlitLantern.SetActive(false);
             }
         }
-
-        if (collision.gameObject.tag == "Floor")
-        {
-            objectOnGround = true;
-            Debug.Log("OBJECT ON GROUND");
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -106,7 +87,8 @@ public class ObjectController : MonoBehaviour
         transform.SetParent(player.transform);
         transform.position = new Vector2(player.transform.position.x+1.5f, player.transform.position.y);
 
-        objectDropped = false;
+        //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 
     private void dropItem()
@@ -118,7 +100,6 @@ public class ObjectController : MonoBehaviour
         GameObject restingPlace = GameObject.FindGameObjectWithTag("Rest");
         transform.SetParent(restingPlace.transform);
 
-        objectOnGround = false;
-        objectDropped = true;
+        gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 }
