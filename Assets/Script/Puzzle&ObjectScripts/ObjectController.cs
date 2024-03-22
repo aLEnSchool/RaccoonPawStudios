@@ -12,6 +12,8 @@ public class ObjectController : MonoBehaviour
     private bool objectPickedUp;
     private bool inRange;
     private bool doorRange;
+    private bool objectOnGround; // to make object fall to the ground
+    private bool objectDropped;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,8 @@ public class ObjectController : MonoBehaviour
         objectPickedUp = false;
         inRange = false;
         doorRange = false;
+        objectOnGround = true;
+        objectDropped = true;
     }
 
     // Update is called once per frame
@@ -41,6 +45,15 @@ public class ObjectController : MonoBehaviour
         }
     }
 
+    // make object fall to the ground once it's dropped
+    private void FixedUpdate()
+    {
+        if (!objectOnGround)
+        {
+            //gameObject.transform.position += new Vector3(0, -0.08f, 0);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -51,25 +64,6 @@ public class ObjectController : MonoBehaviour
         {
             doorRange = true;
         }
-
-        //Lantern Gets Clue collision
-        //if (transform.tag == "Lantern")
-        //{
-        //    if (collision.transform.tag == "Glue")
-        //    {
-        //        transform.tag = "Lantern With Glue";
-        //        sprite.color = Color.red;
-        //    }
-        //}
-        ////Lantern Gets lit
-        //if (transform.tag == "Lantern With Glue")
-        //{
-        //    if (collision.transform.tag == "Lighter")
-        //    {
-        //        transform.tag = "Lit Lantern";
-        //        sprite.color = Color.yellow;
-        //    }
-        //}
 
         //Lantern Gets lit
         if (transform.tag == "Lantern")
@@ -82,7 +76,14 @@ public class ObjectController : MonoBehaviour
                 unlitLantern.SetActive(false);
             }
         }
+
+        if (collision.gameObject.tag == "Floor")
+        {
+            objectOnGround = true;
+            Debug.Log("OBJECT ON GROUND");
+        }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -104,6 +105,8 @@ public class ObjectController : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         transform.SetParent(player.transform);
         transform.position = new Vector2(player.transform.position.x+1.5f, player.transform.position.y);
+
+        objectDropped = false;
     }
 
     private void dropItem()
@@ -114,5 +117,8 @@ public class ObjectController : MonoBehaviour
 
         GameObject restingPlace = GameObject.FindGameObjectWithTag("Rest");
         transform.SetParent(restingPlace.transform);
+
+        objectOnGround = false;
+        objectDropped = true;
     }
 }
