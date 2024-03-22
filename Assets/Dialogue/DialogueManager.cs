@@ -7,17 +7,25 @@ using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
+    private static DialogueManager instance;
+
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
-    
-    private static DialogueManager instance;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private Animator portraitAnimator;
+
+    [Header("Typewriter Effect")]
+    [SerializeField] private float typingSpeed = 0.05f;
+    private Coroutine displayLineCoroutine;
 
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
+
+    private const string portrait = "portrait";
+
 
 
     private void Awake()
@@ -59,6 +67,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
+        PlayerController.instance.canMove = false;
         ContinueStory();
     }
 
@@ -71,16 +80,48 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
     }
 
+    private void changeProfilePic(List<string> currentTags)
+    {
+        foreach (string tag in currentTags) { 
+            string[] splitTag = tag.Split(':');
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            switch (tagKey) {
+                case portrait:
+                    portraitAnimator.Play(tagValue);
+                    break;
+            }
+        }
+    }
+
     private void ContinueStory()
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
             PlayerController.instance.canMove = true;
+
+            changeProfilePic(currentStory.currentTags);
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
+        }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = "";
+
+        foreach (char letter in line.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 }
