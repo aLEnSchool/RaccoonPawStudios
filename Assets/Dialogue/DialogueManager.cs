@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator portraitAnimator;
 
     [Header("Typewriter Effect")]
-    [SerializeField] private float typingSpeed = 0.05f;
+    [SerializeField] private float typingSpeed = 0.037f;
     private Coroutine displayLineCoroutine;
 
     public Story currentStory;
