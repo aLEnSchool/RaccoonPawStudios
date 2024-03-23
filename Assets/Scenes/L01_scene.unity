@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19350004, y: 1.30135, z: 0}
-    m_Extent: {x: 4.6451, y: 3.5644498, z: 0}
+    m_Center: {x: 0.18790007, y: 1.3025, z: 0}
+    m_Extent: {x: 4.6484, y: 3.5666, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4418,8 +4418,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19070005, y: 1.3002499, z: 0}
-    m_Extent: {x: 4.6405, y: 3.5704498, z: 0}
+    m_Center: {x: 0.19255018, y: 1.3025501, z: 0}
+    m_Extent: {x: 4.64255, y: 3.56135, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4761,8 +4761,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19814992, y: 1.3016999, z: 0}
-    m_Extent: {x: 4.6503496, y: 3.5612, z: 0}
+    m_Center: {x: 0.19589996, y: 1.29705, z: 0}
+    m_Extent: {x: 4.6434, y: 3.56875, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8950,8 +8950,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18509996, y: 2.0192, z: 0}
-    m_Extent: {x: 2.2292, y: 2.3363001, z: 0}
+    m_Center: {x: 0.17725003, y: 2.02015, z: 0}
+    m_Extent: {x: 2.2270498, y: 2.34435, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -9464,6 +9464,7 @@ GameObject:
   - component: {fileID: 845420249}
   - component: {fileID: 845420251}
   - component: {fileID: 845420250}
+  - component: {fileID: 845420252}
   m_Layer: 0
   m_Name: John
   m_TagString: Untagged
@@ -9551,6 +9552,19 @@ MonoBehaviour:
   dialogButton: {fileID: 837769370}
   timeBtwnChars: 0.05
   timeBtwnWords: 0.1
+--- !u!114 &845420252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845420247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f5d2a742b547a4a9bfb82a2565c0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogFile1: {fileID: 4900000, guid: 40a7ec100ccff1f4ba1fae99e4f286f0, type: 3}
 --- !u!1 &855418978
 GameObject:
   m_ObjectHideFlags: 0
@@ -10825,8 +10839,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.019950032, y: 1.3656, z: 0}
-    m_Extent: {x: 2.3211498, y: 1.9982, z: 0}
+    m_Center: {x: -0.021799922, y: 1.3750501, z: 0}
+    m_Extent: {x: 2.3212, y: 1.99735, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11811,8 +11825,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19140005, y: 1.3027499, z: 0}
-    m_Extent: {x: 4.6404, y: 3.56545, z: 0}
+    m_Center: {x: 0.19219995, y: 1.29555, z: 0}
+    m_Extent: {x: 4.6400003, y: 3.5647502, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -21530,6 +21544,7 @@ GameObject:
   - component: {fileID: 1876788466}
   - component: {fileID: 1876788467}
   - component: {fileID: 1876788468}
+  - component: {fileID: 1876788469}
   m_Layer: 0
   m_Name: kitchenDoors
   m_TagString: Door
@@ -21694,6 +21709,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlight_border: {fileID: 1055564179}
+--- !u!114 &1876788469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876788462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd580d4d59e0b094982139d6d6f0a5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogFile1: {fileID: 4900000, guid: bf6b941844099ef45925582fdb8e93c3, type: 3}
 --- !u!1 &1876898877
 GameObject:
   m_ObjectHideFlags: 0
@@ -21760,8 +21788,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3332, y: 1.28935, z: 0}
-    m_Extent: {x: 8.1641, y: 2.09695, z: 0}
+    m_Center: {x: 7.3290005, y: 1.2956, z: 0}
+    m_Extent: {x: 8.1587, y: 2.0972, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -23643,6 +23671,7 @@ GameObject:
   - component: {fileID: 2038814049}
   - component: {fileID: 2038814051}
   - component: {fileID: 2038814050}
+  - component: {fileID: 2038814052}
   m_Layer: 0
   m_Name: Rosa
   m_TagString: Untagged
@@ -23731,6 +23760,19 @@ MonoBehaviour:
   dialogButton: {fileID: 2033203476}
   timeBtwnChars: 0.05
   timeBtwnWords: 0.1
+--- !u!114 &2038814052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038814047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0055b9958b435f54aac72d9d4ab64ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogFile1: {fileID: 4900000, guid: 85e4202281b2be647aa1992d821b39c0, type: 3}
 --- !u!1 &2058519366
 GameObject:
   m_ObjectHideFlags: 0

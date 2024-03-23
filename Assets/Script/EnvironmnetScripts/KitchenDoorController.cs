@@ -41,17 +41,17 @@ public class KitchenDoorController : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            if (inRange)
-            {
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    dialogBox.SetActive(true);
-                    dialogOutput.text = voiceLine;
-                }
-            }
-        }
+        //else
+        //{
+        //    if (inRange)
+        //    {
+        //        if (Input.GetKeyDown(KeyCode.E))
+        //        {
+        //            dialogBox.SetActive(true);
+        //            dialogOutput.text = voiceLine;
+        //        }
+        //    }
+        //}
     }
 
     /*-- Trigger Events --*/
