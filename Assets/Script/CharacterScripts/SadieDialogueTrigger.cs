@@ -6,6 +6,7 @@ public class SadieDialogueTrigger : MonoBehaviour
 {
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
+    [SerializeField] private TextAsset dialogFile2;
 
     private bool playerInRange;
 
@@ -21,6 +22,11 @@ public class SadieDialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
+
+                if (PlayerDataController.instance.talkedToClaye)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
+                }
             }
         }
 
