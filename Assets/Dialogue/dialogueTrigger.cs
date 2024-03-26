@@ -21,14 +21,14 @@ public class dialogueTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (PlayerDataController.instance.itemTest)
+                /*if (PlayerDataController.instance.itemTest)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(itemPickedUp);
                 }
                 else
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(itemNotPickedUp);
-                }
+                }*/
             }          
         }
         

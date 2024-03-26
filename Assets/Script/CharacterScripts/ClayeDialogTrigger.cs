@@ -21,6 +21,7 @@ public class ClayeDialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
+                PlayerDataController.instance.talkedToClaye = true;
             }
         }
 

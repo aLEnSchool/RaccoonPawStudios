@@ -46,7 +46,7 @@ public class TestObject : MonoBehaviour
 
     private void pickUp()
     {
-        PlayerDataController.instance.itemTest = true;
+        //PlayerDataController.instance.itemTest = true;
     }
 
 
