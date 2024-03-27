@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19164991, y: 1.2928, z: 0}
-    m_Extent: {x: 4.63835, y: 3.5621, z: 0}
+    m_Center: {x: 0.19449997, y: 1.2957499, z: 0}
+    m_Extent: {x: 4.6469, y: 3.56685, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4419,8 +4419,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1875, y: 1.2982501, z: 0}
-    m_Extent: {x: 4.6541, y: 3.56285, z: 0}
+    m_Center: {x: 0.18505001, y: 1.3015999, z: 0}
+    m_Extent: {x: 4.64945, y: 3.5700998, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4762,8 +4762,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19059992, y: 1.2908499, z: 0}
-    m_Extent: {x: 4.6537, y: 3.5678499, z: 0}
+    m_Center: {x: 0.18645, y: 1.3031499, z: 0}
+    m_Extent: {x: 4.65065, y: 3.56575, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8951,8 +8951,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1803, y: 2.02215, z: 0}
-    m_Extent: {x: 2.2362, y: 2.34625, z: 0}
+    m_Center: {x: 0.18075001, y: 2.02395, z: 0}
+    m_Extent: {x: 2.2347498, y: 2.3438501, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -10672,7 +10672,7 @@ SpriteRenderer:
   m_Size: {x: 50.8, y: 47.004883}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &911866279
@@ -10840,8 +10840,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.024999976, y: 1.36285, z: 0}
-    m_Extent: {x: 2.3231, y: 1.99845, z: 0}
+    m_Center: {x: -0.020850062, y: 1.3691, z: 0}
+    m_Extent: {x: 2.32555, y: 1.9973999, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11826,8 +11826,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18760014, y: 1.303, z: 0}
-    m_Extent: {x: 4.6418, y: 3.5681, z: 0}
+    m_Center: {x: 0.19595003, y: 1.3000001, z: 0}
+    m_Extent: {x: 4.64715, y: 3.5579, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -13798,7 +13798,7 @@ SpriteRenderer:
   m_Size: {x: 50.8, y: 47.004883}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1258698050
@@ -17485,6 +17485,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1528950926}
   - component: {fileID: 1528950927}
+  - component: {fileID: 1528950928}
+  - component: {fileID: 1528950929}
   m_Layer: 0
   m_Name: Painting
   m_TagString: Untagged
@@ -17559,6 +17561,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1528950928
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528950925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.043673515, y: 0.87346125}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 17.946959, y: 18.733078}
+  m_EdgeRadius: 0
+--- !u!114 &1528950929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528950925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab07895f7618f4499747d4e6cad45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogFile1: {fileID: 4900000, guid: 5ff3d3a578376dc40904030ba0c46aef, type: 3}
 --- !u!1 &1546093241
 GameObject:
   m_ObjectHideFlags: 0
@@ -21835,8 +21895,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3265996, y: 1.29225, z: 0}
-    m_Extent: {x: 8.1696, y: 2.09705, z: 0}
+    m_Center: {x: 7.3297005, y: 1.2899001, z: 0}
+    m_Extent: {x: 8.1629, y: 2.0972, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
