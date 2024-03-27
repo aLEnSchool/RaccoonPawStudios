@@ -8,6 +8,9 @@ public class WCDoorController : MonoBehaviour
     public bool exitRoom;
     private bool knobInDoor;
 
+    [Header("Ink Files")]
+    [SerializeField] private TextAsset dialogFile1;
+
     [SerializeField] private GameObject doorWithKnob;
     [SerializeField] private GameObject doorNoKnob;
     [SerializeField] private GameObject doorknob;
@@ -30,7 +33,7 @@ public class WCDoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inRange) // if player is in range of the door
+        if (inRange && !DialogueManager.GetInstance().dialogueIsPlaying) // if player is in range of the door
         {
             if (Input.GetKeyDown(KeyCode.E) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms)) // if user presses E, and not in the middle of switching rooms
             {
@@ -41,6 +44,7 @@ public class WCDoorController : MonoBehaviour
                 }
                 else
                 {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
                     // display "cannot enter" message
                     Debug.Log("cannot enter, there is no doorknob");
                 }
