@@ -2947,6 +2947,7 @@ GameObject:
   - component: {fileID: 296968910}
   - component: {fileID: 296968907}
   - component: {fileID: 296968911}
+  - component: {fileID: 296968912}
   m_Layer: 0
   m_Name: Sadie
   m_TagString: Untagged
@@ -3054,6 +3055,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogFile1: {fileID: 4900000, guid: 2defe073879ebc34baa64c79d44053a8, type: 3}
   dialogFile2: {fileID: 4900000, guid: 87730a67e6e6620458e5ca3b737b9243, type: 3}
+--- !u!95 &296968912
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296968906}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 727bb697f9403db40950ee9e21916a7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &302555479
 GameObject:
   m_ObjectHideFlags: 0
