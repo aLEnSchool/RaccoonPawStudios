@@ -5,16 +5,18 @@ using UnityEngine;
 public class HallSadieEvent : MonoBehaviour
 {
 
-    private bool sadieAppear;
+    public bool sadieInHall;
     private bool inRange;
 
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
 
+    public Animator sadieAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
-        sadieAppear = false;
+        sadieInHall = false;
         inRange = false;
     }
 
@@ -23,12 +25,15 @@ public class HallSadieEvent : MonoBehaviour
     {
         if (inRange && !DialogueManager.GetInstance().dialogueIsPlaying) // if player is in range of the door
         {
-            if (sadieAppear == false) 
+            if (!sadieInHall) 
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
                 // display "cannot enter" message
-                Debug.Log("we shouting at the players"); 
-                sadieAppear = true;
+                Debug.Log("we shouting at the players");
+
+                sadieAnimator.SetBool("EnterHall", true);
+
+                sadieInHall = true;
             }
               
         }

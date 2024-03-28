@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18315005, y: 1.2974, z: 0}
-    m_Extent: {x: 4.64865, y: 3.5688, z: 0}
+    m_Center: {x: 0.1947, y: 1.297, z: 0}
+    m_Extent: {x: 4.6422005, y: 3.5732002, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -2947,6 +2947,7 @@ GameObject:
   - component: {fileID: 296968910}
   - component: {fileID: 296968907}
   - component: {fileID: 296968911}
+  - component: {fileID: 296968912}
   m_Layer: 0
   m_Name: Sadie
   m_TagString: Untagged
@@ -3054,6 +3055,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogFile1: {fileID: 4900000, guid: 2defe073879ebc34baa64c79d44053a8, type: 3}
   dialogFile2: {fileID: 4900000, guid: 87730a67e6e6620458e5ca3b737b9243, type: 3}
+--- !u!95 &296968912
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296968906}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 727bb697f9403db40950ee9e21916a7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &302555479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,7 +4186,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.98039216}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.99215686}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4419,8 +4441,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1882, y: 1.2973001, z: 0}
-    m_Extent: {x: 4.6413, y: 3.5719001, z: 0}
+    m_Center: {x: 0.18935013, y: 1.29605, z: 0}
+    m_Extent: {x: 4.64565, y: 3.57295, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4762,8 +4784,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18994999, y: 1.2998999, z: 0}
-    m_Extent: {x: 4.65275, y: 3.5584998, z: 0}
+    m_Center: {x: 0.19169998, y: 1.2985499, z: 0}
+    m_Extent: {x: 4.6512, y: 3.5664499, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8951,8 +8973,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17264998, y: 2.0238001, z: 0}
-    m_Extent: {x: 2.2312498, y: 2.3408, z: 0}
+    m_Center: {x: 0.18785, y: 2.0233998, z: 0}
+    m_Extent: {x: 2.22895, y: 2.3455, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -10672,7 +10694,7 @@ SpriteRenderer:
   m_Size: {x: 50.8, y: 47.004883}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &911866279
@@ -10840,8 +10862,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.022799969, y: 1.3770001, z: 0}
-    m_Extent: {x: 2.3157, y: 1.9944, z: 0}
+    m_Center: {x: -0.024000049, y: 1.3728, z: 0}
+    m_Extent: {x: 2.3219, y: 1.9940001, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11826,8 +11848,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19265008, y: 1.3026999, z: 0}
-    m_Extent: {x: 4.6454496, y: 3.5651999, z: 0}
+    m_Center: {x: 0.19164991, y: 1.2976, z: 0}
+    m_Extent: {x: 4.64075, y: 3.5714, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -13798,7 +13820,7 @@ SpriteRenderer:
   m_Size: {x: 50.8, y: 47.004883}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1258698050
@@ -14744,8 +14766,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1311802275}
   - component: {fileID: 1311802274}
+  - component: {fileID: 1311802276}
   m_Layer: 0
-  m_Name: SaddieHallEvent
+  m_Name: SadieHallEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14783,7 +14806,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16252995, y: -0.1218977}
+  m_Offset: {x: 0.16252995, y: 0.43518162}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14794,7 +14817,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2708836, y: 0.7562046}
+  m_Size: {x: 1.2708836, y: 3.6530209}
   m_EdgeRadius: 0
 --- !u!4 &1311802275
 Transform:
@@ -14804,13 +14827,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311802273}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.53, y: -19.14, z: -9.665922}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.8460016, y: -17.036396, z: -8.905842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1426074983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1311802276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311802273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5554c66b9b3206418ee418f684b8963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadieInHall: 0
+  dialogFile1: {fileID: 4900000, guid: bed132ca7fc84d741926477956368fa8, type: 3}
+  sadieAnimator: {fileID: 296968912}
 --- !u!1 &1318407102
 GameObject:
   m_ObjectHideFlags: 0
@@ -16322,6 +16360,7 @@ Transform:
   - {fileID: 1590237009}
   - {fileID: 2139342064}
   - {fileID: 118535954}
+  - {fileID: 1311802275}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427674240
@@ -17670,7 +17709,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043673515, y: 0.87346125}
+  m_Offset: {x: -0.043673515, y: -0.9557133}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17681,7 +17720,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.946959, y: 18.733078}
+  m_Size: {x: 17.946959, y: 22.391426}
   m_EdgeRadius: 0
 --- !u!114 &1528950929
 MonoBehaviour:
@@ -21973,8 +22012,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3286495, y: 1.2923999, z: 0}
-    m_Extent: {x: 8.15415, y: 2.1043, z: 0}
+    m_Center: {x: 7.3283, y: 1.29875, z: 0}
+    m_Extent: {x: 8.1544, y: 2.10245, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -26455,4 +26494,3 @@ SceneRoots:
   - {fileID: 1443008281}
   - {fileID: 89050702}
   - {fileID: 1311029841}
-  - {fileID: 1311802275}
