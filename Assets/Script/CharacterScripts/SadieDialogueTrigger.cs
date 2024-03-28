@@ -23,9 +23,13 @@ public class SadieDialogueTrigger : MonoBehaviour
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
 
-                if (PlayerDataController.instance.talkedToClaye)
+                if (PlayerDataController.instance.hallSadie)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
+                    PlayerDataController.instance.clayLighter = true;
+                    PlayerDataController.instance.frannieLighter = true;
+                    PlayerDataController.instance.johnLighter = true;
+                    PlayerDataController.instance.rosaLighter = true;
                 }
             }
         }
