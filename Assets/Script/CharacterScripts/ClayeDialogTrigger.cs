@@ -6,6 +6,7 @@ public class ClayeDialogueTrigger : MonoBehaviour
 {
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
+    [SerializeField] private TextAsset dialogFile2;
 
     private bool playerInRange;
 
@@ -21,7 +22,13 @@ public class ClayeDialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
-                PlayerDataController.instance.talkedToClaye = true;
+                //PlayerDataController.instance.talkedToClaye = true;
+
+                if (PlayerDataController.instance.hallSadie)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
+                    
+                }
             }
         }
 

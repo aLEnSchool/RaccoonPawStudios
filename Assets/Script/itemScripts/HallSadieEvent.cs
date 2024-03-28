@@ -34,6 +34,7 @@ public class HallSadieEvent : MonoBehaviour
                 sadieAnimator.SetBool("EnterHall", true);
 
                 sadieInHall = true;
+                PlayerDataController.instance.hallSadie = true;
             }
               
         }

@@ -12,6 +12,13 @@ public class PlayerDataController : MonoBehaviour
     //CaseFile1 Events
     public bool talkedToClaye = false;
     public bool talkedToSaide = false;
+    public bool hallSadie = false;
+
+    //lighter text
+    public bool clayLighter = false;
+    public bool frannieLighter = false;
+    public bool johnLighter = false;
+    public bool rosaLighter = false;
 
 
     private void Awake()

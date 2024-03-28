@@ -6,9 +6,10 @@ public class FrannieDialogueTrigger : MonoBehaviour
 {
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
+    [SerializeField] private TextAsset dialogFile2;
 
     private bool playerInRange;
-
+    
     private void Awake()
     {
         playerInRange = false;
@@ -21,6 +22,12 @@ public class FrannieDialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
+
+                if (PlayerDataController.instance.hallSadie)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
+                    
+                }
             }
         }
 
