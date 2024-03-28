@@ -22,9 +22,10 @@ public class DialogueManager : MonoBehaviour
     private Coroutine displayLineCoroutine;
 
     [Header("Audio Source")]
-    [SerializeField] private AudioSource typewriter1;
-    [SerializeField] private AudioSource typewriter2;
-    [SerializeField] private AudioSource typewriter3;
+    [SerializeField] private AudioSource typeWriteSound;
+    //[SerializeField] private AudioSource typewriter1;
+    //[SerializeField] private AudioSource typewriter2;
+    //[SerializeField] private AudioSource typewriter3;
 
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
@@ -53,11 +54,9 @@ public class DialogueManager : MonoBehaviour
         //Dialogue
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
-        
+
         //Sound
-        //typewriter1 = GetComponent<AudioSource>();
-        //typewriter2 = GetComponent<AudioSource>();
-        //typewriter3 = GetComponent<AudioSource>();
+        //typeWriteSound.Stop();
     }
 
     private void Update()
@@ -118,6 +117,7 @@ public class DialogueManager : MonoBehaviour
             }
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
             PlayerController.instance.canMove = false;
+            typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
         }
@@ -151,6 +151,8 @@ public class DialogueManager : MonoBehaviour
 
             yield return new WaitForSeconds(typingSpeed);
         }
+        Debug.Log("Stop sound");
+        typeWriteSound.Stop();
     }
 }
 
