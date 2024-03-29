@@ -1,6 +1,5 @@
+Hello, again. #portrait:tom
 ... #portrait:rosa
-Hello. #portrait:tom
-Again. 
 Yes, you're right. #portrait:tom
 It's been too long since we last spoke.
 How are the kids?

@@ -1,3 +1,5 @@
-The lights are out. #portrait:tom
-I don't see a light switch.
-I wonder where it is.
+What #portrait:tom
+It's so dark
+Why is it so dark
+Dada 
+Help me
