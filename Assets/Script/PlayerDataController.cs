@@ -20,6 +20,13 @@ public class PlayerDataController : MonoBehaviour
     public bool johnLighter = false;
     public bool rosaLighter = false;
 
+    //after finding crime scene
+    public bool clayInvest = false;
+    public bool frannieInvest = false;
+    public bool johnInvest = false;
+    public bool rosaInvest = false;
+    public bool sadieInvest = false;
+
 
     private void Awake()
     {
