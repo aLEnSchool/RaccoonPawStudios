@@ -18,14 +18,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Animator portraitAnimator;
 
     [Header("Typewriter Effect")]
-    [SerializeField] private float typingSpeed = 0.5f;
+    [SerializeField] private float typingSpeed = 0.037f;
     private Coroutine displayLineCoroutine;
-
-    [Header("Audio Source")]
-    [SerializeField] private AudioSource typeWriteSound;
-    //[SerializeField] private AudioSource typewriter1;
-    //[SerializeField] private AudioSource typewriter2;
-    //[SerializeField] private AudioSource typewriter3;
 
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
@@ -47,16 +41,10 @@ public class DialogueManager : MonoBehaviour
     {
         return instance;
     }
-
-
     private void Start()
     {
-        //Dialogue
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
-
-        //Sound
-        //typeWriteSound.Stop();
     }
 
     private void Update()
@@ -117,7 +105,6 @@ public class DialogueManager : MonoBehaviour
             }
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
             PlayerController.instance.canMove = false;
-            typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
         }
@@ -134,25 +121,8 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in line.ToCharArray())
         {
             dialogueText.text += letter;
-            /* Failed Attempt
-            int random_typeSound = Random.Range(1, 3);
-            if (random_typeSound == 1)
-            {
-                typewriter1.Play();
-            }
-            if (random_typeSound == 2)
-            {
-                typewriter2.Play();
-            }
-            if (random_typeSound == 3)
-            {
-                typewriter3.Play();
-            }*/
-
             yield return new WaitForSeconds(typingSpeed);
         }
-        Debug.Log("Stop sound");
-        typeWriteSound.Stop();
     }
 }
 

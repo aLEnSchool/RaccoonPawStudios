@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
-    [Header("Movement Variables")]
     [SerializeField] private float moveSpeed = 9f;
     [SerializeField] private float rollSpeed = 0.2f;
     [SerializeField] private float jumpForce = 10f;
@@ -26,14 +25,11 @@ public class PlayerController : MonoBehaviour
     private int jumpCountBench = 0;      // counter for double jump
     private bool fromFloor = true;
 
-    [Header("Animation")]
-    [SerializeField] public Animator animator;
-    private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
     private bool facingRight = true;   // check which direction the player is facing
 
-    [Header("Audio Source")]
-    [SerializeField] private AudioSource playerSwoosh;
-    private bool playSound = false;
+    private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
+
+    public Animator animator;
 
     private void Awake()
     {
@@ -62,6 +58,7 @@ public class PlayerController : MonoBehaviour
         }
         
 
+
         if (!jumping && fromFloor)
         {
             inputX = 0;
@@ -79,28 +76,9 @@ public class PlayerController : MonoBehaviour
                 inputX = moveSpeed;
             }
 
-            //Play Sound
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                playerSwoosh.Play();
-            }
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                playerSwoosh.Play();
-            }
-            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
-            {
-                playerSwoosh.Stop();
-            }
-            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
-            {
-                playerSwoosh.Stop();
-            }
-
             // jumping on floor
             if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping) || Input.GetKeyDown(KeyCode.Space) && (!jumping))
             {
-                //playerSwoosh.Play();
                 if (!fromFloor) // jumping off the bench
                 {
                     rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
@@ -121,13 +99,11 @@ public class PlayerController : MonoBehaviour
             {
                 //Debug.Log("ADDING FORCE");
                 rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
-                
             }
             if (Input.GetKeyUp(KeyCode.D) && jumping)
             {
                 //Debug.Log("ADDING FORCE");
                 rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
-            
             }
         }
 
