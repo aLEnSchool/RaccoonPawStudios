@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Audio Source")]
     [SerializeField] private AudioSource playerSwoosh;
-    private bool playSound = false;
+    //private bool playSound = false;
 
     private void Awake()
     {
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
         inputX = 0;
         rb = GetComponent<Rigidbody2D>();
         canMove = true;
+        playerSwoosh = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -80,11 +81,11 @@ public class PlayerController : MonoBehaviour
             }
 
             //Play Sound
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 playerSwoosh.Play();
             }
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 playerSwoosh.Play();
             }
