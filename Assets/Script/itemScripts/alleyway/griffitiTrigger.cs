@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JohnDialogueTrigger : MonoBehaviour
+public class griffitiTrigger : MonoBehaviour
 {
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
-    [SerializeField] private TextAsset dialogFile2;
-    [SerializeField] private TextAsset dialogFile3;
 
     private bool playerInRange;
 
@@ -23,17 +21,7 @@ public class JohnDialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
-
-                if (PlayerDataController.instance.hallSadie)
-                {
-                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
-                    
-                }
-                if (PlayerDataController.instance.johnInvest)
-                {
-                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile3);
-                    
-                }
+                
             }
         }
 
