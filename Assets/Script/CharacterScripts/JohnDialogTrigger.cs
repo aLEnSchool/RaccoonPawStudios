@@ -7,6 +7,7 @@ public class JohnDialogueTrigger : MonoBehaviour
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
     [SerializeField] private TextAsset dialogFile2;
+    [SerializeField] private TextAsset dialogFile3;
 
     private bool playerInRange;
 
@@ -26,6 +27,11 @@ public class JohnDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.hallSadie)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
+                    
+                }
+                if (PlayerDataController.instance.johnInvest)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile3);
                     
                 }
             }

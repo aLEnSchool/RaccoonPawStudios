@@ -21,7 +21,11 @@ public class ashesTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
-                
+                PlayerDataController.instance.clayInvest = true;
+                PlayerDataController.instance.frannieInvest = true;
+                PlayerDataController.instance.johnInvest = true;
+                PlayerDataController.instance.rosaInvest = true;
+                PlayerDataController.instance.sadieInvest = true;
             }
         }
 
