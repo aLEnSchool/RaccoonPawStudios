@@ -19,7 +19,7 @@ public class ExitBackToDiner : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 // Change camera to the next room
                 exitRoom = true;
