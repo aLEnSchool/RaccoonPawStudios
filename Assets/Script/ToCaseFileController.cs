@@ -27,11 +27,11 @@ public class ToCaseController : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 popUp.SetActive(true);
 
-                //playerDataController.nextScene();
+                //PlayerDataController.instance.nextScene();
             }
         }
     }
