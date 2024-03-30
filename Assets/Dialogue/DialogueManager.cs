@@ -86,7 +86,7 @@ public class DialogueManager : MonoBehaviour
     public IEnumerator ExitDialogueMode()
     {
         yield return new WaitForSeconds(0.2f);
-       
+
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -94,12 +94,14 @@ public class DialogueManager : MonoBehaviour
 
     private void changeProfilePic(List<string> currentTags)
     {
-        foreach (string tag in currentTags) { 
+        foreach (string tag in currentTags)
+        {
             string[] splitTag = tag.Split(':');
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
 
-            switch (tagKey) {
+            switch (tagKey)
+            {
                 case portrait:
                     portraitAnimator.Play(tagValue);
                     break;
