@@ -8,6 +8,8 @@ public class LookThroughController : MonoBehaviour
 
     public GameObject LookThrough;
 
+    //public GameObject doorknob;
+
     // Start is called before the first frame update
     void Start()
     {
