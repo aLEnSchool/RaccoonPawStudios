@@ -8,7 +8,9 @@ public class LookThroughController : MonoBehaviour
 
     public GameObject LookThrough;
 
-    //public GameObject doorknob;
+    public bool itemfound = false;
+
+    //public Button doorknob;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +24,17 @@ public class LookThroughController : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.E)) { 
+            if (Input.GetKeyDown(KeyCode.F)) { 
                 LookThrough.SetActive(true);
             }
         }
         else
         {
             LookThrough.SetActive(false);
+        }
+        if (itemfound)
+        {
+            Debug.Log("STOP");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,5 +53,10 @@ public class LookThroughController : MonoBehaviour
             Debug.Log("Player Exit");
             inRange = false;
         }
+    }
+
+    public void itemFound()
+    {
+        itemfound = true;
     }
 }
