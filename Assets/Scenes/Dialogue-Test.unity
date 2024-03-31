@@ -365,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 210199549}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.04, y: -3.31, z: -1}
+  m_LocalPosition: {x: -8.67, y: -3.31, z: -1}
   m_LocalScale: {x: 0.080762, y: 0.080762, z: 0.080762}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -867,9 +867,8 @@ GameObject:
   m_Component:
   - component: {fileID: 670272154}
   - component: {fileID: 670272153}
-  - component: {fileID: 670272152}
-  - component: {fileID: 670272151}
   - component: {fileID: 670272155}
+  - component: {fileID: 670272151}
   m_Layer: 0
   m_Name: Glue. (1)
   m_TagString: Untagged
@@ -922,18 +921,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 15.011978, y: 31.496748}
   m_EdgeRadius: 0
---- !u!114 &670272152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670272150}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd9305e695081e43a66ee3a1101414d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &670272153
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1013,6 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b20d39dcc4b7474c8c0ebc62e8c3b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LookThrough: {fileID: 947582365}
 --- !u!1 &762980458
 GameObject:
   m_ObjectHideFlags: 0
