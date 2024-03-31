@@ -35,7 +35,7 @@ public class KitchenDoorController : MonoBehaviour
             //TP TO KITCHEN
             if (inRange)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.F))
                 {
                     exitRoom = true;
                 }

@@ -23,7 +23,7 @@ public class ExitKitchenToDiner : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.E) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms)) // if user presses E, and not in the middle of switching rooms
+            if (Input.GetKeyDown(KeyCode.F) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms)) // if user presses E, and not in the middle of switching rooms
             {
                 // Change camera to the next room
                 exitRoom = true;

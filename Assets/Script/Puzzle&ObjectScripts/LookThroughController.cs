@@ -1,25 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 
-public class ToCaseController : MonoBehaviour
+public class LookThroughController : MonoBehaviour
 {
-    private bool inRange;
-    public GameObject playertemp;
+    public bool inRange;
 
-    public GameObject popUp;
+    public GameObject LookThrough;
 
-    private void Awake()
-    {
-        playertemp = GameObject.FindGameObjectWithTag("DontDestroy");
-    }
+    public bool itemfound = false;
+
+    //public Button doorknob;
 
     // Start is called before the first frame update
     void Start()
     {
+        LookThrough.SetActive(false);
         inRange = false;
-        popUp.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,19 +24,24 @@ public class ToCaseController : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                popUp.SetActive(true);
-
-                //PlayerDataController.instance.nextScene();
+            if (Input.GetKeyDown(KeyCode.F)) { 
+                LookThrough.SetActive(true);
             }
         }
+        else
+        {
+            LookThrough.SetActive(false);
+        }
+        if (itemfound)
+        {
+            Debug.Log("STOP");
+        }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Player Entered");
             inRange = true;
         }
     }
@@ -48,15 +50,13 @@ public class ToCaseController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Player Exit");
             inRange = false;
-            popUp.SetActive(false);
         }
     }
 
-    public void toNextScene()
+    public void itemFound()
     {
-        Debug.Log("Go to next Scene");
-        playertemp.GetComponent<PlayerDataController>().nextScene();
+        itemfound = true;
     }
-
 }
