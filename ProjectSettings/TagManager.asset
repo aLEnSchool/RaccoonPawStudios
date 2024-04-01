@@ -19,6 +19,7 @@ TagManager:
   - Lit Lantern
   - Doorknob
   - LookButton
+  - ClayeFood
   layers:
   - Default
   - TransparentFX

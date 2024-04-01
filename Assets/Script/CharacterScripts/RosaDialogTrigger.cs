@@ -7,6 +7,8 @@ public class RosaDialogueTrigger : MonoBehaviour
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
     [SerializeField] private TextAsset dialogFile2;
+    [SerializeField] private TextAsset dialogFile3;
+    [SerializeField] private TextAsset dialogFile4;
 
     private bool playerInRange;
 
@@ -28,6 +30,17 @@ public class RosaDialogueTrigger : MonoBehaviour
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
                     PlayerDataController.instance.rosaLAppear = true;
                     
+                }
+                if (PlayerDataController.instance.rosaInvest)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile3);
+                    //PlayerDataController.instance.rosaBagOpened = true;
+
+                }
+                if (PlayerDataController.instance.rosaBagOpened)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+
                 }
             }
         }
