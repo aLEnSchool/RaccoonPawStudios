@@ -17,6 +17,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator portraitAnimator;
 
+    [Header("Choices UI")]
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
+
     [Header("Typewriter Effect")]
     [SerializeField] private float typingSpeed = 0.5f;
     private Coroutine displayLineCoroutine;
@@ -29,6 +33,8 @@ public class DialogueManager : MonoBehaviour
 
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
+    private bool canContinueToNextLine = false;
+    static Choice choiceSelected;
 
     private const string portrait = "portrait";
 
@@ -54,6 +60,15 @@ public class DialogueManager : MonoBehaviour
         //Dialogue
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+        choiceSelected = null;
+
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices)
+        {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index++;
+        }
 
         //Sound
         //typeWriteSound.Stop();
@@ -122,6 +137,7 @@ public class DialogueManager : MonoBehaviour
             typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
+            
         }
         else
         {
@@ -129,13 +145,46 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void DisplayChoices()
+    {
+        List<Choice> currentChoices = currentStory.currentChoices;
+
+        if(currentChoices.Count > choices.Length)
+        {
+            Debug.LogError("More choices were given than can take");
+        }
+
+        int index = 0;
+        foreach(Choice choice in currentChoices)
+        {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+
+        for (int i = index; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
+
+        //dialoguePanel.SetActive(true);
+        //yield return new WaitUntil(() => { return choiceSelected != null; });
+
+        //AdvanceFromDecision();
+        StartCoroutine(SelectFirstChoice());
+    }
+
     private IEnumerator DisplayLine(string line)
     {
         dialogueText.text = "";
+        HideChoices();
+
+        canContinueToNextLine = false;
 
         foreach (char letter in line.ToCharArray())
         {
             dialogueText.text += letter;
+            
             /* Failed Attempt
             int random_typeSound = Random.Range(1, 3);
             if (random_typeSound == 1)
@@ -155,7 +204,41 @@ public class DialogueManager : MonoBehaviour
         }
         Debug.Log("Stop sound");
         typeWriteSound.Stop();
+        DisplayChoices();
+        canContinueToNextLine = true;
     }
+
+    private IEnumerator SelectFirstChoice() 
+    {
+        // Event System requires we clear it first, then wait
+        // for at least one frame before we set the current selected object.
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+    }
+
+    public void MakeChoice(int choiceIndex)
+    {
+        if (canContinueToNextLine) 
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            // NOTE: The below two lines were added to fix a bug after the Youtube video was made
+            //choices.GetInstance().RegisterSubmitPressed(); // this is specific to my InputManager script
+            ContinueStory();
+        }
+    }
+
+    private void HideChoices() 
+    {
+        foreach (GameObject choiceButton in choices) 
+        {
+            choiceButton.SetActive(false);
+        }
+    }
+
+
+
+
 }
 
 
