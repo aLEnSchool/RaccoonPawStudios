@@ -26,6 +26,7 @@ public class RosaDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.hallSadie)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
+                    PlayerDataController.instance.rosaLAppear = true;
                     
                 }
             }

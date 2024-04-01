@@ -19,6 +19,7 @@ public class PlayerDataController : MonoBehaviour
     public bool frannieLighter = false;
     public bool johnLighter = false;
     public bool rosaLighter = false;
+    public bool rosaLAppear = false;
 
     //after finding crime scene
     public bool clayInvest = false;
