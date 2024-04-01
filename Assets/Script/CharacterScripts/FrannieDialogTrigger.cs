@@ -23,7 +23,7 @@ public class FrannieDialogueTrigger : MonoBehaviour
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
 
-                if (PlayerDataController.instance.hallSadie)
+                if (PlayerDataController.instance.drugsFound)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
                     

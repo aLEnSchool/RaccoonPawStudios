@@ -30,7 +30,7 @@ public class KitchenDoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Sadie.cookBusy)
+        if (PlayerDataController.instance.sadieBusy == true)
         {
             //TP TO KITCHEN
             if (inRange)

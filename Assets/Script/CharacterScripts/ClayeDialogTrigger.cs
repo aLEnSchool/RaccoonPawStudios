@@ -7,6 +7,9 @@ public class ClayeDialogueTrigger : MonoBehaviour
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
     [SerializeField] private TextAsset dialogFile2;
+    [SerializeField] private TextAsset dialogFile3;
+    [SerializeField] private TextAsset dialogFile4;
+    [SerializeField] private TextAsset dialogFile5;
 
     private bool playerInRange;
 
@@ -28,6 +31,22 @@ public class ClayeDialogueTrigger : MonoBehaviour
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
                     
+                }
+                if (PlayerDataController.instance.clayInvest)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile3);
+                    PlayerDataController.instance.sadieBusy = true;
+
+                }
+                if (PlayerDataController.instance.clayeFoodB)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+
+                }
+                if (PlayerDataController.instance.clayeBagOpen)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile5);
+
                 }
             }
         }

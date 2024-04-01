@@ -28,6 +28,22 @@ public class PlayerDataController : MonoBehaviour
     public bool rosaInvest = false;
     public bool sadieInvest = false;
 
+    //tom in the kitchen
+    public bool tomKitchen = false;
+
+    //sadie busy with claye
+    public bool sadieBusy = false;
+
+    //rosa go into bag
+    public bool rosaBagOpened = false;
+
+    //rosa go into bag
+    public bool drugsFound = false;
+
+    //claye's food brought over
+    public bool clayeFoodB = false;
+    public bool clayeBagOpen = false;
+
 
     private void Awake()
     {
