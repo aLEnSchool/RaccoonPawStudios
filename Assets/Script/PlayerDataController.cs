@@ -35,6 +35,7 @@ public class PlayerDataController : MonoBehaviour
     public bool sadieBusy = false;
 
     //rosa go into bag
+    public bool rosaCanOpen = false;
     public bool rosaBagOpened = false;
 
     //rosa go into bag
