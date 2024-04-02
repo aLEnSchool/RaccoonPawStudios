@@ -45,8 +45,8 @@ public class PlayerDataController : MonoBehaviour
     public bool clayeFoodB = false;
     public bool clayeBagOpen = false;
 
-    private string characterSelected = "";
-    private string weaponSelected = "";
+    public int characterSelected;
+    public int weaponSelected;
 
     private void Awake()
     {

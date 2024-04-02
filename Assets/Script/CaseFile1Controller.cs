@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CaseFile1Controller : MonoBehaviour
 {
@@ -53,8 +54,13 @@ public class CaseFile1Controller : MonoBehaviour
     //NEXT SCENE Button
     public void caseFileSubmitted()
     {
-        Debug.Log(weapon_dropdown.value);
+        PlayerDataController.instance.characterSelected = character_dropdown.value;
         Debug.Log(character_dropdown.value);
+
+        PlayerDataController.instance.weaponSelected = weapon_dropdown.value;
+        Debug.Log(weapon_dropdown.value);
+
+        SceneManager.LoadScene("End_scene");
     }
     //Grabs all inserted values
 }
