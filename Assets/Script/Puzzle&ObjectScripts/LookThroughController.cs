@@ -22,19 +22,26 @@ public class LookThroughController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inRange)
+        //PlayerDataController.instance.rosaBagOpened = true;
+
+        if (PlayerDataController.instance.rosaCanOpen)
         {
-            if (Input.GetKeyDown(KeyCode.F)) { 
-                LookThrough.SetActive(true);
+            if (inRange)
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    LookThrough.SetActive(true);
+                    PlayerDataController.instance.rosaBagOpened = true;
+                }
             }
-        }
-        else
-        {
-            LookThrough.SetActive(false);
-        }
-        if (itemfound)
-        {
-            Debug.Log("STOP");
+            else
+            {
+                LookThrough.SetActive(false);
+            }
+            if (itemfound)
+            {
+                Debug.Log("STOP");
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

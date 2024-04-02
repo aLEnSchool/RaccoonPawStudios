@@ -34,7 +34,7 @@ public class RosaDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.rosaInvest)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile3);
-                    //PlayerDataController.instance.rosaBagOpened = true;
+                    PlayerDataController.instance.rosaCanOpen = true;
 
                 }
                 if (PlayerDataController.instance.rosaBagOpened)
