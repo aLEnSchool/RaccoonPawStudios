@@ -45,6 +45,8 @@ public class PlayerDataController : MonoBehaviour
     public bool clayeFoodB = false;
     public bool clayeBagOpen = false;
 
+    private string characterSelected = "";
+    private string weaponSelected = "";
 
     private void Awake()
     {
@@ -85,10 +87,5 @@ public class PlayerDataController : MonoBehaviour
         {
             SceneManager.LoadScene("CaseFileScreen");
         }
-    }
-
-    public void caseFileSubmit()
-    {
-        SceneManager.LoadScene("End_scene");
     }
 }

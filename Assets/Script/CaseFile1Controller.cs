@@ -51,6 +51,10 @@ public class CaseFile1Controller : MonoBehaviour
     }
 
     //NEXT SCENE Button
-
+    public void caseFileSubmitted()
+    {
+        Debug.Log(weapon_dropdown.value);
+        Debug.Log(character_dropdown.value);
+    }
     //Grabs all inserted values
 }
