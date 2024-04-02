@@ -91,14 +91,6 @@ public class PlayerController : MonoBehaviour
             {
                 playerSwoosh.Play();
             }
-            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
-            {
-                playerSwoosh.Stop();
-            }
-            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
-            {
-                playerSwoosh.Stop();
-            }
 
             // jumping on floor
             if ((Input.GetKeyDown(KeyCode.W) && (!jumping)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumping) || Input.GetKeyDown(KeyCode.Space) && (!jumping))
@@ -132,6 +124,16 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
 
             }
+        }
+
+        //Remove Swoosh
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            playerSwoosh.Stop();
+        }
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            playerSwoosh.Stop();
         }
 
         if (Input.GetKeyUp(KeyCode.A) && !jumping || Input.GetKeyUp(KeyCode.LeftArrow) && !jumping)
