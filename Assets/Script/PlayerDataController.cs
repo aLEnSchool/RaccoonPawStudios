@@ -86,4 +86,9 @@ public class PlayerDataController : MonoBehaviour
             SceneManager.LoadScene("CaseFileScreen");
         }
     }
+
+    public void caseFileSubmit()
+    {
+        SceneManager.LoadScene("End_scene");
+    }
 }
