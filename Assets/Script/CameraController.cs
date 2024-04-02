@@ -23,6 +23,7 @@ public class Came : MonoBehaviour
     [SerializeField] private GameObject player; // to access player location
 
     [SerializeField] private FadeToBlack screenFade;
+    private Coroutine fadingCouroutine;
 
     private void Start()
     {
@@ -87,9 +88,14 @@ public class Came : MonoBehaviour
     // 
     private IEnumerator switchRooms(float yPosition, Vector3 playerPosition, ExitDoor door)
     {
-        StartCoroutine(screenFade.fadeOut()); // fade to black
+        if (fadingCouroutine != null)
+        {
+            StopCoroutine(fadingCouroutine);
+        }
+        fadingCouroutine = StartCoroutine(screenFade.fadeOut()); // fade to black
 
         yield return new WaitForSeconds(0.5f);
+
 
         // change camera position to the new room
         yPos = yPosition;
@@ -99,12 +105,20 @@ public class Came : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        StartCoroutine(screenFade.fadeIn()); // fade in
+        if (fadingCouroutine != null)
+        {
+            StopCoroutine(fadingCouroutine);
+        }
+        fadingCouroutine = StartCoroutine(screenFade.fadeIn()); // fade in
     }
 
     private IEnumerator switchRoomToKitchen(float yPosition, Vector3 playerPosition, KitchenDoorController door)
     {
-        StartCoroutine(screenFade.fadeOut()); // fade to black
+        if (fadingCouroutine != null)
+        {
+            StopCoroutine(fadingCouroutine);
+        }
+        fadingCouroutine = StartCoroutine(screenFade.fadeOut()); // fade to black
 
         yield return new WaitForSeconds(0.5f);
 
@@ -116,12 +130,20 @@ public class Came : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        StartCoroutine(screenFade.fadeIn()); // fade in
+        if (fadingCouroutine != null)
+        {
+            StopCoroutine(fadingCouroutine);
+        }
+        fadingCouroutine = StartCoroutine(screenFade.fadeIn()); // fade in
     }
 
     private IEnumerator switchRoomToWC(float yPosition, Vector3 playerPosition, WCDoorController door)
     {
-        StartCoroutine(screenFade.fadeOut()); // fade to black
+        if (fadingCouroutine != null)
+        {
+            StopCoroutine(fadingCouroutine);
+        }
+        fadingCouroutine = StartCoroutine(screenFade.fadeOut()); // fade to black
 
         yield return new WaitForSeconds(0.5f);
 
@@ -133,6 +155,10 @@ public class Came : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        StartCoroutine(screenFade.fadeIn()); // fade in
+        if (fadingCouroutine != null)
+        {
+            StopCoroutine(fadingCouroutine);
+        }
+        fadingCouroutine = StartCoroutine(screenFade.fadeIn()); // fade in
     }
 }
