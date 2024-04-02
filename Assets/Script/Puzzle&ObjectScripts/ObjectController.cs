@@ -28,13 +28,13 @@ public class ObjectController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (inRange && !objectPickedUp) { 
+            if (inRange && !objectPickedUp) {
                 //if (!objectPickedUp)
                 //{
-                    pickUp();
+                pickUp();
                 //}
             }
-            else if (objectPickedUp && !doorRange)
+            else if (objectPickedUp && !PlayerController.instance.doorRange)
             {
                 dropItem();
             }

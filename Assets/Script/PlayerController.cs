@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float inputX;
     private Rigidbody2D rb;
     public bool canMove;
+    public bool doorRange;
 
     private bool jumping = false;   // check whether the player has jumped
     private int jumpCount = 0;      // counter for double jump
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForceBench = 5f;
     private bool jumpingBench = false;   // check whether the player has jumped
     private int jumpCountBench = 0;      // counter for double jump
-    private bool fromFloor = true;
+    public bool fromFloor = true;
 
     [Header("Animation")]
     [SerializeField] public Animator animator;
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         canMove = true;
         playerSwoosh = GetComponent<AudioSource>();
+        doorRange = false;
     }
 
     // Update is called once per frame
@@ -217,6 +219,16 @@ public class PlayerController : MonoBehaviour
 
             fromFloor = false; // jumped from bench
         }
+    }
+
+    //Allows Objects to not be dropped when going through doors
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        doorRange = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        doorRange = false;
     }
 
     // function to slowly decrease the speed at which the hat is falling, to be used after a jump
