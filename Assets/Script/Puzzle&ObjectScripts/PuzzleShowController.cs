@@ -10,7 +10,7 @@ public class PuzzleShowController : MonoBehaviour
     private SpriteRenderer sprite;
 
     private bool inRange;
-    private bool interact;
+    public bool interact;
 
     // Start is called before the first frame update
     void Start()

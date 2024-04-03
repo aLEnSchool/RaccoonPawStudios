@@ -7,6 +7,7 @@ public class InformationController : MonoBehaviour
     private SpriteRenderer sprite;
 
     public SpriteRenderer popupSprite;
+
     private SpriteRenderer[] childrenPopUps;
 
     private bool inRange;

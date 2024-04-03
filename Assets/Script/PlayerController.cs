@@ -44,6 +44,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // reset jump variables
+        jumping = false;
+        jumpCount = 0;
+
+        fromFloor = true; // jumped from floor
+
         inputX = 0;
         rb = GetComponent<Rigidbody2D>();
         canMove = true;
