@@ -130,6 +130,17 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector2(5f, 0f), ForceMode2D.Impulse);
 
             }
+
+            // jumping on bench
+            if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))
+            {
+                rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
+
+                jumpCountBench += 1;
+                jumpingBench = checkJump(1); // check how many jumps have been done
+
+                playHatAnimation = true; // allow the hat floating down animation to be played
+            }
         }
 
         //Remove Swoosh
@@ -149,17 +160,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.D) && !jumping || Input.GetKeyUp(KeyCode.RightArrow) && !jumping)
         {
             inputX = 0;
-        }
-
-        // jumping on bench
-        if ((Input.GetKeyDown(KeyCode.W) && (!jumpingBench)) || Input.GetKeyDown(KeyCode.UpArrow) && (!jumpingBench))
-        {
-            rb.AddForce(Vector2.up * jumpForceBench, ForceMode2D.Impulse);
-
-            jumpCountBench += 1;
-            jumpingBench = checkJump(1); // check how many jumps have been done
-
-            playHatAnimation = true; // allow the hat floating down animation to be played
         }
 
         //Movement

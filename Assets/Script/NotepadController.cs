@@ -19,14 +19,16 @@ public class NotepadController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        notepad_Background.gameObject.SetActive(notepadShown);
+        //notepad_Background.gameObject.SetActive(notepadShown);
 
-        if (notepadShown )
+        if (notepadShown)
         {
+            notepad_Background.gameObject.SetActive(true);
             PlayerController.instance.canMove = false;
         }
         else
         {
+            notepad_Background.gameObject.SetActive(false);
             PlayerController.instance.canMove = true;
         }
     }
@@ -37,7 +39,7 @@ public class NotepadController : MonoBehaviour
 
         if (notepadShown)
         {
-            notepadShown=false;
+            notepadShown = false;
         }
         else
         {
