@@ -10,11 +10,20 @@ public class CodeLockController : MonoBehaviour
     public TMP_Text codeOutput; 
     private string sequence = "";
 
-    private bool sequenceRight;
+    public bool sequenceRight;
+
+    public GameObject openLocker;
+    public GameObject closeLocker;
+
+    private void Awake()
+    {
+        sequenceRight = false;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        openLocker.SetActive(false);
         sequenceRight = false;
     }
 
@@ -23,7 +32,7 @@ public class CodeLockController : MonoBehaviour
     {
         codeOutput.SetText(sequence);
         
-        if (sequence == "263")
+        if (sequence == "2635")
         {
             sequenceRight = true;
         }
@@ -31,11 +40,16 @@ public class CodeLockController : MonoBehaviour
         {
             sequence = "";
         }
-        
+
         if (sequenceRight)
         {
-            Debug.Log("You is right");
+            openLocker.SetActive(true);
+            closeLocker.SetActive(false);
+            closeLocker.GetComponent<PuzzleShowController>().interact = true;
+            //Debug.Log("You is right");
         }
+        else { openLocker.SetActive(false); }
+
     }
 
     public void AddDigit(string digit)
