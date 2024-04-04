@@ -9,6 +9,7 @@ public class LookThroughController : MonoBehaviour
     public GameObject LookThrough;
 
     public bool itemfound = false;
+    public bool interact;
 
     //public Button doorknob;
 
@@ -17,6 +18,7 @@ public class LookThroughController : MonoBehaviour
     {
         LookThrough.SetActive(false);
         inRange = false;
+        interact = false;
     }
 
     // Update is called once per frame
@@ -30,8 +32,17 @@ public class LookThroughController : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    LookThrough.SetActive(true);
-                    PlayerDataController.instance.rosaBagOpened = true;
+                    if (!interact)
+                    {
+                        LookThrough.SetActive(true);
+                        PlayerDataController.instance.rosaBagOpened = true;
+                    }
+                    else
+                    {
+                        interact = false;
+                        LookThrough.SetActive(false);
+                    }
+                    
                 }
             }
             else

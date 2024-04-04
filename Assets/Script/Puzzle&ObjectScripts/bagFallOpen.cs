@@ -8,11 +8,13 @@ public class bagFallOpen : MonoBehaviour
     private Vector3 position;
     public GameObject LookThrough;
     public bool itemfound = false;
+    public bool interact;
 
     // Start is called before the first frame update
     void Start()
     {
         inRange = false;
+        interact = false;
         LookThrough.SetActive(false);
         position = new Vector3(transform.localPosition.x + 1.5f, transform.localPosition.y - 3f, transform.localPosition.z);
     }
@@ -31,8 +33,17 @@ public class bagFallOpen : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    LookThrough.SetActive(true);
-                    PlayerDataController.instance.clayeBagOpen = true;
+                    if (!interact)
+                    {
+                        LookThrough.SetActive(true);
+                        PlayerDataController.instance.clayeBagOpen = true;
+                    }
+                    else
+                    {
+                        interact = false;
+                        LookThrough.SetActive(false);
+                    }
+                    
                 }
             }
             else
