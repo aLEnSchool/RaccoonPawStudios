@@ -28,7 +28,7 @@ public class PuzzleShowController : MonoBehaviour
 
         if (inRange)
         {
-            sprite.color = Color.red;
+            sprite.color = Color.yellow;
         }
         else
         {
