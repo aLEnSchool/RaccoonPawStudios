@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class ObjectController : MonoBehaviour
+public class ClayeFoodLock : MonoBehaviour
 {
     private SpriteRenderer sprite; // For Testing
-    [SerializeField] private GameObject unlitLantern;
-    [SerializeField] private GameObject litLantern;
 
     public bool objectPickedUp;
     private bool inRange;
     private bool doorRange;
+    private Vector3 positionOnTable;
+    private bool click;
     //private Vector3 positionOnTable;
 
     // Start is called before the first frame update
@@ -22,6 +21,8 @@ public class ObjectController : MonoBehaviour
         objectPickedUp = false;
         inRange = false;
         doorRange = false;
+        positionOnTable = new Vector2(-6.04f, 24.55f);
+        click = false;
         //positionOnTable = new Vector3(16.55f, -0.31f, -0.04410756f);
     }
 
@@ -30,7 +31,8 @@ public class ObjectController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (inRange && !objectPickedUp) {
+            if (inRange && !objectPickedUp)
+            {
                 //if (!objectPickedUp)
                 //{
                 pickUp();
@@ -40,6 +42,11 @@ public class ObjectController : MonoBehaviour
             {
                 dropItem();
             }
+        }
+
+        if (click)
+        {
+            clickItem();
         }
 
     }
@@ -55,16 +62,12 @@ public class ObjectController : MonoBehaviour
             doorRange = true;
         }
 
-        //Lantern Gets lit
-        if (transform.tag == "Lantern")
+        if (collision.gameObject.tag == "ClayeFood")
         {
-            if (collision.transform.tag == "Lighter")
-            {
-                transform.tag = "Lit Lantern";
-
-                litLantern.SetActive(true);
-                unlitLantern.SetActive(false);
-            }
+            //inRange = true;
+            //objectPickedUp = false;
+            //transform.localPosition = positionOnTable;
+            click = true;
         }
     }
 
@@ -88,7 +91,7 @@ public class ObjectController : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         transform.SetParent(player.transform);
-        transform.position = new Vector2(player.transform.position.x+1.5f, player.transform.position.y);
+        transform.position = new Vector2(player.transform.position.x + 1.5f, player.transform.position.y);
 
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
@@ -101,6 +104,20 @@ public class ObjectController : MonoBehaviour
 
         GameObject restingPlace = GameObject.FindGameObjectWithTag("Rest");
         transform.SetParent(restingPlace.transform);
+
+        gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+    }
+
+    private void clickItem()
+    {
+        Debug.Log("Click Item");
+        objectPickedUp = false;
+        inRange = false;
+
+        GameObject clayeClick = GameObject.FindGameObjectWithTag("ClayeFood");
+        transform.SetParent(clayeClick.transform);
+        transform.position = new Vector2(clayeClick.transform.position.x - 2.5f, clayeClick.transform.position.y - 0.3f);
+
 
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }

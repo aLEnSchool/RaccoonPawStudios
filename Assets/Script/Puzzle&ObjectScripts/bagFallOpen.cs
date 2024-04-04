@@ -2,40 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookThroughController : MonoBehaviour
+public class bagFallOpen : MonoBehaviour
 {
     public bool inRange;
-
+    private Vector3 position;
     public GameObject LookThrough;
-
     public bool itemfound = false;
     public bool interact;
-
-    //public Button doorknob;
 
     // Start is called before the first frame update
     void Start()
     {
-        LookThrough.SetActive(false);
         inRange = false;
         interact = false;
+        LookThrough.SetActive(false);
+        position = new Vector3(transform.localPosition.x + 1.5f, transform.localPosition.y - 3f, transform.localPosition.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //PlayerDataController.instance.rosaBagOpened = true;
-
-        if (PlayerDataController.instance.rosaCanOpen)
+        if (PlayerDataController.instance.clayeBagFall) //if claye bag is triggered to fall
         {
-            if (inRange)
+            if (!DialogueManager.GetInstance().dialogueIsPlaying) //if dialogue is done
+            {
+                transform.localPosition = position; //drop bag 
+            }
+
+            if (inRange) //if in range
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     if (!interact)
                     {
                         LookThrough.SetActive(true);
-                        PlayerDataController.instance.rosaBagOpened = true;
+                        PlayerDataController.instance.clayeBagOpen = true;
                     }
                     else
                     {
@@ -52,9 +53,10 @@ public class LookThroughController : MonoBehaviour
             if (itemfound)
             {
                 Debug.Log("STOP");
-            }
+            }   
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

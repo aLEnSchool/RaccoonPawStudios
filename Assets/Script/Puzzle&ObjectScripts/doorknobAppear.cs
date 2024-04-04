@@ -2,28 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LighterAppear : MonoBehaviour
+public class doorknobAppear : MonoBehaviour
 {
     private SpriteRenderer sprite;
 
-    public GameObject lighter;
+    public GameObject knob;
     // Start is called before the first frame update
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
 
-        lighter.SetActive(false);
+        knob.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerDataController.instance.rosaLAppear)
+        if (PlayerDataController.instance.clayeBagOpen)
         {
-            if (!DialogueManager.GetInstance().dialogueIsPlaying)
-            {
-                lighter.SetActive(true);
-            }       
+            knob.SetActive(true);
         }
     }
 }

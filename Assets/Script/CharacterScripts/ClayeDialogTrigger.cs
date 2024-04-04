@@ -25,7 +25,7 @@ public class ClayeDialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
-                //PlayerDataController.instance.talkedToClaye = true;
+                
 
                 if (PlayerDataController.instance.hallSadie)
                 {
@@ -41,6 +41,7 @@ public class ClayeDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.clayeFoodB)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+                    PlayerDataController.instance.clayeBagFall = true;
 
                 }
                 if (PlayerDataController.instance.clayeBagOpen)

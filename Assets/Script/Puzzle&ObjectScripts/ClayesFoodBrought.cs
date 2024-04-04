@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ClayesFoodBrought : MonoBehaviour
 {
@@ -13,9 +14,8 @@ public class ClayesFoodBrought : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        foodBrought = false;
         inRange = false;
-
 
     }
 
@@ -31,6 +31,7 @@ public class ClayesFoodBrought : MonoBehaviour
                 Debug.Log("we shouting at the players");
 
                 foodBrought = true;
+                
                 PlayerDataController.instance.clayeFoodB = true;
             }
 
