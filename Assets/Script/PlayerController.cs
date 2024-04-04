@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         // sprite animations
         if ((inputX > 0.01 || inputX < -0.01) && !jumping)
