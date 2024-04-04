@@ -41,7 +41,7 @@ public class ClayeDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.clayeFoodB)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
-                   // PlayerDataController.instance.clayeBagFall = true;
+                    PlayerDataController.instance.clayeBagFall = true;
 
                 }
                 if (PlayerDataController.instance.clayeBagOpen)
