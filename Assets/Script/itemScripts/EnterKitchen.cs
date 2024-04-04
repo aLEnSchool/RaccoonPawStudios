@@ -10,14 +10,14 @@ public class EnterKitchen : MonoBehaviour
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
 
-    public GameObject smoke;
+    //public GameObject smoke;
 
     // Start is called before the first frame update
     void Start()
     {
         tomEnter = false;
         inRange = false;
-        smoke.SetActive(false);
+        //smoke.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class EnterKitchen : MonoBehaviour
             }
             else
             {
-                smoke.SetActive(true);
+                //smoke.SetActive(true);
             }
 
         }
