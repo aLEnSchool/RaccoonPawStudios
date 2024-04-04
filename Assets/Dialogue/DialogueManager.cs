@@ -88,11 +88,11 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("this e");
             ContinueStory();
         }
-        else if (inLine && Input.GetKeyDown(KeyCode.E))
+        /*else if (inLine && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Calling Skipping");
             switchTheBool();
-        }
+        }*/
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
