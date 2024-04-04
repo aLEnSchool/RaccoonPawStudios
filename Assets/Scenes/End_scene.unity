@@ -174,8 +174,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.15149999, y: 1.5338, z: 0}
-    m_Extent: {x: 2.2444, y: 1.9692, z: 0}
+    m_Center: {x: 0.15359998, y: 1.5272001, z: 0}
+    m_Extent: {x: 2.2491, y: 1.9613, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -208,6 +208,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2005026469}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!1 &329680445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329680446}
+  - component: {fileID: 329680447}
+  m_Layer: 0
+  m_Name: EndSceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329680446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329680445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5762159, y: 0.7752795, z: 0.1967507}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &329680447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329680445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6d8376c50ccef4b97dc845326a6580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &488155631
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +430,7 @@ GameObject:
   - component: {fileID: 927890013}
   - component: {fileID: 927890012}
   m_Layer: 0
-  m_Name: Rosa
+  m_Name: Other
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1175,8 +1219,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.18895, y: 1.3008001, z: 0}
-    m_Extent: {x: 3.6184502, y: 2.1255, z: 0}
+    m_Center: {x: 3.18985, y: 1.29845, z: 0}
+    m_Extent: {x: 3.61435, y: 2.12775, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -1215,3 +1259,4 @@ SceneRoots:
   - {fileID: 927890013}
   - {fileID: 1767334576}
   - {fileID: 2005026469}
+  - {fileID: 329680446}
