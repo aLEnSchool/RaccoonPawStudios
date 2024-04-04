@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NotepadController : MonoBehaviour
 {
+    public static NotepadController instance;
+
     [SerializeField] private GameObject notepad_Background;
     public bool notepadShown;
 

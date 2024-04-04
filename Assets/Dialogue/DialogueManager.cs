@@ -38,7 +38,8 @@ public class DialogueManager : MonoBehaviour
 
     private const string portrait = "portrait";
 
-
+    private bool inLine = false;
+    private bool skipTypeWriting = false;
 
     private void Awake()
     {
@@ -82,9 +83,15 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !inLine)
         {
+            Debug.Log("this e");
             ContinueStory();
+        }
+        else if (inLine && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Calling Skipping");
+            switchTheBool();
         }
     }
 
@@ -131,7 +138,9 @@ public class DialogueManager : MonoBehaviour
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine);
+                inLine = false;
             }
+            //inLine = true;
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
             PlayerController.instance.canMove = false;
             typeWriteSound.Play();
@@ -180,32 +189,35 @@ public class DialogueManager : MonoBehaviour
         HideChoices();
 
         canContinueToNextLine = false;
+        //inLine = false;
 
-        foreach (char letter in line.ToCharArray())
+        if (skipTypeWriting)
         {
-            dialogueText.text += letter;
-            
-            /* Failed Attempt
-            int random_typeSound = Random.Range(1, 3);
-            if (random_typeSound == 1)
-            {
-                typewriter1.Play();
-            }
-            if (random_typeSound == 2)
-            {
-                typewriter2.Play();
-            }
-            if (random_typeSound == 3)
-            {
-                typewriter3.Play();
-            }*/
-
-            yield return new WaitForSeconds(typingSpeed);
+            Debug.Log("Stop the typewritter effect");
+            dialogueText.text = line;
+            switchTheBool();
+            typeWriteSound.Stop();
+            DisplayChoices();
+            canContinueToNextLine = true;
+            inLine = false;
         }
-        Debug.Log("Stop sound");
-        typeWriteSound.Stop();
-        DisplayChoices();
-        canContinueToNextLine = true;
+        else 
+        {
+            inLine = true;
+            foreach (char letter in line.ToCharArray())
+            {
+                dialogueText.text += letter;
+
+                yield return new WaitForSeconds(typingSpeed);
+            }
+            typeWriteSound.Stop();
+            DisplayChoices();
+            canContinueToNextLine = true;
+            inLine = false;
+
+        }
+        //Debug.Log("Stop sound");
+        //typeWriteSound.Stop();
     }
 
     private IEnumerator SelectFirstChoice() 
@@ -236,7 +248,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-
+    private void switchTheBool()
+    {
+        if (inLine)
+        {
+            skipTypeWriting = true;
+        }
+        else
+        {
+            skipTypeWriting = false;
+        }
+    }
 
 
 }
