@@ -19,9 +19,11 @@ public class LighterAppear : MonoBehaviour
     void Update()
     {
         if (PlayerDataController.instance.rosaLAppear)
-                {
-                    lighter.SetActive(true);
-                    
-                }
+        {
+            if (!DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                lighter.SetActive(true);
+            }       
+        }
     }
 }

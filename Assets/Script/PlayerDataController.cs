@@ -43,6 +43,7 @@ public class PlayerDataController : MonoBehaviour
 
     //claye's food brought over
     public bool clayeFoodB = false;
+    public bool clayeBagFall = false;
     public bool clayeBagOpen = false;
 
     public int characterSelected;
