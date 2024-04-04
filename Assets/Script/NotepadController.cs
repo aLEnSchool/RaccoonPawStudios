@@ -9,12 +9,17 @@ public class NotepadController : MonoBehaviour
     [SerializeField] private GameObject notepad_Background;
     public bool notepadShown;
 
-    public bool notepadHidden; 
+    public bool notepadHidden;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        notepadShown = false;
+        notepadShown = true;
         notepad_Background.SetActive(false);
     }
 
@@ -23,12 +28,12 @@ public class NotepadController : MonoBehaviour
     {
         //notepad_Background.gameObject.SetActive(notepadShown);
 
-        if (notepadShown)
+        if (!notepadShown)
         {
             notepad_Background.gameObject.SetActive(true);
             PlayerController.instance.canMove = false;
         }
-        else
+        if (notepadShown)
         {
             notepad_Background.gameObject.SetActive(false);
             PlayerController.instance.canMove = true;
