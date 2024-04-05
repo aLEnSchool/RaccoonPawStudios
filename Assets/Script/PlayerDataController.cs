@@ -82,17 +82,21 @@ public class PlayerDataController : MonoBehaviour
         sceneIndex++;
         if (sceneIndex == 1)
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("Animation");
         }
         if (sceneIndex == 2)
         {
-            SceneManager.LoadScene("Transition");
+            SceneManager.LoadScene("Tutorial");
         }
         if (sceneIndex == 3)
         {
-            SceneManager.LoadScene("L01_scene");
+            SceneManager.LoadScene("Transition");
         }
         if (sceneIndex == 4)
+        {
+            SceneManager.LoadScene("L01_scene");
+        }
+        if (sceneIndex == 5)
         {
             SceneManager.LoadScene("CaseFileScreen");
         }
