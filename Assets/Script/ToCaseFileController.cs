@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToCaseController : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class ToCaseController : MonoBehaviour
     public void toNextScene()
     {
         Debug.Log("Go to next Scene");
-        playertemp.GetComponent<PlayerDataController>().nextScene();
+        SceneManager.LoadScene("CaseFileScreen");
     }
 
 }

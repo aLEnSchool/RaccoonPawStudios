@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaseFileScreen.unity
     guid: 0a400dadac2ecc94ea36044a3005ac7d
+  - enabled: 1
+    path: Assets/Scenes/End_scene.unity
+    guid: 45bc0ab3d7672704ba6be6e5c0913bf0
   m_configObjects: {}
