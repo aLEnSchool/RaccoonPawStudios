@@ -71,6 +71,8 @@ public class WCDoorController : MonoBehaviour
             doorWithKnob.SetActive(true);
             doorNoKnob.SetActive(false);
             doorknob.SetActive(false);
+            PlayerDataController.instance.knobInTheDoor = true;
+            //knob.SetActive(false);
         }
     }
 

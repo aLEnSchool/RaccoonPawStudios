@@ -22,5 +22,9 @@ public class doorknobAppear : MonoBehaviour
         {
             knob.SetActive(true);
         }
+        if (PlayerDataController.instance.knobInTheDoor)
+        {
+            knob.SetActive(false);
+        }
     }
 }
