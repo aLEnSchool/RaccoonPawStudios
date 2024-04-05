@@ -84,16 +84,15 @@ public class DialogueManager : MonoBehaviour
         }
 
         //if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
-        if (Input.GetKeyDown(KeyCode.E) && NotepadController.instance.notepadShown)
+        if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
         {
-            Debug.Log("this e");
+            //Debug.Log("this e");
             ContinueStory();
         }
-        /*else if (inLine && Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && inLine && NotepadController.instance.notepadShown)
         {
-            Debug.Log("Calling Skipping");
-            switchTheBool();
-        }*/
+            skipTypeWriting = true;
+        }
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -192,33 +191,25 @@ public class DialogueManager : MonoBehaviour
         canContinueToNextLine = false;
         //inLine = false;
 
-        if (skipTypeWriting)
+        inLine = true;
+        foreach (char letter in line.ToCharArray())
         {
-            Debug.Log("Stop the typewritter effect");
-            dialogueText.text = line;
-            switchTheBool();
-            typeWriteSound.Stop();
-            DisplayChoices();
-            canContinueToNextLine = true;
-            inLine = false;
-        }
-        else 
-        {
-            inLine = true;
-            foreach (char letter in line.ToCharArray())
+            if (skipTypeWriting)
             {
-                dialogueText.text += letter;
-
-                yield return new WaitForSeconds(typingSpeed);
+                dialogueText.text = line;
+                skipTypeWriting = false;
+                break;
             }
-            typeWriteSound.Stop();
-            DisplayChoices();
-            canContinueToNextLine = true;
-            inLine = false;
+            dialogueText.text += letter;
 
+            yield return new WaitForSeconds(typingSpeed);
         }
-        //Debug.Log("Stop sound");
-        //typeWriteSound.Stop();
+
+        typeWriteSound.Stop();
+        DisplayChoices();
+        canContinueToNextLine = true;
+        //skipTypeWriting = false;
+        inLine = false;
     }
 
     private IEnumerator SelectFirstChoice() 
@@ -248,20 +239,6 @@ public class DialogueManager : MonoBehaviour
             choiceButton.SetActive(false);
         }
     }
-
-    private void switchTheBool()
-    {
-        if (inLine)
-        {
-            skipTypeWriting = true;
-        }
-        else
-        {
-            skipTypeWriting = false;
-        }
-    }
-
-
 }
 
 

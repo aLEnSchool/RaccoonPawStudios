@@ -36,7 +36,10 @@ public class NotepadController : MonoBehaviour
         if (notepadShown)
         {
             notepad_Background.gameObject.SetActive(false);
-            PlayerController.instance.canMove = true;
+            if (!DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                PlayerController.instance.canMove = true;
+            }
         }
     }
 
