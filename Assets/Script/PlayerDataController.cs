@@ -33,18 +33,21 @@ public class PlayerDataController : MonoBehaviour
 
     //sadie busy with claye
     public bool sadieBusy = false;
+    public bool wentIntoKitchen = false;
 
     //rosa go into bag
     public bool rosaCanOpen = false;
     public bool rosaBagOpened = false;
 
-    //rosa go into bag
+    //drugs found
     public bool drugsFound = false;
 
     //claye's food brought over
     public bool clayeFoodB = false;
     public bool clayeBagFall = false;
     public bool clayeBagOpen = false;
+
+    
 
     public int characterSelected;
     public int weaponSelected;

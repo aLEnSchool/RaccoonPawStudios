@@ -46,6 +46,7 @@ public class CodeLockController : MonoBehaviour
             openLocker.SetActive(true);
             closeLocker.SetActive(false);
             closeLocker.GetComponent<PuzzleShowController>().interact = true;
+            PlayerDataController.instance.drugsFound = true;
             //Debug.Log("You is right");
         }
         else { openLocker.SetActive(false); }
