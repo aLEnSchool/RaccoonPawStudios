@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Dialogue UI")]
-    [SerializeField] public GameObject dialoguePanel;
+    [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator portraitAnimator;
 
@@ -83,21 +83,20 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        //if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
-        if (Input.GetKeyDown(KeyCode.E) && !inLine && !NotepadController.instance.notepadShown)
+        if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
         {
-            //skipTypeWriting = false;
+            Debug.Log("this e");
             ContinueStory();
         }
-        if (Input.GetKeyDown(KeyCode.E) && inLine && !NotepadController.instance.notepadShown)
+        /*else if (inLine && Input.GetKeyDown(KeyCode.E))
         {
-            skipTypeWriting = true;
-        }
+            Debug.Log("Calling Skipping");
+            switchTheBool();
+        }*/
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
-        //Debug.Log("StartingScript");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
@@ -147,7 +146,7 @@ public class DialogueManager : MonoBehaviour
             typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
-            
+
         }
         else
         {
@@ -159,13 +158,13 @@ public class DialogueManager : MonoBehaviour
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        if(currentChoices.Count > choices.Length)
+        if (currentChoices.Count > choices.Length)
         {
             Debug.LogError("More choices were given than can take");
         }
 
         int index = 0;
-        foreach(Choice choice in currentChoices)
+        foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -192,29 +191,36 @@ public class DialogueManager : MonoBehaviour
         canContinueToNextLine = false;
         //inLine = false;
 
-        inLine = true;
-        foreach (char letter in line.ToCharArray())
+        if (skipTypeWriting)
         {
-            if (skipTypeWriting)
-            {
-                dialogueText.text = line;
-                skipTypeWriting = false;
-                inLine = false;
-                break;
-            }
-            dialogueText.text += letter;
-
-            yield return new WaitForSeconds(typingSpeed);
+            Debug.Log("Stop the typewritter effect");
+            dialogueText.text = line;
+            switchTheBool();
+            typeWriteSound.Stop();
+            DisplayChoices();
+            canContinueToNextLine = true;
+            inLine = false;
         }
-        skipTypeWriting = false;
-        typeWriteSound.Stop();
-        DisplayChoices();
-        canContinueToNextLine = true;
-        //skipTypeWriting = false;
-        inLine = false;
+        else
+        {
+            inLine = true;
+            foreach (char letter in line.ToCharArray())
+            {
+                dialogueText.text += letter;
+
+                yield return new WaitForSeconds(typingSpeed);
+            }
+            typeWriteSound.Stop();
+            DisplayChoices();
+            canContinueToNextLine = true;
+            inLine = false;
+
+        }
+        //Debug.Log("Stop sound");
+        //typeWriteSound.Stop();
     }
 
-    private IEnumerator SelectFirstChoice() 
+    private IEnumerator SelectFirstChoice()
     {
         // Event System requires we clear it first, then wait
         // for at least one frame before we set the current selected object.
@@ -225,7 +231,7 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        if (canContinueToNextLine) 
+        if (canContinueToNextLine)
         {
             currentStory.ChooseChoiceIndex(choiceIndex);
             // NOTE: The below two lines were added to fix a bug after the Youtube video was made
@@ -234,13 +240,26 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void HideChoices() 
+    private void HideChoices()
     {
-        foreach (GameObject choiceButton in choices) 
+        foreach (GameObject choiceButton in choices)
         {
             choiceButton.SetActive(false);
         }
     }
+
+    private void switchTheBool()
+    {
+        if (inLine)
+        {
+            skipTypeWriting = true;
+        }
+        else
+        {
+            skipTypeWriting = false;
+        }
+    }
+
 }
 
 
