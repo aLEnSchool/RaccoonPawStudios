@@ -198,6 +198,7 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueText.text = line;
                 skipTypeWriting = false;
+                inLine = false;
                 break;
             }
             dialogueText.text += letter;
