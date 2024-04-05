@@ -46,6 +46,7 @@ public class PlayerDataController : MonoBehaviour
     public bool clayeFoodB = false;
     public bool clayeBagFall = false;
     public bool clayeBagOpen = false;
+    public bool knobInTheDoor = false;
 
     
 
