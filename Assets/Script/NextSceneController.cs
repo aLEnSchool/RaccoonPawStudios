@@ -25,7 +25,7 @@ public class NextSceneController : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 Debug.Log("Go to next Scene");
                 playertemp.GetComponent<PlayerDataController>().nextScene();
