@@ -80,23 +80,6 @@ public class EndDialogueController : MonoBehaviour
 
     private void Update()
     {
-        /*if (!dialogueIsPlaying)
-        {
-            PlayerController.instance.canMove = true;
-            return;
-        }*/
-
-        //if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
-        /*if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
-        {
-            //Debug.Log("this e");
-            ContinueStory();
-        }
-        if (Input.GetKeyDown(KeyCode.E) && inLine && NotepadController.instance.notepadShown)
-        {
-            skipTypeWriting = true;
-        }*/
-
         if (Input.GetKeyDown(KeyCode.E) && !inLine)
         {
             ContinueStory();
@@ -213,6 +196,7 @@ public class EndDialogueController : MonoBehaviour
         //inLine = false;
 
         inLine = true;
+
         foreach (char letter in line.ToCharArray())
         {
             if (skipTypeWriting)
