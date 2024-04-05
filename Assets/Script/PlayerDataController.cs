@@ -97,4 +97,46 @@ public class PlayerDataController : MonoBehaviour
             SceneManager.LoadScene("CaseFileScreen");
         }
     }
+    public void mainMenu()
+    {
+        sceneIndex = 0;
+
+        //CaseFile1 Events
+        talkedToClaye = false;
+        talkedToSaide = false;
+        hallSadie = false;
+
+        //lighter text
+        clayLighter = false;
+        frannieLighter = false;
+        johnLighter = false;
+        rosaLighter = false;
+        rosaLAppear = false;
+
+        //after finding crime scene
+        clayInvest = false;
+        frannieInvest = false;
+        johnInvest = false;
+        rosaInvest = false;
+        sadieInvest = false;
+
+        //tom in the kitchen
+        tomKitchen = false;
+
+        //sadie busy with claye
+        sadieBusy = false;
+        wentIntoKitchen = false;
+
+        //rosa go into bag
+        rosaCanOpen = false;
+        rosaBagOpened = false;
+
+        //drugs found
+        drugsFound = false;
+
+        //claye's food brought over
+        clayeFoodB = false;
+        clayeBagFall = false;
+        clayeBagOpen = false;
+        knobInTheDoor = false;
 }
