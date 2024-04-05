@@ -71,6 +71,10 @@ public class PlayerDataController : MonoBehaviour
     {
         
     }
+    public void quitGame()
+    {
+        Application.Quit();
+    }
 
     public void nextScene()
     {

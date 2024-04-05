@@ -4,10 +4,11 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
-public class DialogueManager : MonoBehaviour
+public class TutorialDialogueManager : MonoBehaviour
 {
-    private static DialogueManager instance;
+    private static TutorialDialogueManager instance;
 
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
@@ -34,12 +35,14 @@ public class DialogueManager : MonoBehaviour
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool canContinueToNextLine = false;
-    static Choice choiceSelected;
+    //static Choice choiceSelected;
 
     private const string portrait = "portrait";
 
     private bool inLine = false;
     private bool skipTypeWriting = false;
+
+    //private bool transition = false;
 
     private void Awake()
     {
@@ -50,7 +53,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    public static DialogueManager GetInstance()
+    public static TutorialDialogueManager GetInstance()
     {
         return instance;
     }
@@ -59,9 +62,9 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         //Dialogue
-        dialogueIsPlaying = false;
+        dialogueIsPlaying = true;
         dialoguePanel.SetActive(false);
-        choiceSelected = null;
+        //choiceSelected = null;
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -115,6 +118,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
     }
 
+
     private void changeProfilePic(List<string> currentTags)
     {
         foreach (string tag in currentTags)
@@ -147,7 +151,7 @@ public class DialogueManager : MonoBehaviour
             typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
-            
+
         }
         else
         {
@@ -159,13 +163,13 @@ public class DialogueManager : MonoBehaviour
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        if(currentChoices.Count > choices.Length)
+        if (currentChoices.Count > choices.Length)
         {
             Debug.LogError("More choices were given than can take");
         }
 
         int index = 0;
-        foreach(Choice choice in currentChoices)
+        foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -181,18 +185,19 @@ public class DialogueManager : MonoBehaviour
         //yield return new WaitUntil(() => { return choiceSelected != null; });
 
         //AdvanceFromDecision();
-        StartCoroutine(SelectFirstChoice());
+        //StartCoroutine(SelectFirstChoice());
     }
 
     private IEnumerator DisplayLine(string line)
     {
         dialogueText.text = "";
-        HideChoices();
+        //HideChoices();
 
         canContinueToNextLine = false;
         //inLine = false;
 
         inLine = true;
+
         foreach (char letter in line.ToCharArray())
         {
             if (skipTypeWriting)
@@ -206,41 +211,11 @@ public class DialogueManager : MonoBehaviour
 
             yield return new WaitForSeconds(typingSpeed);
         }
-        skipTypeWriting = false;
+
         typeWriteSound.Stop();
-        DisplayChoices();
+        //DisplayChoices();
         canContinueToNextLine = true;
-        //skipTypeWriting = false;
+        skipTypeWriting = false;
         inLine = false;
     }
-
-    private IEnumerator SelectFirstChoice() 
-    {
-        // Event System requires we clear it first, then wait
-        // for at least one frame before we set the current selected object.
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
-    }
-
-    public void MakeChoice(int choiceIndex)
-    {
-        if (canContinueToNextLine) 
-        {
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            // NOTE: The below two lines were added to fix a bug after the Youtube video was made
-            //choices.GetInstance().RegisterSubmitPressed(); // this is specific to my InputManager script
-            ContinueStory();
-        }
-    }
-
-    private void HideChoices() 
-    {
-        foreach (GameObject choiceButton in choices) 
-        {
-            choiceButton.SetActive(false);
-        }
-    }
 }
-
-

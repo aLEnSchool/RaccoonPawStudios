@@ -20,7 +20,7 @@ public class ClayeTutDialogue : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
+                TutorialDialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
             }
         }
 
