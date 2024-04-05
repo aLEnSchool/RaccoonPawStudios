@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class ToCaseController : MonoBehaviour
 {
     private bool inRange;
-
     public GameObject playertemp;
 
     public GameObject popUp;

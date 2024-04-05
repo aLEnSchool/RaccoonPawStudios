@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class CaseFile1Controller : MonoBehaviour
 {
-    public GameObject playertemp;
-
     [Header("Character Dropdown", order = 0)]
     [SerializeField] TMP_Dropdown character_dropdown;
     [SerializeField] SpriteRenderer character_image;
@@ -16,11 +14,6 @@ public class CaseFile1Controller : MonoBehaviour
     [Header("Weapon Dropdown",order = 1)]
     [SerializeField] TMP_Dropdown weapon_dropdown;
     [SerializeField] SpriteRenderer weapon_image;
-
-    private void Awake()
-    {
-        playertemp = GameObject.FindGameObjectWithTag("DontDestroy");
-    }
 
     // Start is called before the first frame update
     void Start()
