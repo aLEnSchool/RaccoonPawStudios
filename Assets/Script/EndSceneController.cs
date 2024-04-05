@@ -33,6 +33,11 @@ public class EndSceneController : MonoBehaviour
     {
         setCharacter();
         setObject();
+        EndDialogueController.GetInstance().dialoguePanel.SetActive(true);
+    }
+    private void Update()
+    {
+        EndDialogueController.GetInstance().dialoguePanel.SetActive(true);
     }
 
     //Set Character
@@ -41,27 +46,27 @@ public class EndSceneController : MonoBehaviour
         if (PlayerDataController.instance.characterSelected == 0)
         {
             other_character.sprite = claye;
-            DialogueManager.GetInstance().EnterDialogueMode(clayeDialog);
+            EndDialogueController.GetInstance().EnterDialogueMode(clayeDialog);
         }
         if (PlayerDataController.instance.characterSelected == 1)
         {
             other_character.sprite = sadie;
-            DialogueManager.GetInstance().EnterDialogueMode(sadieDialog);
+            EndDialogueController.GetInstance().EnterDialogueMode(sadieDialog);
         }
         if (PlayerDataController.instance.characterSelected == 2)
         {
             other_character.sprite = frannie;
-            DialogueManager.GetInstance().EnterDialogueMode(frannieDialog);
+            EndDialogueController.GetInstance().EnterDialogueMode(frannieDialog);
         }
         if (PlayerDataController.instance.characterSelected == 3)
         {
             other_character.sprite = rosa;
-            DialogueManager.GetInstance().EnterDialogueMode(rosaDialog);
+            EndDialogueController.GetInstance().EnterDialogueMode(rosaDialog);
         }
         if (PlayerDataController.instance.characterSelected == 4)
         {
             other_character.sprite = john;
-            DialogueManager.GetInstance().EnterDialogueMode(johnDialog);
+            EndDialogueController.GetInstance().EnterDialogueMode(johnDialog);
         }
     }
 

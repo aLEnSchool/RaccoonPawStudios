@@ -5,9 +5,9 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 
-public class DialogueManager : MonoBehaviour
+public class EndDialogueController : MonoBehaviour
 {
-    private static DialogueManager instance;
+    private static EndDialogueController instance;
 
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    public static DialogueManager GetInstance()
+    public static EndDialogueController GetInstance()
     {
         return instance;
     }
@@ -59,9 +59,9 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         //Dialogue
-        dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
-        choiceSelected = null;
+        //dialogueIsPlaying = true;
+        dialoguePanel.SetActive(true);
+        //choiceSelected = null;
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -77,14 +77,14 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (!dialogueIsPlaying)
+        /*if (!dialogueIsPlaying)
         {
             PlayerController.instance.canMove = true;
             return;
-        }
+        }*/
 
         //if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
-        if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
+        /*if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
         {
             //Debug.Log("this e");
             ContinueStory();
@@ -92,6 +92,11 @@ public class DialogueManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && inLine && NotepadController.instance.notepadShown)
         {
             skipTypeWriting = true;
+        }*/
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ContinueStory();
         }
     }
 
@@ -147,7 +152,7 @@ public class DialogueManager : MonoBehaviour
             typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
-            
+
         }
         else
         {
@@ -159,13 +164,13 @@ public class DialogueManager : MonoBehaviour
     {
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        if(currentChoices.Count > choices.Length)
+        if (currentChoices.Count > choices.Length)
         {
             Debug.LogError("More choices were given than can take");
         }
 
         int index = 0;
-        foreach(Choice choice in currentChoices)
+        foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -214,7 +219,7 @@ public class DialogueManager : MonoBehaviour
         inLine = false;
     }
 
-    private IEnumerator SelectFirstChoice() 
+    private IEnumerator SelectFirstChoice()
     {
         // Event System requires we clear it first, then wait
         // for at least one frame before we set the current selected object.
@@ -225,7 +230,7 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        if (canContinueToNextLine) 
+        if (canContinueToNextLine)
         {
             currentStory.ChooseChoiceIndex(choiceIndex);
             // NOTE: The below two lines were added to fix a bug after the Youtube video was made
@@ -234,13 +239,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void HideChoices() 
+    private void HideChoices()
     {
-        foreach (GameObject choiceButton in choices) 
+        foreach (GameObject choiceButton in choices)
         {
             choiceButton.SetActive(false);
         }
     }
 }
-
-
