@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class EndDialogueController : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class EndDialogueController : MonoBehaviour
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool canContinueToNextLine = false;
-    static Choice choiceSelected;
+    //static Choice choiceSelected;
 
     private const string portrait = "portrait";
 
@@ -98,6 +99,11 @@ public class EndDialogueController : MonoBehaviour
         {
             ContinueStory();
         }
+        if (displayLineCoroutine != null)
+        {
+            StopCoroutine(displayLineCoroutine);
+            SceneManager.LoadScene("Fin");
+        }
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -107,7 +113,7 @@ public class EndDialogueController : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        PlayerController.instance.canMove = false;
+        //PlayerController.instance.canMove = false;
         ContinueStory();
     }
 
@@ -148,7 +154,7 @@ public class EndDialogueController : MonoBehaviour
             }
             //inLine = true;
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-            PlayerController.instance.canMove = false;
+            //PlayerController.instance.canMove = false;
             typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
@@ -186,13 +192,13 @@ public class EndDialogueController : MonoBehaviour
         //yield return new WaitUntil(() => { return choiceSelected != null; });
 
         //AdvanceFromDecision();
-        StartCoroutine(SelectFirstChoice());
+        //StartCoroutine(SelectFirstChoice());
     }
 
     private IEnumerator DisplayLine(string line)
     {
         dialogueText.text = "";
-        HideChoices();
+        //HideChoices();
 
         canContinueToNextLine = false;
         //inLine = false;
@@ -213,37 +219,9 @@ public class EndDialogueController : MonoBehaviour
         }
 
         typeWriteSound.Stop();
-        DisplayChoices();
+        //DisplayChoices();
         canContinueToNextLine = true;
         //skipTypeWriting = false;
         inLine = false;
-    }
-
-    private IEnumerator SelectFirstChoice()
-    {
-        // Event System requires we clear it first, then wait
-        // for at least one frame before we set the current selected object.
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
-    }
-
-    public void MakeChoice(int choiceIndex)
-    {
-        if (canContinueToNextLine)
-        {
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            // NOTE: The below two lines were added to fix a bug after the Youtube video was made
-            //choices.GetInstance().RegisterSubmitPressed(); // this is specific to my InputManager script
-            ContinueStory();
-        }
-    }
-
-    private void HideChoices()
-    {
-        foreach (GameObject choiceButton in choices)
-        {
-            choiceButton.SetActive(false);
-        }
     }
 }
