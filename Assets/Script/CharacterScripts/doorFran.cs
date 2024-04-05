@@ -9,6 +9,7 @@ public class doorFran : MonoBehaviour
     [SerializeField] private TextAsset dialogFile2;
     [SerializeField] private TextAsset dialogFile3;
     [SerializeField] private TextAsset dialogFile4;
+    [SerializeField] private TextAsset dialogFile5;
 
     private bool playerInRange;
 
@@ -40,9 +41,15 @@ public class doorFran : MonoBehaviour
                     //DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
                     Debug.Log("please don't play");
+                    PlayerDataController.instance.wentIntoKitchen = true;
 
                 }
-                
+                if (PlayerDataController.instance.wentIntoKitchen)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile5);
+
+                }
+
             }
         }
 
