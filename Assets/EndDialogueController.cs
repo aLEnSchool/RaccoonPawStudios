@@ -42,6 +42,8 @@ public class EndDialogueController : MonoBehaviour
     private bool inLine = false;
     private bool skipTypeWriting = false;
 
+    private bool transition = false;
+
     private void Awake()
     {
         if (instance != null)
@@ -95,11 +97,17 @@ public class EndDialogueController : MonoBehaviour
             skipTypeWriting = true;
         }*/
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !inLine)
         {
             ContinueStory();
         }
-        if (displayLineCoroutine != null)
+        if (Input.GetKeyDown(KeyCode.E) && inLine)
+        {
+            skipTypeWriting = true;
+        }
+        
+        
+        if (transition)
         {
             StopCoroutine(displayLineCoroutine);
             SceneManager.LoadScene("Fin");
@@ -124,6 +132,7 @@ public class EndDialogueController : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        transition = true;
     }
 
     private void changeProfilePic(List<string> currentTags)
