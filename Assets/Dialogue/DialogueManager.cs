@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEditor.Rendering;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
 
     [Header("Typewriter Effect")]
-    [SerializeField] private float typingSpeed = 0.5f;
+    [SerializeField] private float typingSpeed = 0.037f;
     private Coroutine displayLineCoroutine;
 
     [Header("Audio Source")]
@@ -34,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool canContinueToNextLine = false;
+    
     static Choice choiceSelected;
 
     private const string portrait = "portrait";
@@ -88,11 +90,10 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("this e");
             ContinueStory();
         }
-        /*else if (inLine && Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space) && inLine && NotepadController.instance.notepadShown)
         {
-            Debug.Log("Calling Skipping");
-            switchTheBool();
-        }*/
+            skipTypeWriting = true;
+        }
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -138,7 +139,6 @@ public class DialogueManager : MonoBehaviour
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine);
-                inLine = false;
             }
             //inLine = true;
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
@@ -191,33 +191,25 @@ public class DialogueManager : MonoBehaviour
         canContinueToNextLine = false;
         //inLine = false;
 
-        if (skipTypeWriting)
+        inLine = true;
+        foreach (char letter in line.ToCharArray())
         {
-            Debug.Log("Stop the typewritter effect");
-            dialogueText.text = line;
-            switchTheBool();
-            typeWriteSound.Stop();
-            DisplayChoices();
-            canContinueToNextLine = true;
-            inLine = false;
-        }
-        else
-        {
-            inLine = true;
-            foreach (char letter in line.ToCharArray())
+            if (skipTypeWriting)
             {
-                dialogueText.text += letter;
-
-                yield return new WaitForSeconds(typingSpeed);
+                dialogueText.text = line;
+                canContinueToNextLine = true;
+                skipTypeWriting = false;
+                inLine = false;
+                break;
             }
-            typeWriteSound.Stop();
-            DisplayChoices();
-            canContinueToNextLine = true;
-            inLine = false;
 
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
-        //Debug.Log("Stop sound");
-        //typeWriteSound.Stop();
+         typeWriteSound.Stop();
+         DisplayChoices();
+         canContinueToNextLine = true;
+         inLine = false;
     }
 
     private IEnumerator SelectFirstChoice()
@@ -247,19 +239,6 @@ public class DialogueManager : MonoBehaviour
             choiceButton.SetActive(false);
         }
     }
-
-    private void switchTheBool()
-    {
-        if (inLine)
-        {
-            skipTypeWriting = true;
-        }
-        else
-        {
-            skipTypeWriting = false;
-        }
-    }
-
 }
 
 
