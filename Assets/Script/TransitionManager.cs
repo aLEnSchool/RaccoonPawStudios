@@ -4,17 +4,17 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
-using UnityEditor.Rendering;
+using UnityEngine.SceneManagement;
 
-public class DialogueManager : MonoBehaviour
+public class TransitionManager : MonoBehaviour
 {
-    private static DialogueManager instance;
+    private static TransitionManager instance;
 
     [Header("Load Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] public GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Animator portraitAnimator;
 
@@ -23,7 +23,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
 
     [Header("Typewriter Effect")]
-    [SerializeField] private float typingSpeed = 0.037f;
+    [SerializeField] private float typingSpeed = 0.5f;
     private Coroutine displayLineCoroutine;
 
     [Header("Audio Source")]
@@ -35,13 +35,14 @@ public class DialogueManager : MonoBehaviour
     public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool canContinueToNextLine = false;
-    
-    static Choice choiceSelected;
+    //static Choice choiceSelected;
 
     private const string portrait = "portrait";
 
     private bool inLine = false;
     private bool skipTypeWriting = false;
+
+    private bool transition = false;
 
     private void Awake()
     {
@@ -52,7 +53,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    public static DialogueManager GetInstance()
+    public static TransitionManager GetInstance()
     {
         return instance;
     }
@@ -61,9 +62,9 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         //Dialogue
-        dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
-        choiceSelected = null;
+        //dialogueIsPlaying = true;
+        dialoguePanel.SetActive(true);
+        //choiceSelected = null;
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -73,36 +74,38 @@ public class DialogueManager : MonoBehaviour
             index++;
         }
 
+        EnterDialogueMode(loadGlobalsJSON);
         //Sound
         //typeWriteSound.Stop();
     }
 
     private void Update()
     {
-        if (!dialogueIsPlaying)
+        if (Input.GetKeyDown(KeyCode.E) && !inLine)
         {
-            PlayerController.instance.canMove = true;
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
-        {
-            Debug.Log("this e");
             ContinueStory();
         }
-        if (Input.GetKeyDown(KeyCode.Space) && inLine && NotepadController.instance.notepadShown)
+        if (Input.GetKeyDown(KeyCode.E) && inLine)
         {
             skipTypeWriting = true;
+        }
+
+
+        if (transition)
+        {
+            StopCoroutine(displayLineCoroutine);
+            SceneManager.LoadScene("L01_Scene");
         }
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+        Debug.Log("StartingScript");
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        PlayerController.instance.canMove = false;
+        //PlayerController.instance.canMove = false;
         ContinueStory();
     }
 
@@ -113,6 +116,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        transition = true;
     }
 
     private void changeProfilePic(List<string> currentTags)
@@ -139,10 +143,11 @@ public class DialogueManager : MonoBehaviour
             if (displayLineCoroutine != null)
             {
                 StopCoroutine(displayLineCoroutine);
+                inLine = false;
             }
             //inLine = true;
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-            PlayerController.instance.canMove = false;
+            //PlayerController.instance.canMove = false;
             typeWriteSound.Play();
 
             changeProfilePic(currentStory.currentTags);
@@ -180,65 +185,37 @@ public class DialogueManager : MonoBehaviour
         //yield return new WaitUntil(() => { return choiceSelected != null; });
 
         //AdvanceFromDecision();
-        StartCoroutine(SelectFirstChoice());
+        //StartCoroutine(SelectFirstChoice());
     }
 
     private IEnumerator DisplayLine(string line)
     {
         dialogueText.text = "";
-        HideChoices();
+        //HideChoices();
 
         canContinueToNextLine = false;
         //inLine = false;
 
         inLine = true;
+
         foreach (char letter in line.ToCharArray())
         {
             if (skipTypeWriting)
             {
                 dialogueText.text = line;
-                canContinueToNextLine = true;
                 skipTypeWriting = false;
                 inLine = false;
                 break;
             }
-
             dialogueText.text += letter;
+
             yield return new WaitForSeconds(typingSpeed);
         }
-         typeWriteSound.Stop();
-         DisplayChoices();
-         canContinueToNextLine = true;
-         inLine = false;
-    }
 
-    private IEnumerator SelectFirstChoice()
-    {
-        // Event System requires we clear it first, then wait
-        // for at least one frame before we set the current selected object.
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
-    }
-
-    public void MakeChoice(int choiceIndex)
-    {
-        if (canContinueToNextLine)
-        {
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            // NOTE: The below two lines were added to fix a bug after the Youtube video was made
-            //choices.GetInstance().RegisterSubmitPressed(); // this is specific to my InputManager script
-            ContinueStory();
-        }
-    }
-
-    private void HideChoices()
-    {
-        foreach (GameObject choiceButton in choices)
-        {
-            choiceButton.SetActive(false);
-        }
+        typeWriteSound.Stop();
+        //DisplayChoices();
+        canContinueToNextLine = true;
+        //skipTypeWriting = false;
+        inLine = false;
     }
 }
-
-

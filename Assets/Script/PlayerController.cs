@@ -232,11 +232,17 @@ public class PlayerController : MonoBehaviour
     //Allows Objects to not be dropped when going through doors
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        doorRange = true;
+        if (collision.gameObject.tag == "Door")
+        {
+            doorRange = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        doorRange = false;
+        if (collision.gameObject.tag == "Door")
+        {
+            doorRange = false;
+        }
     }
 
     // function to slowly decrease the speed at which the hat is falling, to be used after a jump
