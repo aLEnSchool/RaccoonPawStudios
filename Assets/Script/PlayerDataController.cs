@@ -139,5 +139,7 @@ public class PlayerDataController : MonoBehaviour
         clayeBagFall = false;
         clayeBagOpen = false;
         knobInTheDoor = false;
+
+        SceneManager.LoadScene("Starting_screen");
     }
 }
