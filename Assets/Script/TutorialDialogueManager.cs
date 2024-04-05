@@ -90,6 +90,7 @@ public class TutorialDialogueManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !inLine && !NotepadController.instance.notepadShown)
         {
             //skipTypeWriting = false;
+            //PlayerController.instance.canMove = false;
             ContinueStory();
         }
         if (Input.GetKeyDown(KeyCode.E) && inLine && !NotepadController.instance.notepadShown)
@@ -116,6 +117,7 @@ public class TutorialDialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        PlayerController.instance.canMove = true;
     }
 
 

@@ -39,6 +39,7 @@ public class ClayeTutDialogue : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             playerInRange = false;
+            
         }
     }
 }
