@@ -83,7 +83,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
+        //if (Input.GetKeyDown(KeyCode.E) && !inLine && NotepadController.instance.notepadShown)
+        if (Input.GetKeyDown(KeyCode.E) && NotepadController.instance.notepadShown)
         {
             Debug.Log("this e");
             ContinueStory();
