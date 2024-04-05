@@ -40,6 +40,8 @@ public class ObjectController : MonoBehaviour
             {
                 dropItem();
             }
+            Debug.Log("Object: " + doorRange);
+            Debug.Log("Player: " + PlayerController.instance.doorRange);
         }
 
     }
