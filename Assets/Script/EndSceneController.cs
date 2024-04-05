@@ -21,17 +21,18 @@ public class EndSceneController : MonoBehaviour
     [SerializeField] private Sprite cookbook;
     [SerializeField] private Sprite mercury;
 
+    [Header("Dialog Files")]
+    [SerializeField] private TextAsset clayeDialog;
+    [SerializeField] private TextAsset sadieDialog;
+    [SerializeField] private TextAsset frannieDialog;
+    [SerializeField] private TextAsset rosaDialog;
+    [SerializeField] private TextAsset johnDialog;
+
     // Start is called before the first frame update
     void Start()
     {
         setCharacter();
         setObject();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     //Set Character
@@ -40,22 +41,27 @@ public class EndSceneController : MonoBehaviour
         if (PlayerDataController.instance.characterSelected == 0)
         {
             other_character.sprite = claye;
+            DialogueManager.GetInstance().EnterDialogueMode(clayeDialog);
         }
         if (PlayerDataController.instance.characterSelected == 1)
         {
             other_character.sprite = sadie;
+            DialogueManager.GetInstance().EnterDialogueMode(sadieDialog);
         }
         if (PlayerDataController.instance.characterSelected == 2)
         {
             other_character.sprite = frannie;
+            DialogueManager.GetInstance().EnterDialogueMode(frannieDialog);
         }
         if (PlayerDataController.instance.characterSelected == 3)
         {
             other_character.sprite = rosa;
+            DialogueManager.GetInstance().EnterDialogueMode(rosaDialog);
         }
         if (PlayerDataController.instance.characterSelected == 4)
         {
             other_character.sprite = john;
+            DialogueManager.GetInstance().EnterDialogueMode(johnDialog);
         }
     }
 
