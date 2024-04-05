@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class KitchenDoorController : MonoBehaviour
 {
-    public WaitressController Sadie;
+    //public WaitressController Sadie;
 
     private bool inRange;
     public bool exitRoom;
 
-    private string voiceLine;
+    //private bool playerInRange;
+
+    //private string voiceLine;
 
     //Dialog Variables
-    public GameObject dialogBox;
-    public TMP_Text dialogOutput;
+    //public GameObject dialogBox;
+    //public TMP_Text dialogOutput;
 
 
     // Start is called before the first frame update
@@ -23,13 +25,14 @@ public class KitchenDoorController : MonoBehaviour
         inRange = false;
         exitRoom = false;
 
-        dialogBox.SetActive(false);
-        voiceLine = "Can't come in here, it's restricted";
+        //dialogBox.SetActive(false);
+        //voiceLine = "Can't come in here, it's restricted";
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if (PlayerDataController.instance.sadieBusy == true)
         {
             //TP TO KITCHEN
@@ -69,7 +72,7 @@ public class KitchenDoorController : MonoBehaviour
         {
             inRange = false;
         
-            dialogBox.SetActive(false);
+            //dialogBox.SetActive(false);
         }
     }
 }
