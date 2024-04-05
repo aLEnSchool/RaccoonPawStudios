@@ -21,17 +21,23 @@ public class EndSceneController : MonoBehaviour
     [SerializeField] private Sprite cookbook;
     [SerializeField] private Sprite mercury;
 
+    [Header("Dialog Files")]
+    [SerializeField] private TextAsset clayeDialog;
+    [SerializeField] private TextAsset sadieDialog;
+    [SerializeField] private TextAsset frannieDialog;
+    [SerializeField] private TextAsset rosaDialog;
+    [SerializeField] private TextAsset johnDialog;
+
     // Start is called before the first frame update
     void Start()
     {
         setCharacter();
         setObject();
+        EndDialogueController.GetInstance().dialoguePanel.SetActive(true);
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        EndDialogueController.GetInstance().dialoguePanel.SetActive(true);
     }
 
     //Set Character
@@ -40,22 +46,27 @@ public class EndSceneController : MonoBehaviour
         if (PlayerDataController.instance.characterSelected == 0)
         {
             other_character.sprite = claye;
+            EndDialogueController.GetInstance().EnterDialogueMode(clayeDialog);
         }
         if (PlayerDataController.instance.characterSelected == 1)
         {
             other_character.sprite = sadie;
+            EndDialogueController.GetInstance().EnterDialogueMode(sadieDialog);
         }
         if (PlayerDataController.instance.characterSelected == 2)
         {
             other_character.sprite = frannie;
+            EndDialogueController.GetInstance().EnterDialogueMode(frannieDialog);
         }
         if (PlayerDataController.instance.characterSelected == 3)
         {
             other_character.sprite = rosa;
+            EndDialogueController.GetInstance().EnterDialogueMode(rosaDialog);
         }
         if (PlayerDataController.instance.characterSelected == 4)
         {
             other_character.sprite = john;
+            EndDialogueController.GetInstance().EnterDialogueMode(johnDialog);
         }
     }
 
