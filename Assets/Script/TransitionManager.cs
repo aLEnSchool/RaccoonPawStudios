@@ -85,10 +85,10 @@ public class TransitionManager : MonoBehaviour
         {
             ContinueStory();
         }
-        if (Input.GetKeyDown(KeyCode.E) && inLine)
+        /*if (Input.GetKeyDown(KeyCode.Space) && inLine)
         {
             skipTypeWriting = true;
-        }
+        }*/
 
 
         if (transition)
@@ -104,6 +104,7 @@ public class TransitionManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        //typeWriteSound.Play();
 
         //PlayerController.instance.canMove = false;
         ContinueStory();
@@ -115,25 +116,8 @@ public class TransitionManager : MonoBehaviour
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
-        dialogueText.text = "";
+        dialogueText.text += "";
         transition = true;
-    }
-
-    private void changeProfilePic(List<string> currentTags)
-    {
-        foreach (string tag in currentTags)
-        {
-            string[] splitTag = tag.Split(':');
-            string tagKey = splitTag[0].Trim();
-            string tagValue = splitTag[1].Trim();
-
-            switch (tagKey)
-            {
-                case portrait:
-                    portraitAnimator.Play(tagValue);
-                    break;
-            }
-        }
     }
 
     private void ContinueStory()
@@ -147,11 +131,7 @@ public class TransitionManager : MonoBehaviour
             }
             //inLine = true;
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-            //PlayerController.instance.canMove = false;
             typeWriteSound.Play();
-
-            changeProfilePic(currentStory.currentTags);
-
         }
         else
         {
@@ -159,63 +139,31 @@ public class TransitionManager : MonoBehaviour
         }
     }
 
-    private void DisplayChoices()
-    {
-        List<Choice> currentChoices = currentStory.currentChoices;
-
-        if (currentChoices.Count > choices.Length)
-        {
-            Debug.LogError("More choices were given than can take");
-        }
-
-        int index = 0;
-        foreach (Choice choice in currentChoices)
-        {
-            choices[index].gameObject.SetActive(true);
-            choicesText[index].text = choice.text;
-            index++;
-        }
-
-        for (int i = index; i < choices.Length; i++)
-        {
-            choices[i].gameObject.SetActive(false);
-        }
-
-        //dialoguePanel.SetActive(true);
-        //yield return new WaitUntil(() => { return choiceSelected != null; });
-
-        //AdvanceFromDecision();
-        //StartCoroutine(SelectFirstChoice());
-    }
 
     private IEnumerator DisplayLine(string line)
     {
-        dialogueText.text = "";
-        //HideChoices();
+        dialogueText.text += "\n";
 
         canContinueToNextLine = false;
         //inLine = false;
 
         inLine = true;
-
         foreach (char letter in line.ToCharArray())
         {
             if (skipTypeWriting)
             {
-                dialogueText.text = line;
+                dialogueText.text += line;
+                canContinueToNextLine = true;
                 skipTypeWriting = false;
                 inLine = false;
                 break;
             }
-            dialogueText.text += letter;
 
+            dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-
         typeWriteSound.Stop();
-        //DisplayChoices();
         canContinueToNextLine = true;
-        //skipTypeWriting = false;
         inLine = false;
     }
 }

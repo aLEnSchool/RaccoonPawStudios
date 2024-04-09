@@ -308,8 +308,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.16260004, y: 1.5273501, z: 0}
-    m_Extent: {x: 2.247, y: 1.97145, z: 0}
+    m_Center: {x: 0.15859997, y: 1.5338, z: 0}
+    m_Extent: {x: 2.242, y: 1.9674, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -948,9 +948,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 897016796}
+  - component: {fileID: 897016797}
   - component: {fileID: 897016795}
   - component: {fileID: 897016794}
-  - component: {fileID: 897016797}
   m_Layer: 0
   m_Name: DialogManager
   m_TagString: Untagged
@@ -968,11 +968,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c03252f1840fe1d4dbc80c9dd1243028, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8eb4124b936ba3840ac9f6b44f1dcc46, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.706
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2294,8 +2294,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.1914, y: 1.2973, z: 0}
-    m_Extent: {x: 3.6163, y: 2.1283998, z: 0}
+    m_Center: {x: 3.1929002, y: 1.3062501, z: 0}
+    m_Extent: {x: 3.6243, y: 2.12905, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
