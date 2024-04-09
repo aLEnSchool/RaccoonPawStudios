@@ -18,7 +18,7 @@ public class paintingDialogue : MonoBehaviour
     {
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
                 //PlayerDataController.instance.talkedToClaye = true;
