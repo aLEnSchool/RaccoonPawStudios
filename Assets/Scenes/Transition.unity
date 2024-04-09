@@ -801,8 +801,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0018000603, y: 0.0025999546, z: 0}
-    m_Extent: {x: 2.112, y: 2.1099, z: 0}
+    m_Center: {x: -0.0065499544, y: -0.002949953, z: 0}
+    m_Extent: {x: 2.1101499, y: 2.11305, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   portraitAnimator: {fileID: 0}
   choices: []
   typingSpeed: 0.02
-  typeWriteSound: {fileID: 0}
+  typeWriteSound: {fileID: 1066561509}
 --- !u!82 &1066561509
 AudioSource:
   m_ObjectHideFlags: 0
