@@ -82,14 +82,15 @@ public class EndDialogueController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && !inLine)
         {
+            Debug.Log("this e");
             ContinueStory();
         }
-        if (Input.GetKeyDown(KeyCode.E) && inLine)
+        if (Input.GetKeyDown(KeyCode.Space) && inLine)
         {
             skipTypeWriting = true;
         }
-        
-        
+
+
         if (transition)
         {
             StopCoroutine(displayLineCoroutine);
@@ -158,63 +159,30 @@ public class EndDialogueController : MonoBehaviour
         }
     }
 
-    private void DisplayChoices()
-    {
-        List<Choice> currentChoices = currentStory.currentChoices;
-
-        if (currentChoices.Count > choices.Length)
-        {
-            Debug.LogError("More choices were given than can take");
-        }
-
-        int index = 0;
-        foreach (Choice choice in currentChoices)
-        {
-            choices[index].gameObject.SetActive(true);
-            choicesText[index].text = choice.text;
-            index++;
-        }
-
-        for (int i = index; i < choices.Length; i++)
-        {
-            choices[i].gameObject.SetActive(false);
-        }
-
-        //dialoguePanel.SetActive(true);
-        //yield return new WaitUntil(() => { return choiceSelected != null; });
-
-        //AdvanceFromDecision();
-        //StartCoroutine(SelectFirstChoice());
-    }
-
     private IEnumerator DisplayLine(string line)
     {
         dialogueText.text = "";
-        //HideChoices();
 
         canContinueToNextLine = false;
         //inLine = false;
 
         inLine = true;
-
         foreach (char letter in line.ToCharArray())
         {
             if (skipTypeWriting)
             {
                 dialogueText.text = line;
+                canContinueToNextLine = true;
                 skipTypeWriting = false;
                 inLine = false;
                 break;
             }
-            dialogueText.text += letter;
 
+            dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-
         typeWriteSound.Stop();
-        //DisplayChoices();
         canContinueToNextLine = true;
-        //skipTypeWriting = false;
         inLine = false;
     }
 }
