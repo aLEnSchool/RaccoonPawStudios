@@ -13,4 +13,3 @@ I found it. #portrait:claye
 You stole it.#portrait:tom
 I found it. #portrait:claye
 You stole--#portrait:tom
-(CLAYE DID NOT DO IT)

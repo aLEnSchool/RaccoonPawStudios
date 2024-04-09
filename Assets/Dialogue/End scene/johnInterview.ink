@@ -6,4 +6,3 @@ A hundreds of kids, yeah. It's why you would need the cash. You got paid to do, 
 All clues lead to the two of you. Was it a team job? Tell me, John. Tell me!#portrait:tom
 Detective... Have you thought of getting some sleep yourself.#portrait:john
 (John was right. I am incredibly tired. I haven't gotten good sleep in years.)#portrait:tom
-(JOHN DID NOT DO IT.) #portrait:tom
