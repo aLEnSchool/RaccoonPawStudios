@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18770003, y: 1.2967, z: 0}
-    m_Extent: {x: 4.6520996, y: 3.5643, z: 0}
+    m_Center: {x: 0.18330002, y: 1.3015499, z: 0}
+    m_Extent: {x: 4.6461, y: 3.56215, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -5576,8 +5576,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19060016, y: 1.30195, z: 0}
-    m_Extent: {x: 4.6413, y: 3.56635, z: 0}
+    m_Center: {x: 0.19184995, y: 1.2923001, z: 0}
+    m_Extent: {x: 4.6529503, y: 3.5674, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6011,8 +6011,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19120002, y: 1.2961, z: 0}
-    m_Extent: {x: 4.6400003, y: 3.5646, z: 0}
+    m_Center: {x: 0.1947, y: 1.2948499, z: 0}
+    m_Extent: {x: 4.6427, y: 3.56845, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11209,8 +11209,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18400002, y: 2.0205, z: 0}
-    m_Extent: {x: 2.2291, y: 2.3465998, z: 0}
+    m_Center: {x: 0.1774, y: 2.0223, z: 0}
+    m_Extent: {x: 2.2276, y: 2.3355, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -13937,8 +13937,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.024249911, y: 1.37605, z: 0}
-    m_Extent: {x: 2.32295, y: 1.9960501, z: 0}
+    m_Center: {x: -0.02060008, y: 1.36845, z: 0}
+    m_Extent: {x: 2.3288, y: 1.99835, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15000,8 +15000,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19299984, y: 1.29765, z: 0}
-    m_Extent: {x: 4.6548, y: 3.56425, z: 0}
+    m_Center: {x: 0.19015002, y: 1.2979, z: 0}
+    m_Extent: {x: 4.6531496, y: 3.5613, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15584,6 +15584,7 @@ GameObject:
   - component: {fileID: 1107942607}
   - component: {fileID: 1107942606}
   - component: {fileID: 1107942611}
+  - component: {fileID: 1107942613}
   m_Layer: 0
   m_Name: ClayeFoods
   m_TagString: Untagged
@@ -15802,6 +15803,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPickedUp: 0
+--- !u!114 &1107942613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107942604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 1858662830}
 --- !u!1 &1119857058
 GameObject:
   m_ObjectHideFlags: 0
@@ -19081,7 +19095,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1305271693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27162,7 +27176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1825882462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27179,8 +27193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49, y: -23}
-  m_SizeDelta: {x: 20.48, y: 20.48}
+  m_AnchoredPosition: {x: 30, y: -11.626}
+  m_SizeDelta: {x: 49.8537, y: 44.7717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1825882464
 CanvasRenderer:
@@ -28488,8 +28502,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.33045, y: 1.29235, z: 0}
-    m_Extent: {x: 8.16295, y: 2.09755, z: 0}
+    m_Center: {x: 7.3285, y: 1.2892001, z: 0}
+    m_Extent: {x: 8.1586, y: 2.0967, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
