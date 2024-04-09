@@ -104,6 +104,7 @@ public class TransitionManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        //typeWriteSound.Play();
 
         //PlayerController.instance.canMove = false;
         ContinueStory();
@@ -119,23 +120,6 @@ public class TransitionManager : MonoBehaviour
         transition = true;
     }
 
-    private void changeProfilePic(List<string> currentTags)
-    {
-        foreach (string tag in currentTags)
-        {
-            string[] splitTag = tag.Split(':');
-            string tagKey = splitTag[0].Trim();
-            string tagValue = splitTag[1].Trim();
-
-            switch (tagKey)
-            {
-                case portrait:
-                    portraitAnimator.Play(tagValue);
-                    break;
-            }
-        }
-    }
-
     private void ContinueStory()
     {
         if (currentStory.canContinue)
@@ -147,11 +131,7 @@ public class TransitionManager : MonoBehaviour
             }
             //inLine = true;
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
-            //PlayerController.instance.canMove = false;
             typeWriteSound.Play();
-
-            changeProfilePic(currentStory.currentTags);
-
         }
         else
         {
