@@ -85,10 +85,10 @@ public class TransitionManager : MonoBehaviour
         {
             ContinueStory();
         }
-        if (Input.GetKeyDown(KeyCode.Space) && inLine)
+        /*if (Input.GetKeyDown(KeyCode.Space) && inLine)
         {
             skipTypeWriting = true;
-        }
+        }*/
 
 
         if (transition)
