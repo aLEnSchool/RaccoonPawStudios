@@ -171,6 +171,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 191843570}
   dialogueText: {fileID: 1375776388}
   portraitAnimator: {fileID: 322814939}
+  choices: []
   typingSpeed: 0.5
   typeWriteSound: {fileID: 0}
 --- !u!1 &173249462
@@ -1321,6 +1322,7 @@ MonoBehaviour:
   inRange: 0
   LookThrough: {fileID: 947582365}
   itemfound: 0
+  interact: 0
 --- !u!1 &739430236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,7 +1641,9 @@ MonoBehaviour:
   rollSpeed: 0.2
   jumpForce: 10
   canMove: 0
+  doorRange: 0
   jumpForceBench: 5
+  fromFloor: 1
   animator: {fileID: 774922641}
   playerSwoosh: {fileID: 774922647}
 --- !u!212 &774922645
@@ -2350,11 +2354,25 @@ MonoBehaviour:
   frannieLighter: 0
   johnLighter: 0
   rosaLighter: 0
+  rosaLAppear: 0
   clayInvest: 0
   frannieInvest: 0
   johnInvest: 0
   rosaInvest: 0
   sadieInvest: 0
+  tomKitchen: 0
+  sadieBusy: 0
+  wentIntoKitchen: 0
+  rosaCanOpen: 0
+  rosaBagOpened: 0
+  drugsFound: 0
+  clayeFoodB: 0
+  clayeBagFall: 0
+  clayeBagOpen: 0
+  knobInTheDoor: 0
+  characterSelected: 0
+  weaponSelected: 0
+  notesTaken: 
 --- !u!1 &1671727852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,7 +2635,7 @@ GameObject:
   - component: {fileID: 1869823302}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
