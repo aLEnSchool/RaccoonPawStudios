@@ -90,7 +90,13 @@ public class ObjectController : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         transform.SetParent(player.transform);
-        transform.position = new Vector2(player.transform.position.x+1.5f, player.transform.position.y);
+        if (PlayerController.instance.facingRight) {
+            transform.position = new Vector2(player.transform.position.x + 1.5f, player.transform.position.y);
+        }
+        else
+        {
+            transform.position = new Vector2(player.transform.position.x - 1.5f, player.transform.position.y);
+        }
 
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }

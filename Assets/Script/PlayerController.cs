@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [Header("Animation")]
     [SerializeField] public Animator animator;
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
-    private bool facingRight = true;   // check which direction the player is facing
+    public bool facingRight = true;   // check which direction the player is facing
 
     [Header("Audio Source")]
     [SerializeField] private AudioSource playerSwoosh;
