@@ -7,6 +7,7 @@ public class LookThroughController : MonoBehaviour
     public bool inRange;
 
     public GameObject LookThrough;
+    public GameObject rosaBag;
 
     public bool itemfound = false;
     public bool interact;
@@ -53,6 +54,8 @@ public class LookThroughController : MonoBehaviour
             {
                 Debug.Log("STOP");
             }
+
+            rosaBag.GetComponent<HighlightObjectController>().enabled = true;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

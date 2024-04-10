@@ -24,8 +24,6 @@ public class beginTutEvent : MonoBehaviour
         {
             if (!tomBegin)
             {
-                // display "cannot enter" message
-                Debug.Log("we shouting at the players");
 
                 popUp.SetActive(true);
                 //tomBegin = true;
