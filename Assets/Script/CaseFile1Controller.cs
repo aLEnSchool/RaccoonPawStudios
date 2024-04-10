@@ -15,9 +15,12 @@ public class CaseFile1Controller : MonoBehaviour
     [SerializeField] TMP_Dropdown weapon_dropdown;
     [SerializeField] SpriteRenderer weapon_image;
 
+    public GameObject notepad;
+
     // Start is called before the first frame update
     void Start()
     {
+        GetNotepadNotes();
         //character_image.sprite = character_dropdown.captionImage.sprite;
         changeCharacterImage();
         changeWeaponImage();
@@ -27,6 +30,11 @@ public class CaseFile1Controller : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void GetNotepadNotes()
+    {
+        notepad.GetComponent<TMP_InputField>().text = PlayerDataController.instance.notesTaken;
     }
 
     //Get Value

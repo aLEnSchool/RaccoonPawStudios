@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19200015, y: 1.3053999, z: 0}
-    m_Extent: {x: 4.6497, y: 3.5639, z: 0}
+    m_Center: {x: 0.19825006, y: 1.2925501, z: 0}
+    m_Extent: {x: 4.64935, y: 3.56785, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -5576,8 +5576,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19525003, y: 1.29345, z: 0}
-    m_Extent: {x: 4.64965, y: 3.56995, z: 0}
+    m_Center: {x: 0.19180012, y: 1.3015999, z: 0}
+    m_Extent: {x: 4.646, y: 3.5654998, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6011,8 +6011,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1855998, y: 1.3022001, z: 0}
-    m_Extent: {x: 4.6524, y: 3.5645, z: 0}
+    m_Center: {x: 0.18599987, y: 1.3031999, z: 0}
+    m_Extent: {x: 4.6457, y: 3.5657, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8048,6 +8048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playertemp: {fileID: 0}
   popUp: {fileID: 1386521029}
+  notepadNotes: {fileID: 0}
 --- !u!114 &594694551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10585,6 +10586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playertemp: {fileID: 0}
   popUp: {fileID: 1386521029}
+  notepadNotes: {fileID: 0}
 --- !u!1 &730717865
 GameObject:
   m_ObjectHideFlags: 0
@@ -11209,8 +11211,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17875004, y: 2.0215502, z: 0}
-    m_Extent: {x: 2.22945, y: 2.33705, z: 0}
+    m_Center: {x: 0.17379999, y: 2.0244, z: 0}
+    m_Extent: {x: 2.2297, y: 2.3405998, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -12739,7 +12741,7 @@ GameObject:
   - component: {fileID: 879609558}
   m_Layer: 5
   m_Name: InputField (TMP)
-  m_TagString: Untagged
+  m_TagString: Notepad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13937,8 +13939,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.022099972, y: 1.3652999, z: 0}
-    m_Extent: {x: 2.3222, y: 1.9905, z: 0}
+    m_Center: {x: -0.019549966, y: 1.3649501, z: 0}
+    m_Extent: {x: 2.31955, y: 1.99925, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15000,8 +15002,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18250012, y: 1.2953498, z: 0}
-    m_Extent: {x: 4.6473, y: 3.57175, z: 0}
+    m_Center: {x: 0.18855, y: 1.2947, z: 0}
+    m_Extent: {x: 4.65105, y: 3.5719, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -28502,8 +28504,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.33045, y: 1.2899001, z: 0}
-    m_Extent: {x: 8.16545, y: 2.0962, z: 0}
+    m_Center: {x: 7.33425, y: 1.2918, z: 0}
+    m_Extent: {x: 8.16035, y: 2.0968, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55

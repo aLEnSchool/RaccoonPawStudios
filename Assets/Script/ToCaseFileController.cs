@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,9 +12,12 @@ public class ToCaseController : MonoBehaviour
 
     public GameObject popUp;
 
+    public GameObject notepadNotes;
+
     private void Awake()
     {
         playertemp = GameObject.FindGameObjectWithTag("DontDestroy");
+        notepadNotes = GameObject.FindGameObjectWithTag("Notepad");
     }
 
     // Start is called before the first frame update
@@ -56,6 +60,8 @@ public class ToCaseController : MonoBehaviour
 
     public void toNextScene()
     {
+        PlayerDataController.instance.notesTaken = notepadNotes.GetComponent<TMP_InputField>().text;
+        Debug.Log(notepadNotes.GetComponent<TMP_InputField>().text);
         Debug.Log("Go to next Scene");
         SceneManager.LoadScene("CaseFileScreen");
     }
