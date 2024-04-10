@@ -308,8 +308,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.14855003, y: 1.5256, z: 0}
-    m_Extent: {x: 2.24195, y: 1.9689, z: 0}
+    m_Center: {x: 0.15859997, y: 1.5338, z: 0}
+    m_Extent: {x: 2.242, y: 1.9674, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -557,6 +557,7 @@ MonoBehaviour:
   lantern: {fileID: 21300000, guid: 8559608d71f1de54b811f6c43a13e5c1, type: 3}
   cookbook: {fileID: 21300000, guid: cb3c5e6662f254d49bcb9e18cb5c680a, type: 3}
   mercury: {fileID: 21300000, guid: 3dbbc748805e7d34e94c00ca051b7ef8, type: 3}
+  matches: {fileID: 21300000, guid: f7b23c6ba79c2a145a47d0f7e8db8c8c, type: 3}
   clayeDialog: {fileID: 4900000, guid: 3a4cf206787806f469384bbe1ee98bcd, type: 3}
   sadieDialog: {fileID: 4900000, guid: 4e1a4cccd4657ba479bb3faf10a888b8, type: 3}
   frannieDialog: {fileID: 4900000, guid: 54d651733df5cbf4ba84f27646134e52, type: 3}
@@ -1261,7 +1262,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 00a6efaf66015ba4895477629b694ef2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1345,7 +1346,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b18122f11f1937a4fa702ce55ca72522, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2219,8 +2220,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 3.1857, y: 1.3065, z: 0}
-    m_Extent: {x: 3.6234999, y: 2.1325, z: 0}
+    m_Center: {x: 3.1929002, y: 1.3062501, z: 0}
+    m_Extent: {x: 3.6243, y: 2.12905, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55

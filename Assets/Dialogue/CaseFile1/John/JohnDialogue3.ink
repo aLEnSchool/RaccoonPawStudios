@@ -3,7 +3,7 @@ Sir? You awake? #portrait:tom
 Mmmmuh... #portrait:john
 Can I get your name, sir? #portrait:tom
 Muh... Jo.. John. #portrait:john
-Okay, Jo-John. Can I ask you some questions? #portrait:tom
+Okay, Mr. Jo-John. Can I ask you some questions? #portrait:tom
 Who are you? #portrait:john
 Tom Trilby, Private Investigator Tom Trilby.  #portrait:tom
 I want to ask you some questions regarding Mr. Bowler's murder.
@@ -11,7 +11,7 @@ Murder... #portrait:john
 Wait.
 Someone's dead?
 ... #portrait:tom
-John, come on. 
+Mr. John, come on. 
 I'm not buying it. 
 You're here with your wife, correct?
 I- Yes. Is she okay? #portrait:john
@@ -20,7 +20,7 @@ So, I'd say she's doing okay.
 Oh fabric, murder... #portrait:john
 That's horrible.
 Terrible. #portrait:tom
-Now, where were you at the time of the crime.
+Now, where were you at the time of the crime?
 I don't know. #portrait:john
 Here?
 I think I've been asleep for awhile.

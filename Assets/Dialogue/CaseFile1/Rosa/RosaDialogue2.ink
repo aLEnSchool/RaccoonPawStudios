@@ -10,7 +10,7 @@ Oh, you do speak. #portrait:tom
 ... #portrait:rosa
 I just came here with my husband for brunch...
 We didn't do anything.
-We need to get home to out kids.
+We need to get home to our kids.
 Your husband? Sleeping boonie? #portrait:tom
 ... #portrait:rosa
 Charming. #portrait:tom
@@ -25,5 +25,5 @@ I... Just give it back when you're done.
 Thank you. #portrait:tom
 What's your name?
 Rosa #portrait:rosa
-Thank you, Rosa. #portrait:tom
+Thank you, Mrs. Rosa. #portrait:tom
 

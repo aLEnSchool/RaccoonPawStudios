@@ -3,7 +3,7 @@ I have some questions. #portrait:tom
 
 == My_Choices ==
     +[Ask about the kids] -> Kids
-    +[Ask about money] -> Money
+    +[Ask about the money] -> Money
     +[No more questions] -> No_More
     
 == Kids ==
@@ -16,7 +16,7 @@ Yes, honey. That's quite enough. We're managing. #portrait:rosa
 -> My_Choices
 
 == Money ==
-That's quite a lot of cash, Ms. Rosa. #portrait:tom
+That's quite a lot of cash, Mrs. Rosa. #portrait:tom
 We've been saving. #portrait:rosa
 We have? #portrait:john
 Have you? #portrait:tom
@@ -32,9 +32,9 @@ I don't know. I don't count the days, detective. #portrait:rosa
 Are they new? #portrait:tom
 I said, we've been saving. #portrait:rosa
 Why do you care so much about my money and what it looks like?
-I'm just asking, Ms. Rosa. No need to get defensive. #portrait:tom
+I'm just asking, Mrs. Rosa. No need to get defensive. #portrait:tom
 Pah. I wouldn't if you weren't so rude. #portrait:rosa
-Hon, it's okay. We're okay, right, detective? #portrait:john
+Hon, it's okay. We're okay, right, Mr. Trilby? #portrait:john
 Right. #portrait:tom
 -> My_Choices
 

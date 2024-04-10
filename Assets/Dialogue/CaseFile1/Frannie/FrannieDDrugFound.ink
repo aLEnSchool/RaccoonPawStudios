@@ -1,6 +1,6 @@
 What are you doing here? Again. #portrait:frannie
-Let’s not beat around the beret, Ms. Chef Frannie. #portrait:tom
-You’re hiding something. And I think for your best interest, you come clean.
+Let’s not beat around the beret, Ms. Chef Frances. #portrait:tom
+You’re hiding something. And I think for your best interest, you should come clean.
 Does the boorish attitude ever work? #portrait:frannie
 Why does Ms. Sweets have mercury? #portrait:tom
 ... #portrait:frannie
@@ -10,7 +10,7 @@ You didn’t see anything. You’re lying. #portrait:frannie
 I saw the locker. #portrait:tom
 No, you didn’t. I see what you’re doing. It’s not working. #portrait:frannie
 Ms. Chef, I know what I saw. #portrait:tom
-I’m coming to you as Sadie’s friend. You’re Sadie’s friend too, right?
+I’m coming to you as Ms. Sweet's friend. You’re her friend too, right?
 ... #portrait:frannie
 We’re close.
 I thought so. #portrait:tom
@@ -32,7 +32,7 @@ It’s me. She’s just holding it for me. Mr. Bowler comes to me for some. Ther
 ... #portrait:tom
 He came to you for mercury?
 That’s what I said, isn’t it? #portrait:frannie
-Only this one time? Or consistently. #portrait:tom
+Only this one time? Or consistently? #portrait:tom
 Every time he was here, so almost every day. #portrait:frannie
 And how much mercury would you sell him? #portrait:tom
 Oh, you know, just a vial or so. #portrait:frannie

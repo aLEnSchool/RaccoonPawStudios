@@ -20,6 +20,7 @@ public class EndSceneController : MonoBehaviour
     [SerializeField] private Sprite lantern;
     [SerializeField] private Sprite cookbook;
     [SerializeField] private Sprite mercury;
+    [SerializeField] private Sprite matches;
 
     [Header("Dialog Files")]
     [SerializeField] private TextAsset clayeDialog;
@@ -88,6 +89,10 @@ public class EndSceneController : MonoBehaviour
         if (PlayerDataController.instance.weaponSelected == 3)
         {
             weapon.sprite = mercury;
+        }
+        if (PlayerDataController.instance.weaponSelected == 4)
+        {
+            weapon.sprite = matches;
         }
     }
 }
