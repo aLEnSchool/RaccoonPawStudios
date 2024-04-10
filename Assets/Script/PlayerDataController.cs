@@ -48,10 +48,9 @@ public class PlayerDataController : MonoBehaviour
     public bool clayeBagOpen = false;
     public bool knobInTheDoor = false;
 
-    
-
     public int characterSelected;
     public int weaponSelected;
+    public string notesTaken;
 
     private void Awake()
     {
