@@ -90,5 +90,9 @@ public class EndSceneController : MonoBehaviour
         {
             weapon.sprite = mercury;
         }
+        if (PlayerDataController.instance.weaponSelected == 4)
+        {
+            weapon.sprite = matches;
+        }
     }
 }
