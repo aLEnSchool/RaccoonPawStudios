@@ -35,6 +35,7 @@ public class ObjectController : MonoBehaviour
                 //{
                 pickUp();
                 //}
+
             }
             else if (objectPickedUp && !doorRange && !PlayerController.instance.doorRange)
             {
