@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     // jumping on the bench
     [SerializeField] private float jumpForceBench = 5f;
-    private bool jumpingBench = false;   // check whether the player has jumped
+    private bool jumpingBench = true;   // check whether the player has jumped
     private int jumpCountBench = 0;      // counter for double jump
     public bool fromFloor = true;
 
@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (!jumping && fromFloor)
+        if (!jumping && (fromFloor || jumpingBench))
         {
             inputX = 0;
         }
