@@ -1,3 +1,3 @@
-Oh. #portrait:tom
+Oh... #portrait:tom
 There's no doorknob.
 
