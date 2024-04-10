@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19784999, y: 1.2993, z: 0}
-    m_Extent: {x: 4.65135, y: 3.5723999, z: 0}
+    m_Center: {x: 0.19775009, y: 1.2988499, z: 0}
+    m_Extent: {x: 4.65095, y: 3.5683498, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -2375,11 +2375,11 @@ Transform:
   m_GameObject: {fileID: 134027296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24, y: -0.73, z: 0}
-  m_LocalScale: {x: 0.20183687, y: 0.20183687, z: 0.20183687}
+  m_LocalPosition: {x: -0.000012698373, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 296968909}
+  m_Father: {fileID: 1768014765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &134027298
 SpriteRenderer:
@@ -3951,7 +3951,6 @@ GameObject:
   - component: {fileID: 296968907}
   - component: {fileID: 296968911}
   - component: {fileID: 296968912}
-  - component: {fileID: 296968913}
   m_Layer: 0
   m_Name: Sadie
   m_TagString: Sadie
@@ -3995,8 +3994,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.73, y: 6.23}
-    newSize: {x: 6.73, y: 6.23}
+    oldSize: {x: 50.8, y: 47.004883}
+    newSize: {x: 50.8, y: 47.004883}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4018,7 +4017,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1768014765}
-  - {fileID: 134027297}
   m_Father: {fileID: 1867851621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &296968910
@@ -4088,19 +4086,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &296968913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296968906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 134027296}
 --- !u!1 &297148605
 GameObject:
   m_ObjectHideFlags: 0
@@ -5829,8 +5814,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19410014, y: 1.2978499, z: 0}
-    m_Extent: {x: 4.6424, y: 3.56755, z: 0}
+    m_Center: {x: 0.19369984, y: 1.3008999, z: 0}
+    m_Extent: {x: 4.6496, y: 3.5591998, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6264,8 +6249,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19039989, y: 1.2999, z: 0}
-    m_Extent: {x: 4.6528997, y: 3.5586, z: 0}
+    m_Center: {x: 0.19069982, y: 1.3012999, z: 0}
+    m_Extent: {x: 4.6528997, y: 3.5643997, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11880,8 +11865,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17744994, y: 2.02035, z: 0}
-    m_Extent: {x: 2.23315, y: 2.34275, z: 0}
+    m_Center: {x: 0.1825, y: 2.0211499, z: 0}
+    m_Extent: {x: 2.2371001, y: 2.33415, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15180,8 +15165,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.022300005, y: 1.37415, z: 0}
-    m_Extent: {x: 2.3303, y: 1.99365, z: 0}
+    m_Center: {x: -0.025900006, y: 1.3615, z: 0}
+    m_Extent: {x: 2.3218002, y: 1.9942999, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16243,8 +16228,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1875999, y: 1.3001499, z: 0}
-    m_Extent: {x: 4.6463003, y: 3.56075, z: 0}
+    m_Center: {x: 0.18480015, y: 1.3061, z: 0}
+    m_Extent: {x: 4.6468, y: 3.5658002, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -27977,6 +27962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768014765}
   - component: {fileID: 1768014766}
+  - component: {fileID: 1768014767}
   m_Layer: 0
   m_Name: IMG_0800
   m_TagString: Untagged
@@ -27996,7 +27982,8 @@ Transform:
   m_LocalPosition: {x: -0.24, y: -0.73, z: 0}
   m_LocalScale: {x: 0.20183687, y: 0.20183687, z: 0.20183687}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 134027297}
   m_Father: {fileID: 296968909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1768014766
@@ -28051,6 +28038,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1768014767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768014764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 134027296}
 --- !u!1 &1768128494
 GameObject:
   m_ObjectHideFlags: 0
@@ -30308,8 +30308,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3257, y: 1.3016, z: 0}
-    m_Extent: {x: 8.1554, y: 2.1032, z: 0}
+    m_Center: {x: 7.31895, y: 1.29005, z: 0}
+    m_Extent: {x: 8.16215, y: 2.10045, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
