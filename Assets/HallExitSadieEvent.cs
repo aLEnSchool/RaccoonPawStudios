@@ -2,42 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HallSadieEvent : MonoBehaviour
+public class HallExitSadieEvent : MonoBehaviour
 {
-
-    public bool sadieInHall;
+    public bool sadieExitHall; // true when Sadie should exit the hall
     private bool inRange;
-
-    [Header("Ink Files")]
-    [SerializeField] private TextAsset dialogFile1;
 
     public Animator sadieAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
-        sadieInHall = false;
+        sadieExitHall = false;
         inRange = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inRange && !DialogueManager.GetInstance().dialogueIsPlaying) // if player is in range of the door
+        if (inRange && !DialogueManager.GetInstance().dialogueIsPlaying) // if player is in range of the collider in the alley
         {
-            if (!sadieInHall) 
+            if (!sadieExitHall)
             {
-                DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
-                // display "cannot enter" message
+                sadieAnimator.SetBool("ExitHall", true); // play sadie exit hall animation
 
-                sadieAnimator.SetBool("EnterHall", true);
-
-                sadieInHall = true;
-                PlayerDataController.instance.hallSadie = true;
+                sadieExitHall = true;
+                PlayerDataController.instance.sadieBusy = true;
             }
-              
+
         }
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
