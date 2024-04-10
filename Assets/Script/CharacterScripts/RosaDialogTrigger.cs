@@ -11,6 +11,7 @@ public class RosaDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile4;
     [SerializeField] private TextAsset dialogLighter;
     [SerializeField] private TextAsset dialogLanternOn;
+    [SerializeField] private TextAsset dialogEnd;
 
     private bool playerInRange;
 
@@ -58,6 +59,11 @@ public class RosaDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.rosaBagOpened)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+
+                }
+                if (PlayerDataController.instance.drugs == true && PlayerDataController.instance.knobInTheDoor == true && PlayerDataController.instance.sadieDrugTalk == true && PlayerDataController.instance.franDrugTalk)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogEnd);
 
                 }
             }

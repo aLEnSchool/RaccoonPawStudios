@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.20050001, y: 1.29665, z: 0}
-    m_Extent: {x: 4.6475, y: 3.57345, z: 0}
+    m_Center: {x: 0.19784999, y: 1.2993, z: 0}
+    m_Extent: {x: 4.65135, y: 3.5723999, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4065,6 +4065,8 @@ MonoBehaviour:
   dialogLighter: {fileID: 4900000, guid: 81c892225ff588547a40998b4d073820, type: 3}
   dialogLighterFound: {fileID: 4900000, guid: c24cfb7fc960e4548a471c12dc1ce4d9, type: 3}
   dialogLanternOn: {fileID: 4900000, guid: 36b8672f5ff36c240a4d447008fe48ae, type: 3}
+  dialogFoodBrought: {fileID: 4900000, guid: 093f80fef7832a54e85ededb5e6f9c54, type: 3}
+  dialogEnd: {fileID: 4900000, guid: c5dd946748bba374eb7111d5acb539b5, type: 3}
 --- !u!95 &296968912
 Animator:
   serializedVersion: 5
@@ -5827,8 +5829,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18805003, y: 1.3023499, z: 0}
-    m_Extent: {x: 4.64205, y: 3.5616498, z: 0}
+    m_Center: {x: 0.19410014, y: 1.2978499, z: 0}
+    m_Extent: {x: 4.6424, y: 3.56755, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6262,8 +6264,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19099998, y: 1.2957499, z: 0}
-    m_Extent: {x: 4.6554, y: 3.56155, z: 0}
+    m_Center: {x: 0.19039989, y: 1.2999, z: 0}
+    m_Extent: {x: 4.6528997, y: 3.5586, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6559,6 +6561,7 @@ MonoBehaviour:
   dialogFile5: {fileID: 4900000, guid: d5d7c3c2c76106644b97f5cdfac74ba4, type: 3}
   dialogLighter: {fileID: 0}
   dialogLanternOn: {fileID: 0}
+  dialogEnd: {fileID: 0}
 --- !u!212 &477611255
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9028,6 +9031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogFile1: {fileID: 4900000, guid: be4cd3c0b01727c4e9450c7e29170b28, type: 3}
   dialogFile2: {fileID: 4900000, guid: e3153a8ad45d8964b86fef1f4a78c1db, type: 3}
+  dialogEnd: {fileID: 4900000, guid: 7ae13b2138f0fdf45a9f3bd4768ff239, type: 3}
 --- !u!114 &610978044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9327,6 +9331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2065433585}
   - {fileID: 1379371419}
   - {fileID: 309967605}
   - {fileID: 679172579}
@@ -11875,8 +11880,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.176, y: 2.0229, z: 0}
-    m_Extent: {x: 2.2264, y: 2.3448, z: 0}
+    m_Center: {x: 0.17744994, y: 2.02035, z: 0}
+    m_Extent: {x: 2.23315, y: 2.34275, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -13196,6 +13201,7 @@ MonoBehaviour:
   dialogFile1: {fileID: 4900000, guid: 40a7ec100ccff1f4ba1fae99e4f286f0, type: 3}
   dialogFile2: {fileID: 4900000, guid: 4191524aa31a9734786ddc7b49afbc2c, type: 3}
   dialogFile3: {fileID: 4900000, guid: 4dbfd83a2077d1a45b8a0bfb8d7b6736, type: 3}
+  dialogEnd: {fileID: 4900000, guid: 4191524aa31a9734786ddc7b49afbc2c, type: 3}
 --- !u!114 &845420253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15174,8 +15180,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.018999934, y: 1.3718, z: 0}
-    m_Extent: {x: 2.3207002, y: 2.0019, z: 0}
+    m_Center: {x: -0.022300005, y: 1.37415, z: 0}
+    m_Extent: {x: 2.3303, y: 1.99365, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16237,8 +16243,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19575, y: 1.2972, z: 0}
-    m_Extent: {x: 4.6503496, y: 3.563, z: 0}
+    m_Center: {x: 0.1875999, y: 1.3001499, z: 0}
+    m_Extent: {x: 4.6463003, y: 3.56075, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -20023,7 +20029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1276910417
 Transform:
   m_ObjectHideFlags: 0
@@ -20791,6 +20797,9 @@ MonoBehaviour:
   clayeBagFall: 0
   clayeBagOpen: 0
   knobInTheDoor: 0
+  drugs: 0
+  sadieDrugTalk: 0
+  franDrugTalk: 0
   characterSelected: 0
   weaponSelected: 0
   notesTaken: 
@@ -25547,6 +25556,7 @@ MonoBehaviour:
   dialogFile5: {fileID: 4900000, guid: d5d7c3c2c76106644b97f5cdfac74ba4, type: 3}
   dialogLighter: {fileID: 4900000, guid: eecb54849f503194d84097a0715d41f4, type: 3}
   dialogLanternOn: {fileID: 4900000, guid: 0527c1db0543ef04299bf71798b97ba2, type: 3}
+  dialogEnd: {fileID: 4900000, guid: 084c9a65d54eacf44b5d36f2e0e6285c, type: 3}
 --- !u!114 &1591054839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30298,8 +30308,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3228498, y: 1.29755, z: 0}
-    m_Extent: {x: 8.162149, y: 2.09465, z: 0}
+    m_Center: {x: 7.3257, y: 1.3016, z: 0}
+    m_Extent: {x: 8.1554, y: 2.1032, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -32436,6 +32446,7 @@ MonoBehaviour:
   dialogFile4: {fileID: 4900000, guid: 39d27ceea5c2e5147a58d92330f29e78, type: 3}
   dialogLighter: {fileID: 4900000, guid: a4c0858e287757747b86d47182923e53, type: 3}
   dialogLanternOn: {fileID: 4900000, guid: 8dd43705b8ea65d45a94378afcfe901f, type: 3}
+  dialogEnd: {fileID: 4900000, guid: 7b1f63be39dd83a418f97ee16b47aa98, type: 3}
 --- !u!114 &2038814053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32615,6 +32626,98 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &2065433584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065433585}
+  - component: {fileID: 2065433587}
+  - component: {fileID: 2065433586}
+  m_Layer: 0
+  m_Name: SadieExitHall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2065433585
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065433584}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.9, y: -2.37, z: 0}
+  m_LocalScale: {x: 1, y: 9.1625, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633458198}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2065433586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065433584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f67e808371492f4da19d264ccc1cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sadieExitHall: 0
+  sadieAnimator: {fileID: 296968912}
+--- !u!61 &2065433587
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065433584}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2070462576
 GameObject:
   m_ObjectHideFlags: 0

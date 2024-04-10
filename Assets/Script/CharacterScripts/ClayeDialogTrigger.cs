@@ -12,6 +12,7 @@ public class ClayeDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile5;
     [SerializeField] private TextAsset dialogLighter;
     [SerializeField] private TextAsset dialogLanternOn;
+    [SerializeField] private TextAsset dialogEnd;
 
     private bool playerInRange;
 
@@ -59,6 +60,11 @@ public class ClayeDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.clayeBagOpen)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile5);
+
+                }
+                if (PlayerDataController.instance.drugs == true && PlayerDataController.instance.knobInTheDoor == true && PlayerDataController.instance.sadieDrugTalk == true && PlayerDataController.instance.franDrugTalk)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogEnd);
 
                 }
             }

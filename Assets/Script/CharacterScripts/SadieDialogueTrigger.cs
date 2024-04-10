@@ -12,6 +12,8 @@ public class SadieDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogLighter;
     [SerializeField] private TextAsset dialogLighterFound;
     [SerializeField] private TextAsset dialogLanternOn;
+    [SerializeField] private TextAsset dialogFoodBrought;
+    [SerializeField] private TextAsset dialogEnd;
 
     private bool playerInRange;
 
@@ -58,9 +60,22 @@ public class SadieDialogueTrigger : MonoBehaviour
                     PlayerDataController.instance.sadieBusy = true;
 
                 }
+                if (PlayerDataController.instance.clayeFoodB)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFoodBrought);
+                    //PlayerDataController.instance.clayeBagFall = true;
+
+                }
                 if (PlayerDataController.instance.drugsFound)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+                    PlayerDataController.instance.drugs = true;
+                    PlayerDataController.instance.sadieDrugTalk = true;
+
+                }
+                if (PlayerDataController.instance.drugs == true && PlayerDataController.instance.knobInTheDoor == true && PlayerDataController.instance.sadieDrugTalk == true && PlayerDataController.instance.franDrugTalk)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogEnd);
 
                 }
             }

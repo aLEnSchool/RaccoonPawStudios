@@ -59,6 +59,10 @@ public class PlayerDataController : MonoBehaviour
     public bool clayeBagOpen = false;
     public bool knobInTheDoor = false;
 
+    public bool drugs = false;
+    public bool sadieDrugTalk = false;
+    public bool franDrugTalk = false;
+
     public int characterSelected;
     public int weaponSelected;
     public string notesTaken;

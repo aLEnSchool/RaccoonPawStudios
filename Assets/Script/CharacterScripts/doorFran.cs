@@ -44,7 +44,7 @@ public class doorFran : MonoBehaviour
                 if (PlayerDataController.instance.sadieBusy)
                 {
                     //DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
-                    DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+                    //DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
                     Debug.Log("please don't play");
                     PlayerDataController.instance.wentIntoKitchen = true;
 
