@@ -7,6 +7,7 @@ public class FrannieDialogueTrigger : MonoBehaviour
     [Header("Ink Files")]
     [SerializeField] private TextAsset dialogFile1;
     [SerializeField] private TextAsset dialogFile2;
+    [SerializeField] private TextAsset dialogEnd;
 
     private bool playerInRange;
     
@@ -26,7 +27,13 @@ public class FrannieDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.drugsFound)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
-                    
+                    PlayerDataController.instance.franDrugTalk = true;
+
+                }
+                if (PlayerDataController.instance.drugs == true && PlayerDataController.instance.knobInTheDoor == true && PlayerDataController.instance.sadieDrugTalk == true && PlayerDataController.instance.franDrugTalk)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogEnd);
+
                 }
             }
         }

@@ -9,6 +9,11 @@ public class SadieDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile2;
     [SerializeField] private TextAsset dialogFile3;
     [SerializeField] private TextAsset dialogFile4;
+    [SerializeField] private TextAsset dialogLighter;
+    [SerializeField] private TextAsset dialogLighterFound;
+    [SerializeField] private TextAsset dialogLanternOn;
+    [SerializeField] private TextAsset dialogFoodBrought;
+    [SerializeField] private TextAsset dialogEnd;
 
     private bool playerInRange;
 
@@ -32,6 +37,22 @@ public class SadieDialogueTrigger : MonoBehaviour
                     PlayerDataController.instance.frannieLighter = true;
                     PlayerDataController.instance.johnLighter = true;
                     PlayerDataController.instance.rosaLighter = true;
+                    //PlayerDataController.instance.sadieLighter = true;
+                }
+                if (PlayerDataController.instance.sadieLighter)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighter);
+
+                }
+                if (PlayerDataController.instance.sadieLighterFound)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighterFound);
+
+                }
+                if (PlayerDataController.instance.lanternOn)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLanternOn);
+
                 }
                 if (PlayerDataController.instance.sadieInvest)
                 {
@@ -39,9 +60,22 @@ public class SadieDialogueTrigger : MonoBehaviour
                     PlayerDataController.instance.sadieBusy = true;
 
                 }
+                if (PlayerDataController.instance.clayeFoodB)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogFoodBrought);
+                    //PlayerDataController.instance.clayeBagFall = true;
+
+                }
                 if (PlayerDataController.instance.drugsFound)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+                    PlayerDataController.instance.drugs = true;
+                    PlayerDataController.instance.sadieDrugTalk = true;
+
+                }
+                if (PlayerDataController.instance.drugs == true && PlayerDataController.instance.knobInTheDoor == true && PlayerDataController.instance.sadieDrugTalk == true && PlayerDataController.instance.franDrugTalk)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogEnd);
 
                 }
             }

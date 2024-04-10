@@ -1,4 +1,4 @@
-hello. #portrait:tom
+Hello. #portrait:tom
 Oh, hello, hello. Sorry, if you can give me—Oh! Hello! You must be here for—For... #portrait:sadie
 Yes, for the murder. Private Investigator Tom Trilby. You are? #portrait:tom
 Sadie! Sadie Sweets. #portrait:sadie
