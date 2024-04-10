@@ -10,6 +10,7 @@ public class doorFran : MonoBehaviour
     [SerializeField] private TextAsset dialogFile3;
     [SerializeField] private TextAsset dialogFile4;
     [SerializeField] private TextAsset dialogFile5;
+    [SerializeField] private TextAsset dialogLighter;
 
     private bool playerInRange;
 
@@ -30,7 +31,11 @@ public class doorFran : MonoBehaviour
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2); 
                 }
+                if (PlayerDataController.instance.frannieLighterFound)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighter);
 
+                }
                 if (PlayerDataController.instance.frannieInvest)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile3);

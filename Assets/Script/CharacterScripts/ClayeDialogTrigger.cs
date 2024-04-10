@@ -10,6 +10,8 @@ public class ClayeDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile3;
     [SerializeField] private TextAsset dialogFile4;
     [SerializeField] private TextAsset dialogFile5;
+    [SerializeField] private TextAsset dialogLighter;
+    [SerializeField] private TextAsset dialogLanternOn;
 
     private bool playerInRange;
 
@@ -31,6 +33,16 @@ public class ClayeDialogueTrigger : MonoBehaviour
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
                     
+                }
+                if (PlayerDataController.instance.clayLighterFound)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighter);
+                    
+                }
+                if (PlayerDataController.instance.lanternOn)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLanternOn);
+
                 }
                 if (PlayerDataController.instance.clayInvest)
                 {

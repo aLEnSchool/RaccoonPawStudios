@@ -19,7 +19,18 @@ public class PlayerDataController : MonoBehaviour
     public bool frannieLighter = false;
     public bool johnLighter = false;
     public bool rosaLighter = false;
+    public bool sadieLighter = false;
     public bool rosaLAppear = false;
+
+    //if lighter found
+    public bool clayLighterFound = false;
+    public bool frannieLighterFound = false;
+    public bool johnLighterFound = false;
+    public bool rosaLighterFound = false;
+    public bool sadieLighterFound = false;
+
+    //if lantern on
+    public bool lanternOn = false;
 
     //after finding crime scene
     public bool clayInvest = false;

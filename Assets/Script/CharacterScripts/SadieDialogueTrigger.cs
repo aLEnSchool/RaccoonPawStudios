@@ -9,6 +9,9 @@ public class SadieDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile2;
     [SerializeField] private TextAsset dialogFile3;
     [SerializeField] private TextAsset dialogFile4;
+    [SerializeField] private TextAsset dialogLighter;
+    [SerializeField] private TextAsset dialogLighterFound;
+    [SerializeField] private TextAsset dialogLanternOn;
 
     private bool playerInRange;
 
@@ -32,6 +35,22 @@ public class SadieDialogueTrigger : MonoBehaviour
                     PlayerDataController.instance.frannieLighter = true;
                     PlayerDataController.instance.johnLighter = true;
                     PlayerDataController.instance.rosaLighter = true;
+                    //PlayerDataController.instance.sadieLighter = true;
+                }
+                if (PlayerDataController.instance.sadieLighter)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighter);
+
+                }
+                if (PlayerDataController.instance.sadieLighterFound)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighterFound);
+
+                }
+                if (PlayerDataController.instance.lanternOn)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLanternOn);
+
                 }
                 if (PlayerDataController.instance.sadieInvest)
                 {

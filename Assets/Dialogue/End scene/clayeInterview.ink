@@ -1,4 +1,4 @@
-Well, Claye. I think you did it. I'm giving you the chace to come clean. #portrait:tom
+Well, Claye. I think you did it. I'm giving you the chance to come clean. #portrait:tom
 Sweetie, all I've done is eat a fine meal.#portrait:claye
 Claye, you clearly do not want to talk.#portrait:tom
 I'm talking to you right now.#portrait:claye

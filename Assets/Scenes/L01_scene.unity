@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19000006, y: 1.2954499, z: 0}
-    m_Extent: {x: 4.6507, y: 3.57095, z: 0}
+    m_Center: {x: 0.20050001, y: 1.29665, z: 0}
+    m_Extent: {x: 4.6475, y: 3.57345, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -4062,6 +4062,9 @@ MonoBehaviour:
   dialogFile2: {fileID: 4900000, guid: c600e30a268fd354585b65d586343950, type: 3}
   dialogFile3: {fileID: 4900000, guid: 9bb4815ab8f860748a5cfdf3a668a25b, type: 3}
   dialogFile4: {fileID: 4900000, guid: cdc7820f746b881458b1ae99bff84981, type: 3}
+  dialogLighter: {fileID: 4900000, guid: 81c892225ff588547a40998b4d073820, type: 3}
+  dialogLighterFound: {fileID: 4900000, guid: c24cfb7fc960e4548a471c12dc1ce4d9, type: 3}
+  dialogLanternOn: {fileID: 4900000, guid: 36b8672f5ff36c240a4d447008fe48ae, type: 3}
 --- !u!95 &296968912
 Animator:
   serializedVersion: 5
@@ -5824,8 +5827,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18884993, y: 1.3024, z: 0}
-    m_Extent: {x: 4.64995, y: 3.5672998, z: 0}
+    m_Center: {x: 0.18805003, y: 1.3023499, z: 0}
+    m_Extent: {x: 4.64205, y: 3.5616498, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6259,8 +6262,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19204998, y: 1.2972, z: 0}
-    m_Extent: {x: 4.64525, y: 3.5634, z: 0}
+    m_Center: {x: 0.19099998, y: 1.2957499, z: 0}
+    m_Extent: {x: 4.6554, y: 3.56155, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6554,6 +6557,8 @@ MonoBehaviour:
   dialogFile3: {fileID: 4900000, guid: 9bb4815ab8f860748a5cfdf3a668a25b, type: 3}
   dialogFile4: {fileID: 4900000, guid: 084c9a65d54eacf44b5d36f2e0e6285c, type: 3}
   dialogFile5: {fileID: 4900000, guid: d5d7c3c2c76106644b97f5cdfac74ba4, type: 3}
+  dialogLighter: {fileID: 0}
+  dialogLanternOn: {fileID: 0}
 --- !u!212 &477611255
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11870,8 +11875,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17935002, y: 2.02745, z: 0}
-    m_Extent: {x: 2.2357502, y: 2.34025, z: 0}
+    m_Center: {x: 0.176, y: 2.0229, z: 0}
+    m_Extent: {x: 2.2264, y: 2.3448, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15169,8 +15174,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.023699999, y: 1.36585, z: 0}
-    m_Extent: {x: 2.3234, y: 1.99915, z: 0}
+    m_Center: {x: -0.018999934, y: 1.3718, z: 0}
+    m_Extent: {x: 2.3207002, y: 2.0019, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16232,8 +16237,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18614984, y: 1.2953001, z: 0}
-    m_Extent: {x: 4.64415, y: 3.5644002, z: 0}
+    m_Center: {x: 0.19575, y: 1.2972, z: 0}
+    m_Extent: {x: 4.6503496, y: 3.563, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -20763,7 +20768,14 @@ MonoBehaviour:
   frannieLighter: 0
   johnLighter: 0
   rosaLighter: 0
+  sadieLighter: 0
   rosaLAppear: 0
+  clayLighterFound: 0
+  frannieLighterFound: 0
+  johnLighterFound: 0
+  rosaLighterFound: 0
+  sadieLighterFound: 0
+  lanternOn: 0
   clayInvest: 0
   frannieInvest: 0
   johnInvest: 0
@@ -25533,6 +25545,8 @@ MonoBehaviour:
   dialogFile3: {fileID: 4900000, guid: 9bb4815ab8f860748a5cfdf3a668a25b, type: 3}
   dialogFile4: {fileID: 4900000, guid: 084c9a65d54eacf44b5d36f2e0e6285c, type: 3}
   dialogFile5: {fileID: 4900000, guid: d5d7c3c2c76106644b97f5cdfac74ba4, type: 3}
+  dialogLighter: {fileID: 4900000, guid: eecb54849f503194d84097a0715d41f4, type: 3}
+  dialogLanternOn: {fileID: 4900000, guid: 0527c1db0543ef04299bf71798b97ba2, type: 3}
 --- !u!114 &1591054839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30217,6 +30231,7 @@ MonoBehaviour:
   dialogFile3: {fileID: 4900000, guid: c6ff8625bbc102549a835c00f3b138bb, type: 3}
   dialogFile4: {fileID: 4900000, guid: 4bc272334310df443b42f006046f2e68, type: 3}
   dialogFile5: {fileID: 4900000, guid: ac7302064d5272647a5649093ea1310f, type: 3}
+  dialogLighter: {fileID: 4900000, guid: c6ff8625bbc102549a835c00f3b138bb, type: 3}
 --- !u!1 &1876898877
 GameObject:
   m_ObjectHideFlags: 0
@@ -30283,8 +30298,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3241, y: 1.29315, z: 0}
-    m_Extent: {x: 8.1632, y: 2.09845, z: 0}
+    m_Center: {x: 7.3228498, y: 1.29755, z: 0}
+    m_Extent: {x: 8.162149, y: 2.09465, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -32419,6 +32434,8 @@ MonoBehaviour:
   dialogFile2: {fileID: 4900000, guid: 3d7c47f0798554849bedd0b9a7e248ce, type: 3}
   dialogFile3: {fileID: 4900000, guid: 628558e4a4583f744a5238ceebb085dc, type: 3}
   dialogFile4: {fileID: 4900000, guid: 39d27ceea5c2e5147a58d92330f29e78, type: 3}
+  dialogLighter: {fileID: 4900000, guid: a4c0858e287757747b86d47182923e53, type: 3}
+  dialogLanternOn: {fileID: 4900000, guid: 8dd43705b8ea65d45a94378afcfe901f, type: 3}
 --- !u!114 &2038814053
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class RosaDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile2;
     [SerializeField] private TextAsset dialogFile3;
     [SerializeField] private TextAsset dialogFile4;
+    [SerializeField] private TextAsset dialogLighter;
+    [SerializeField] private TextAsset dialogLanternOn;
 
     private bool playerInRange;
 
@@ -29,7 +31,23 @@ public class RosaDialogueTrigger : MonoBehaviour
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
                     PlayerDataController.instance.rosaLAppear = true;
-                    
+
+                    //PlayerDataController.instance.rosaLighterFound = true;
+                    PlayerDataController.instance.johnLighterFound = true;
+                    PlayerDataController.instance.sadieLighterFound = true;
+                    PlayerDataController.instance.clayLighterFound = true;
+                    PlayerDataController.instance.frannieLighterFound = true;
+
+                }
+                if (PlayerDataController.instance.rosaLighterFound)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighter);
+
+                }
+                if (PlayerDataController.instance.lanternOn)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLanternOn);
+
                 }
                 if (PlayerDataController.instance.rosaInvest)
                 {

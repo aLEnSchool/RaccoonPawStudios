@@ -8,6 +8,7 @@ public class JohnDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile1;
     [SerializeField] private TextAsset dialogFile2;
     [SerializeField] private TextAsset dialogFile3;
+    //[SerializeField] private TextAsset dialogLighter;
 
     private bool playerInRange;
 
