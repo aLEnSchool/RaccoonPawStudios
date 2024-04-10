@@ -35,7 +35,7 @@ public class WCDoorController : MonoBehaviour
     {
         if (inRange && !DialogueManager.GetInstance().dialogueIsPlaying) // if player is in range of the door
         {
-            if (Input.GetKeyDown(KeyCode.F) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms)) // if user presses E, and not in the middle of switching rooms
+            if (Input.GetKeyDown(KeyCode.E) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms)) // if user presses E, and not in the middle of switching rooms
             {
                 if (knobInDoor) // if player brought missing doorknob to door
                 {

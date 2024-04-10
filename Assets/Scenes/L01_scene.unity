@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19480014, y: 1.3040501, z: 0}
-    m_Extent: {x: 4.6483, y: 3.56645, z: 0}
+    m_Center: {x: 0.18374991, y: 1.29365, z: 0}
+    m_Extent: {x: 4.64565, y: 3.57125, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -3967,7 +3967,7 @@ GameObject:
   - component: {fileID: 296968912}
   m_Layer: 0
   m_Name: Sadie
-  m_TagString: Untagged
+  m_TagString: Sadie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5824,8 +5824,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1867001, y: 1.3055499, z: 0}
-    m_Extent: {x: 4.6495, y: 3.56545, z: 0}
+    m_Center: {x: 0.18599987, y: 1.2977501, z: 0}
+    m_Extent: {x: 4.651, y: 3.5738502, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6259,8 +6259,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19324994, y: 1.2911, z: 0}
-    m_Extent: {x: 4.65125, y: 3.5681, z: 0}
+    m_Center: {x: 0.19180012, y: 1.2981999, z: 0}
+    m_Extent: {x: 4.6453, y: 3.5626, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11870,8 +11870,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18279994, y: 2.0188, z: 0}
-    m_Extent: {x: 2.2243, y: 2.3319, z: 0}
+    m_Center: {x: 0.18429995, y: 2.0232, z: 0}
+    m_Extent: {x: 2.2281, y: 2.3316998, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15155,8 +15155,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.02094996, y: 1.36255, z: 0}
-    m_Extent: {x: 2.31875, y: 1.99735, z: 0}
+    m_Center: {x: -0.019650102, y: 1.3722, z: 0}
+    m_Extent: {x: 2.3294501, y: 1.9969001, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16218,8 +16218,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1944499, y: 1.29575, z: 0}
-    m_Extent: {x: 4.64855, y: 3.57125, z: 0}
+    m_Center: {x: 0.18690014, y: 1.30185, z: 0}
+    m_Extent: {x: 4.6468, y: 3.5643501, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -23546,7 +23546,9 @@ MonoBehaviour:
   jumpForceBench: 5
   fromFloor: 1
   animator: {fileID: 1486233423}
+  facingRight: 1
   playerSwoosh: {fileID: 1486233424}
+  sadie: 0
 --- !u!212 &1486233421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24525,7 +24527,7 @@ Transform:
   m_GameObject: {fileID: 1528950925}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.04, y: -14.196396, z: 0.76008}
+  m_LocalPosition: {x: -0.92, y: -14.196396, z: 0.76008}
   m_LocalScale: {x: 0.27685672, y: 0.27685672, z: 0.27685672}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24616,7 +24618,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043673515, y: -0.9557133}
+  m_Offset: {x: 0.6401019, y: -0.9557133}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24627,7 +24629,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 17.946959, y: 22.391426}
+  m_Size: {x: 2.7443008, y: 22.391426}
   m_EdgeRadius: 0
 --- !u!114 &1528950929
 MonoBehaviour:
@@ -28013,7 +28015,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: af642e52c475c284c929219b185d56a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30294,8 +30296,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.32675, y: 1.2974, z: 0}
-    m_Extent: {x: 8.16475, y: 2.1002, z: 0}
+    m_Center: {x: 7.3225, y: 1.3018501, z: 0}
+    m_Extent: {x: 8.1659, y: 2.10305, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55

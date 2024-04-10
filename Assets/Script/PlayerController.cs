@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioSource playerSwoosh;
     //private bool playSound = false;
 
+    public bool sadie = false;
+
     private void Awake()
     {
         instance = this;
@@ -236,12 +238,20 @@ public class PlayerController : MonoBehaviour
         {
             doorRange = true;
         }
+        if ((collision.gameObject.tag == "Sadie"))
+        {
+            sadie = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Door")
         {
             doorRange = false;
+        }
+        if ((collision.gameObject.tag == "Sadie"))
+        {
+            sadie = false;
         }
     }
 
