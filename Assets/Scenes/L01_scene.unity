@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18645, y: 1.301, z: 0}
-    m_Extent: {x: 4.65255, y: 3.5663, z: 0}
+    m_Center: {x: 0.19000006, y: 1.2954499, z: 0}
+    m_Extent: {x: 4.6507, y: 3.57095, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -1576,7 +1576,6 @@ GameObject:
   m_Component:
   - component: {fileID: 76339794}
   - component: {fileID: 76339795}
-  - component: {fileID: 76339796}
   m_Layer: 0
   m_Name: IMG_0792
   m_TagString: Untagged
@@ -1651,19 +1650,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &76339796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76339793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 1188204753}
 --- !u!1 &89050700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3965,6 +3951,7 @@ GameObject:
   - component: {fileID: 296968907}
   - component: {fileID: 296968911}
   - component: {fileID: 296968912}
+  - component: {fileID: 296968913}
   m_Layer: 0
   m_Name: Sadie
   m_TagString: Sadie
@@ -4096,6 +4083,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &296968913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296968906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 134027296}
 --- !u!1 &297148605
 GameObject:
   m_ObjectHideFlags: 0
@@ -5824,8 +5824,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19889998, y: 1.2963499, z: 0}
-    m_Extent: {x: 4.6478004, y: 3.5697498, z: 0}
+    m_Center: {x: 0.18884993, y: 1.3024, z: 0}
+    m_Extent: {x: 4.64995, y: 3.5672998, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6259,8 +6259,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19375014, y: 1.3014001, z: 0}
-    m_Extent: {x: 4.6525497, y: 3.5691, z: 0}
+    m_Center: {x: 0.19204998, y: 1.2972, z: 0}
+    m_Extent: {x: 4.64525, y: 3.5634, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8264,7 +8264,6 @@ GameObject:
   m_Component:
   - component: {fileID: 590541812}
   - component: {fileID: 590541813}
-  - component: {fileID: 590541814}
   m_Layer: 0
   m_Name: IMG_0799
   m_TagString: Untagged
@@ -8339,19 +8338,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &590541814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590541811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 895535439}
 --- !u!1 &592046182
 GameObject:
   m_ObjectHideFlags: 0
@@ -8933,6 +8919,7 @@ GameObject:
   - component: {fileID: 610978042}
   - component: {fileID: 610978041}
   - component: {fileID: 610978043}
+  - component: {fileID: 610978044}
   m_Layer: 0
   m_Name: Frannie
   m_TagString: Untagged
@@ -9036,6 +9023,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogFile1: {fileID: 4900000, guid: be4cd3c0b01727c4e9450c7e29170b28, type: 3}
   dialogFile2: {fileID: 4900000, guid: e3153a8ad45d8964b86fef1f4a78c1db, type: 3}
+--- !u!114 &610978044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610978038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 2056767191}
 --- !u!1 &613572605
 GameObject:
   m_ObjectHideFlags: 0
@@ -11870,8 +11870,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17869997, y: 2.0209, z: 0}
-    m_Extent: {x: 2.2349, y: 2.3407, z: 0}
+    m_Center: {x: 0.17935002, y: 2.02745, z: 0}
+    m_Extent: {x: 2.2357502, y: 2.34025, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -13087,6 +13087,7 @@ GameObject:
   - component: {fileID: 845420251}
   - component: {fileID: 845420250}
   - component: {fileID: 845420252}
+  - component: {fileID: 845420253}
   m_Layer: 0
   m_Name: John
   m_TagString: Untagged
@@ -13190,6 +13191,19 @@ MonoBehaviour:
   dialogFile1: {fileID: 4900000, guid: 40a7ec100ccff1f4ba1fae99e4f286f0, type: 3}
   dialogFile2: {fileID: 4900000, guid: 4191524aa31a9734786ddc7b49afbc2c, type: 3}
   dialogFile3: {fileID: 4900000, guid: 4dbfd83a2077d1a45b8a0bfb8d7b6736, type: 3}
+--- !u!114 &845420253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845420247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 1188204753}
 --- !u!1 &855418978
 GameObject:
   m_ObjectHideFlags: 0
@@ -15155,8 +15169,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.02004993, y: 1.36735, z: 0}
-    m_Extent: {x: 2.3285499, y: 1.9905499, z: 0}
+    m_Center: {x: -0.023699999, y: 1.36585, z: 0}
+    m_Extent: {x: 2.3234, y: 1.99915, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16218,8 +16232,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19950008, y: 1.3064001, z: 0}
-    m_Extent: {x: 4.6482, y: 3.5644, z: 0}
+    m_Center: {x: 0.18614984, y: 1.2953001, z: 0}
+    m_Extent: {x: 4.64415, y: 3.5644002, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -20082,7 +20096,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1278442823}
   - component: {fileID: 1278442824}
-  - component: {fileID: 1278442825}
   m_Layer: 0
   m_Name: IMG_0802
   m_TagString: Untagged
@@ -20157,19 +20170,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1278442825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278442822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 2056767191}
 --- !u!1 &1286841587
 GameObject:
   m_ObjectHideFlags: 0
@@ -27953,7 +27953,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1768014765}
   - component: {fileID: 1768014766}
-  - component: {fileID: 1768014767}
   m_Layer: 0
   m_Name: IMG_0800
   m_TagString: Untagged
@@ -28028,19 +28027,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1768014767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768014764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 134027296}
 --- !u!1 &1768128494
 GameObject:
   m_ObjectHideFlags: 0
@@ -30297,8 +30283,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.33245, y: 1.2925, z: 0}
-    m_Extent: {x: 8.16115, y: 2.099, z: 0}
+    m_Center: {x: 7.3241, y: 1.29315, z: 0}
+    m_Extent: {x: 8.1632, y: 2.09845, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -32327,6 +32313,7 @@ GameObject:
   - component: {fileID: 2038814051}
   - component: {fileID: 2038814050}
   - component: {fileID: 2038814052}
+  - component: {fileID: 2038814053}
   m_Layer: 0
   m_Name: Rosa
   m_TagString: Rosa
@@ -32432,6 +32419,19 @@ MonoBehaviour:
   dialogFile2: {fileID: 4900000, guid: 3d7c47f0798554849bedd0b9a7e248ce, type: 3}
   dialogFile3: {fileID: 4900000, guid: 628558e4a4583f744a5238ceebb085dc, type: 3}
   dialogFile4: {fileID: 4900000, guid: 39d27ceea5c2e5147a58d92330f29e78, type: 3}
+--- !u!114 &2038814053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038814047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 895535439}
 --- !u!1 &2056767191
 GameObject:
   m_ObjectHideFlags: 0
