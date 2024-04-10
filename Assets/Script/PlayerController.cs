@@ -23,18 +23,21 @@ public class PlayerController : MonoBehaviour
 
     // jumping on the bench
     [SerializeField] private float jumpForceBench = 5f;
-    private bool jumpingBench = false;   // check whether the player has jumped
+    private bool jumpingBench = true;   // check whether the player has jumped
     private int jumpCountBench = 0;      // counter for double jump
     public bool fromFloor = true;
 
     [Header("Animation")]
     [SerializeField] public Animator animator;
     private bool playHatAnimation = false; // variable to check if the hat floating down animation has been played or not
-    private bool facingRight = true;   // check which direction the player is facing
+    public bool facingRight = true;   // check which direction the player is facing
 
     [Header("Audio Source")]
     [SerializeField] private AudioSource playerSwoosh;
     //private bool playSound = false;
+
+    public bool sadie = false;
+    public bool rosa = false;
 
     private void Awake()
     {
@@ -71,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (!jumping && fromFloor)
+        if (!jumping && (fromFloor || jumpingBench))
         {
             inputX = 0;
         }
@@ -236,12 +239,28 @@ public class PlayerController : MonoBehaviour
         {
             doorRange = true;
         }
+        if ((collision.gameObject.tag == "Sadie"))
+        {
+            sadie = true;
+        }
+        if ((collision.gameObject.tag == "Rosa"))
+        {
+            rosa = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Door")
         {
             doorRange = false;
+        }
+        if ((collision.gameObject.tag == "Sadie"))
+        {
+            sadie = false;
+        }
+        if ((collision.gameObject.tag == "Rosa"))
+        {
+            rosa = false;
         }
     }
 

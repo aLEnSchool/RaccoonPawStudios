@@ -18,7 +18,7 @@ public class glassesTrigger : MonoBehaviour
     {
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
                 

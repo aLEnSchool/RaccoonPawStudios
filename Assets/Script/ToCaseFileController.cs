@@ -32,7 +32,7 @@ public class ToCaseController : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 popUp.SetActive(true);
 

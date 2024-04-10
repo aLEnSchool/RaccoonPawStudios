@@ -28,7 +28,7 @@ public class ClayesFoodBrought : MonoBehaviour
             {
                 DialogueManager.GetInstance().EnterDialogueMode(dialogFile1);
                 // display "cannot enter" message
-                Debug.Log("we shouting at the players");
+                //Debug.Log("we shouting at the players");
 
                 foodBrought = true;
                 
