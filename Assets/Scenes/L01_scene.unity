@@ -17784,7 +17784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You won't be able ot go back to the level.
+  m_text: You won't be able to go back to the level.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 60c004719cdd87c41a02a99c03a5b70f, type: 2}
   m_sharedMaterial: {fileID: -4239924486289479721, guid: 60c004719cdd87c41a02a99c03a5b70f, type: 2}
@@ -22302,7 +22302,7 @@ GameObject:
   - component: {fileID: 1386521032}
   - component: {fileID: 1386521031}
   m_Layer: 5
-  m_Name: PopUp
+  m_Name: GoToCasefilePopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27188,7 +27188,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -19.821617, y: 0, z: -19.821587, w: 0}
+  m_margin: {x: -4.3238907, y: 0, z: -2.6924286, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
