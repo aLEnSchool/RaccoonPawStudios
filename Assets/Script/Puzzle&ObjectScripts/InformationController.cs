@@ -37,7 +37,7 @@ public class InformationController : MonoBehaviour
             sprite.color = Color.white;
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && inRange) 
+        if (Input.GetKeyDown(KeyCode.E) && inRange) 
         {
             if (!interact)
             {

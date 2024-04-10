@@ -31,7 +31,7 @@ public class bagFallOpen : MonoBehaviour
 
             if (inRange) //if in range
             {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     if (!interact)
                     {
