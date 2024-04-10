@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     //private bool playSound = false;
 
     public bool sadie = false;
+    public bool rosa = false;
 
     private void Awake()
     {
@@ -242,6 +243,10 @@ public class PlayerController : MonoBehaviour
         {
             sadie = true;
         }
+        if ((collision.gameObject.tag == "Rosa"))
+        {
+            rosa = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -252,6 +257,10 @@ public class PlayerController : MonoBehaviour
         if ((collision.gameObject.tag == "Sadie"))
         {
             sadie = false;
+        }
+        if ((collision.gameObject.tag == "Rosa"))
+        {
+            rosa = false;
         }
     }
 

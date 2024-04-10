@@ -323,8 +323,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18374991, y: 1.29365, z: 0}
-    m_Extent: {x: 4.64565, y: 3.57125, z: 0}
+    m_Center: {x: 0.18834996, y: 1.3065001, z: 0}
+    m_Extent: {x: 4.6459503, y: 3.5658002, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -5824,8 +5824,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18599987, y: 1.2977501, z: 0}
-    m_Extent: {x: 4.651, y: 3.5738502, z: 0}
+    m_Center: {x: 0.19519997, y: 1.2958499, z: 0}
+    m_Extent: {x: 4.6421, y: 3.56995, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6259,8 +6259,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19180012, y: 1.2981999, z: 0}
-    m_Extent: {x: 4.6453, y: 3.5626, z: 0}
+    m_Center: {x: 0.19370008, y: 1.3034999, z: 0}
+    m_Extent: {x: 4.6453, y: 3.5669, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -11870,8 +11870,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18429995, y: 2.0232, z: 0}
-    m_Extent: {x: 2.2281, y: 2.3316998, z: 0}
+    m_Center: {x: 0.18285, y: 2.0242999, z: 0}
+    m_Extent: {x: 2.2308502, y: 2.338, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15155,8 +15155,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.019650102, y: 1.3722, z: 0}
-    m_Extent: {x: 2.3294501, y: 1.9969001, z: 0}
+    m_Center: {x: -0.02215004, y: 1.37345, z: 0}
+    m_Extent: {x: 2.32475, y: 1.9993501, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16218,8 +16218,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18690014, y: 1.30185, z: 0}
-    m_Extent: {x: 4.6468, y: 3.5643501, z: 0}
+    m_Center: {x: 0.1854999, y: 1.2969, z: 0}
+    m_Extent: {x: 4.6464996, y: 3.5705001, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -23549,6 +23549,7 @@ MonoBehaviour:
   facingRight: 1
   playerSwoosh: {fileID: 1486233424}
   sadie: 0
+  rosa: 0
 --- !u!212 &1486233421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30296,8 +30297,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3225, y: 1.3018501, z: 0}
-    m_Extent: {x: 8.1659, y: 2.10305, z: 0}
+    m_Center: {x: 7.32305, y: 1.2989, z: 0}
+    m_Extent: {x: 8.16725, y: 2.0995, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -32328,7 +32329,7 @@ GameObject:
   - component: {fileID: 2038814052}
   m_Layer: 0
   m_Name: Rosa
-  m_TagString: Untagged
+  m_TagString: Rosa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

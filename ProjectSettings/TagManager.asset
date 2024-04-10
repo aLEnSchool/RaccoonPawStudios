@@ -26,6 +26,7 @@ TagManager:
   - Money
   - FamilyPhoto
   - Sadie
+  - Rosa
   layers:
   - Default
   - TransparentFX

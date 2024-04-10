@@ -24,7 +24,8 @@ public class ExitDoor : MonoBehaviour
         if (inRange) // if player is in range of the door
         {
             Debug.Log(PlayerController.instance.sadie);
-            if (Input.GetKeyDown(KeyCode.E) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms) && !PlayerController.instance.sadie) // if user presses f, and not in the middle of switching rooms
+            Debug.Log(PlayerController.instance.rosa);
+            if (Input.GetKeyDown(KeyCode.E) && !(blackScreen.GetComponent<FadeToBlack>().isSwitchingRooms) && !PlayerController.instance.sadie && !PlayerController.instance.rosa) // if user presses f, and not in the middle of switching rooms
             {
                 // Change camera to the next room
                 exitRoom = true;
