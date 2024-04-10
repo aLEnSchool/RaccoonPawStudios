@@ -29,7 +29,7 @@ public class ClayeFoodLock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             if (inRange && !objectPickedUp)
             {

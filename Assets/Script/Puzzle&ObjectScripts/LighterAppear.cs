@@ -23,6 +23,7 @@ public class LighterAppear : MonoBehaviour
             if (!DialogueManager.GetInstance().dialogueIsPlaying)
             {
                 lighter.SetActive(true);
+                PlayerDataController.instance.rosaLighterFound = true;
             }       
         }
     }

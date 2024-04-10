@@ -8,6 +8,8 @@ public class JohnDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile1;
     [SerializeField] private TextAsset dialogFile2;
     [SerializeField] private TextAsset dialogFile3;
+    //[SerializeField] private TextAsset dialogLighter;
+    [SerializeField] private TextAsset dialogEnd;
 
     private bool playerInRange;
 
@@ -33,6 +35,11 @@ public class JohnDialogueTrigger : MonoBehaviour
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile3);
                     
+                }
+                if (PlayerDataController.instance.drugs == true && PlayerDataController.instance.knobInTheDoor == true && PlayerDataController.instance.sadieDrugTalk == true && PlayerDataController.instance.franDrugTalk)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogEnd);
+
                 }
             }
         }

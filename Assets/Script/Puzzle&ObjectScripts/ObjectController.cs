@@ -67,6 +67,8 @@ public class ObjectController : MonoBehaviour
 
                 litLantern.SetActive(true);
                 unlitLantern.SetActive(false);
+
+                PlayerDataController.instance.lanternOn = true;
             }
         }
     }

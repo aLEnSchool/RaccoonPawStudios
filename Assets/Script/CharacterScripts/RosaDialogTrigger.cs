@@ -9,6 +9,9 @@ public class RosaDialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset dialogFile2;
     [SerializeField] private TextAsset dialogFile3;
     [SerializeField] private TextAsset dialogFile4;
+    [SerializeField] private TextAsset dialogLighter;
+    [SerializeField] private TextAsset dialogLanternOn;
+    [SerializeField] private TextAsset dialogEnd;
 
     private bool playerInRange;
 
@@ -29,7 +32,23 @@ public class RosaDialogueTrigger : MonoBehaviour
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile2);
                     PlayerDataController.instance.rosaLAppear = true;
-                    
+
+                    //PlayerDataController.instance.rosaLighterFound = true;
+                    PlayerDataController.instance.johnLighterFound = true;
+                    PlayerDataController.instance.sadieLighterFound = true;
+                    PlayerDataController.instance.clayLighterFound = true;
+                    PlayerDataController.instance.frannieLighterFound = true;
+
+                }
+                if (PlayerDataController.instance.rosaLighterFound)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLighter);
+
+                }
+                if (PlayerDataController.instance.lanternOn)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogLanternOn);
+
                 }
                 if (PlayerDataController.instance.rosaInvest)
                 {
@@ -40,6 +59,11 @@ public class RosaDialogueTrigger : MonoBehaviour
                 if (PlayerDataController.instance.rosaBagOpened)
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(dialogFile4);
+
+                }
+                if (PlayerDataController.instance.drugs == true && PlayerDataController.instance.knobInTheDoor == true && PlayerDataController.instance.sadieDrugTalk == true && PlayerDataController.instance.franDrugTalk)
+                {
+                    DialogueManager.GetInstance().EnterDialogueMode(dialogEnd);
 
                 }
             }
