@@ -66,4 +66,9 @@ public class ToCaseController : MonoBehaviour
         SceneManager.LoadScene("CaseFileScreen");
     }
 
+    public void cancel()
+    {
+        popUp.SetActive(false);
+    }
+
 }
