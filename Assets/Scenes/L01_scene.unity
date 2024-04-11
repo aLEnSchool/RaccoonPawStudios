@@ -407,8 +407,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1875, y: 1.29685, z: 0}
-    m_Extent: {x: 4.645, y: 3.5692499, z: 0}
+    m_Center: {x: 0.1890502, y: 1.3013499, z: 0}
+    m_Extent: {x: 4.64925, y: 3.56475, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -2619,11 +2619,11 @@ Transform:
   m_GameObject: {fileID: 134027296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000012698373, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.24000256, y: -0.7299998, z: 0}
+  m_LocalScale: {x: 0.2018369, y: 0.2018369, z: 0.2018369}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1768014765}
+  m_Father: {fileID: 296968909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &134027298
 SpriteRenderer:
@@ -2665,7 +2665,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: af642e52c475c284c929219b185d56a3, type: 3}
   m_Color: {r: 1, g: 0.88178724, b: 0.504717, a: 1}
   m_FlipX: 0
@@ -4195,6 +4195,7 @@ GameObject:
   - component: {fileID: 296968907}
   - component: {fileID: 296968911}
   - component: {fileID: 296968912}
+  - component: {fileID: 296968913}
   m_Layer: 0
   m_Name: Sadie
   m_TagString: Sadie
@@ -4234,7 +4235,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08132124, y: -0.2590313}
+  m_Offset: {x: -0.0043414235, y: -0.2590313}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4245,7 +4246,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.048258, y: 7.6622896}
+  m_Size: {x: 3.6206026, y: 7.6622896}
   m_EdgeRadius: 0
 --- !u!4 &296968909
 Transform:
@@ -4261,6 +4262,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1768014765}
+  - {fileID: 134027297}
   m_Father: {fileID: 1867851621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &296968910
@@ -4330,6 +4332,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &296968913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296968906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 134027296}
 --- !u!1 &297148605
 GameObject:
   m_ObjectHideFlags: 0
@@ -6058,8 +6073,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19344997, y: 1.29445, z: 0}
-    m_Extent: {x: 4.64225, y: 3.56375, z: 0}
+    m_Center: {x: 0.19420004, y: 1.2989, z: 0}
+    m_Extent: {x: 4.6458, y: 3.5593, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6493,8 +6508,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18860006, y: 1.3053, z: 0}
-    m_Extent: {x: 4.6542, y: 3.5658, z: 0}
+    m_Center: {x: 0.19160008, y: 1.30025, z: 0}
+    m_Extent: {x: 4.641, y: 3.56985, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -8253,14 +8268,13 @@ GameObject:
   m_Component:
   - component: {fileID: 538950745}
   - component: {fileID: 538950747}
-  - component: {fileID: 538950746}
   m_Layer: 6
   m_Name: doorknob (1)
   m_TagString: Doorknob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &538950745
 Transform:
   m_ObjectHideFlags: 0
@@ -8276,19 +8290,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1861619696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &538950746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538950744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 538950744}
 --- !u!212 &538950747
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8563,7 +8564,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 30870ce497c61bf4480a747c2ee49ad2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12109,8 +12110,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.17495, y: 2.0220501, z: 0}
-    m_Extent: {x: 2.2325501, y: 2.34325, z: 0}
+    m_Center: {x: 0.1753, y: 2.0149999, z: 0}
+    m_Extent: {x: 2.2354999, y: 2.336, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -13383,7 +13384,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02733469, y: -1.0643172}
+  m_Offset: {x: 0.11526072, y: -1.0643172}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13394,7 +13395,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.532528, y: 8.358636}
+  m_Size: {x: 4.6532993, y: 8.358636}
   m_EdgeRadius: 0
 --- !u!114 &845420251
 MonoBehaviour:
@@ -14858,7 +14859,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 30870ce497c61bf4480a747c2ee49ad2, type: 3}
   m_Color: {r: 1, g: 0.9496452, b: 0.5896226, a: 1}
   m_FlipX: 0
@@ -15409,8 +15410,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.025149941, y: 1.3676, z: 0}
-    m_Extent: {x: 2.32085, y: 2.0013, z: 0}
+    m_Center: {x: -0.016899943, y: 1.3691001, z: 0}
+    m_Extent: {x: 2.3238, y: 1.9958, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16472,8 +16473,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19645, y: 1.2927, z: 0}
-    m_Extent: {x: 4.6501503, y: 3.5673, z: 0}
+    m_Center: {x: 0.18420005, y: 1.2996999, z: 0}
+    m_Extent: {x: 4.6466, y: 3.5668, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -28282,7 +28283,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1768014765}
   - component: {fileID: 1768014766}
-  - component: {fileID: 1768014767}
   m_Layer: 0
   m_Name: IMG_0800
   m_TagString: Untagged
@@ -28302,8 +28302,7 @@ Transform:
   m_LocalPosition: {x: -0.24, y: -0.73, z: 0}
   m_LocalScale: {x: 0.20183687, y: 0.20183687, z: 0.20183687}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 134027297}
+  m_Children: []
   m_Father: {fileID: 296968909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1768014766
@@ -28358,19 +28357,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1768014767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768014764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 134027296}
 --- !u!1 &1768128494
 GameObject:
   m_ObjectHideFlags: 0
@@ -30087,6 +30073,7 @@ GameObject:
   - component: {fileID: 1861619699}
   - component: {fileID: 1861619701}
   - component: {fileID: 1861619700}
+  - component: {fileID: 1861619702}
   m_Layer: 6
   m_Name: doorknob
   m_TagString: Doorknob
@@ -30294,6 +30281,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1861619702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861619695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight_border: {fileID: 538950744}
 --- !u!1 &1867851620
 GameObject:
   m_ObjectHideFlags: 0
@@ -30674,8 +30674,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3313, y: 1.3021, z: 0}
-    m_Extent: {x: 8.1631, y: 2.1017, z: 0}
+    m_Center: {x: 7.3236, y: 1.28805, z: 0}
+    m_Extent: {x: 8.158, y: 2.0973501, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55

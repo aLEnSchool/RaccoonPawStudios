@@ -44,6 +44,8 @@ public class TransitionManager : MonoBehaviour
 
     private bool transition = false;
 
+    [SerializeField] FadeToBlack fadeToBlack;
+
     private void Awake()
     {
         if (instance != null)
@@ -112,7 +114,7 @@ public class TransitionManager : MonoBehaviour
 
     public IEnumerator ExitDialogueMode()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -135,6 +137,7 @@ public class TransitionManager : MonoBehaviour
         }
         else
         {
+            StartCoroutine(fadeToBlack.fadeOut());
             StartCoroutine(ExitDialogueMode());
         }
     }
