@@ -37,7 +37,6 @@ public class FadeToBlack : MonoBehaviour
             //yield return null;
             yield return new WaitForSeconds(0.001f);
         }
-        Debug.Log("fade out pls");
 
     }
 
