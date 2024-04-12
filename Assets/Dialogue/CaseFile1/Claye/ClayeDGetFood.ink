@@ -19,7 +19,7 @@ If you think about it, ideas are to the mind what food is to the body. #portrait
 -> Continue 
 
 == Continue ==
-AHHHHH #portrait:claye
+AHHHHH!!! #portrait:claye
 Okay Claye, it's going to be okay. I brought you a rock. #portrait:sadie
 Um, hey, Tom. Would you be able to go get Claye his food from the kitchen as I take care of him? 
 It would really help. 
