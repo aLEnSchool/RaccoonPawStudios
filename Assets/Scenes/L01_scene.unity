@@ -407,8 +407,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19799995, y: 1.3027999, z: 0}
-    m_Extent: {x: 4.6467, y: 3.5633, z: 0}
+    m_Center: {x: 0.19424987, y: 1.2996501, z: 0}
+    m_Extent: {x: 4.6445503, y: 3.56955, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6279,8 +6279,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1951499, y: 1.3003501, z: 0}
-    m_Extent: {x: 4.64545, y: 3.56875, z: 0}
+    m_Center: {x: 0.19304991, y: 1.29225, z: 0}
+    m_Extent: {x: 4.65125, y: 3.5634499, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6714,8 +6714,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19210005, y: 1.2928, z: 0}
-    m_Extent: {x: 4.6468, y: 3.5646, z: 0}
+    m_Center: {x: 0.1879499, y: 1.30025, z: 0}
+    m_Extent: {x: 4.6490498, y: 3.57055, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -12156,8 +12156,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18855, y: 2.0213501, z: 0}
-    m_Extent: {x: 2.22945, y: 2.34425, z: 0}
+    m_Center: {x: 0.18330002, y: 2.02195, z: 0}
+    m_Extent: {x: 2.237, y: 2.3433502, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15575,8 +15575,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.022399902, y: 1.3649, z: 0}
-    m_Extent: {x: 2.3197, y: 1.9957, z: 0}
+    m_Center: {x: -0.019649982, y: 1.36905, z: 0}
+    m_Extent: {x: 2.32025, y: 2.00505, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -15606,7 +15606,6 @@ GameObject:
   m_Component:
   - component: {fileID: 945794738}
   - component: {fileID: 945794740}
-  - component: {fileID: 945794739}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Untagged
@@ -15629,19 +15628,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1745473364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &945794739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 945794737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight_border: {fileID: 0}
 --- !u!212 &945794740
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16874,8 +16860,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1874001, y: 1.3014499, z: 0}
-    m_Extent: {x: 4.6507998, y: 3.56675, z: 0}
+    m_Center: {x: 0.19064999, y: 1.2996999, z: 0}
+    m_Extent: {x: 4.64265, y: 3.5706, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -27027,7 +27013,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.08716798, y: -0.36689377}
+  m_Offset: {x: 0.5922271, y: -0.36689377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -27038,7 +27024,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.41209, y: 12.642788}
+  m_Size: {x: 9.053301, y: 12.642788}
   m_EdgeRadius: 0
 --- !u!114 &1632839845
 MonoBehaviour:
@@ -27495,6 +27481,7 @@ GameObject:
   - component: {fileID: 1664175384}
   - component: {fileID: 1664175385}
   - component: {fileID: 1664175386}
+  - component: {fileID: 1664175387}
   m_Layer: 0
   m_Name: Door_noKnob
   m_TagString: Untagged
@@ -27583,6 +27570,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlight_border: {fileID: 234488147}
+--- !u!61 &1664175387
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664175383}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24251008, y: -4.2196894}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 20.48, y: 20.48}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.518513, y: 17.860888}
+  m_EdgeRadius: 0
 --- !u!1 &1676492457
 GameObject:
   m_ObjectHideFlags: 0
@@ -28581,6 +28613,7 @@ GameObject:
   - component: {fileID: 1745473364}
   - component: {fileID: 1745473363}
   - component: {fileID: 1745473365}
+  - component: {fileID: 1745473366}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -28668,7 +28701,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4385b9c4c25674dbd25c7757262dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlight_border: {fileID: 0}
+  highlight_border: {fileID: 945794737}
+--- !u!61 &1745473366
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745473362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.29838085, y: -0.72464275}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 20.48, y: 20.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.373005, y: 15.318356}
+  m_EdgeRadius: 0
 --- !u!1 &1746898133
 GameObject:
   m_ObjectHideFlags: 0
@@ -31507,8 +31585,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3245, y: 1.294, z: 0}
-    m_Extent: {x: 8.1678, y: 2.1017, z: 0}
+    m_Center: {x: 7.3265, y: 1.2962, z: 0}
+    m_Extent: {x: 8.1711, y: 2.1031, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
