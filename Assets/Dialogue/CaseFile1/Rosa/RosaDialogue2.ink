@@ -15,7 +15,7 @@ Your husband? Sleeping boonie? #portrait:tom
 ... #portrait:rosa
 Charming. #portrait:tom
 Well, we can discuss the details of your date later. 
-You wouldn't happen to have a lighter on rim do you?
+You wouldn't happen to have a lighter on brim do you?
 I- why? #portrait:rosa
 That's a yes, then. #portrait:tom
 I- Well- No- For what? #portrait:rosa
