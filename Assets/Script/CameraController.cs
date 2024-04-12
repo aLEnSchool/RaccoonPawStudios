@@ -53,7 +53,7 @@ public class Came : MonoBehaviour
         //if the player wants to go from diner to kitchen
         if (kitchenDoor.exitRoom)
         {
-            StartCoroutine(switchRoomToKitchen(-0.5f, new Vector3(-3f, -34f, -0.52f), kitchenDoor));
+            StartCoroutine(switchRoomToKitchen(-31.5f, new Vector3(-0.5f, -34f, -0.52f), kitchenDoor));
         }
 
         //if the player wants to go from kitchen back to diner
