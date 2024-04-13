@@ -24,11 +24,11 @@ public class bagFallOpen : MonoBehaviour
     {
         if (PlayerDataController.instance.clayeBagFall) //if claye bag is triggered to fall
         {
-            if (!DialogueManager.GetInstance().dialogueIsPlaying) //if dialogue is done
-            {
+            //if (!DialogueManager.GetInstance().dialogueIsPlaying) //if dialogue is done
+            //{
                 gameObject.transform.position = position; //drop bag 
                 gameObject.GetComponent<HighlightObjectController>().enabled = true; // turn on bag highlight
-            }
+            //}
 
             if (inRange) //if in range
             {
