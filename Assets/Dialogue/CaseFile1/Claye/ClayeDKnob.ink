@@ -1,7 +1,7 @@
 Mr. Stone, why do you have the missing doorknob? #portrait:tom
 Doorknob? What doorknob? #portrait:claye
 This one that was in your bag? #portrait:tom
-Oh, that's not a doorknob, silly. It's a cool rock I found eariler. #portrait:claye
+Oh, that's not a doorknob, silly. It's a cool rock I found earlier. #portrait:claye
 I needed to use the closet out back, drank too much glue as usual. 
 That fancy bowler hat just left the closet, snuck out back for some reason. 
 Who knows what the rich are up to, eh?
