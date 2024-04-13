@@ -26,7 +26,7 @@ public class HallExitSadieEvent : MonoBehaviour
                 sadieAnimator.SetBool("ExitHall", true); // play sadie exit hall animation
 
                 sadieExitHall = true;
-                PlayerDataController.instance.sadieBusy = true;
+                //PlayerDataController.instance.sadieBusy = true;
             }
 
         }

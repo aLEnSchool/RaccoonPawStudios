@@ -1,5 +1,4 @@
 ... #portrait:rosa
-... #portrait:rosa
 Hello ma'am. I'm a private investigator, Private Investigator Tom Trilby. Can I ask you some questions? #portrait:tom
 ... #portrait:rosa
 ... #portrait:tom

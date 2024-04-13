@@ -1,6 +1,6 @@
 Please, Claye. We're getting you your food. #portrait:sadie
 FOOD!! #portrait:claye
-(I have questions that need answering.) #portrait:tom
+... #portrait:tom
 -> My_Choices
 
 == My_Choices ==

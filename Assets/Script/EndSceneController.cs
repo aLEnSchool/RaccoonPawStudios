@@ -29,6 +29,7 @@ public class EndSceneController : MonoBehaviour
     [SerializeField] private TextAsset rosaDialog;
     [SerializeField] private TextAsset johnDialog;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class EndSceneController : MonoBehaviour
     private void Update()
     {
         EndDialogueController.GetInstance().dialoguePanel.SetActive(true);
+
     }
 
     //Set Character
@@ -95,4 +97,6 @@ public class EndSceneController : MonoBehaviour
             weapon.sprite = matches;
         }
     }
+
+
 }

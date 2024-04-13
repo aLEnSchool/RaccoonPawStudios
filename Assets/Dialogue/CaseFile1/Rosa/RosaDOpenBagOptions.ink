@@ -1,3 +1,4 @@
+What do you want? #portrait:rosa
 I have some questions. #portrait:tom
 -> My_Choices
 
@@ -8,7 +9,7 @@ I have some questions. #portrait:tom
     
 == Kids ==
 A photo of your kids, I presume? #portrait:tom
-Yes, all 15 of them. #portrait:rosa
+Yes, all fifteen of them. #portrait:rosa
 It must be a lot of work, taking care of them. #portrait:tom
 We manage. #portrait:rosa
 Not well, these days. We're always tired, always low on money, don't know how we're making it-- #portrait:john
@@ -28,7 +29,7 @@ That's my wife. She always comes prepared. #portrait:john
 Seems like it. #portrait:tom
 Looks like she takes care of the bills, too. 
 They look so fresh. How long would you say they've been in your purse?
-I don't know. I don't count the days, detective. #portrait:rosa
+I don't know. I don't count the days, Mr. Trilby. #portrait:rosa
 Are they new? #portrait:tom
 I said, we've been saving. #portrait:rosa
 Why do you care so much about my money and what it looks like?

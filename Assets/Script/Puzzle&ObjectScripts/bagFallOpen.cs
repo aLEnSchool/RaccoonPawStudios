@@ -16,17 +16,19 @@ public class bagFallOpen : MonoBehaviour
         inRange = false;
         interact = false;
         LookThrough.SetActive(false);
-        position = new Vector3(transform.localPosition.x + 1.5f, transform.localPosition.y - 3f, transform.localPosition.z);
+        position = new Vector3(transform.localPosition.x + 2.0f, transform.localPosition.y - 3f, transform.localPosition.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (PlayerDataController.instance.clayeBagFall) //if claye bag is triggered to fall
+
+        if (PlayerDataController.instance.clayeFoodB) //if claye's food is brought
         {
             if (!DialogueManager.GetInstance().dialogueIsPlaying) //if dialogue is done
             {
-                transform.localPosition = position; //drop bag 
+                gameObject.transform.position = position; //drop bag 
+                gameObject.GetComponent<HighlightObjectController>().enabled = true; // turn on bag highlight
             }
 
             if (inRange) //if in range

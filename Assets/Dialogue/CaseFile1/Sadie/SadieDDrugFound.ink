@@ -28,7 +28,7 @@ Stop! Fine, it was me! I was selling the mercury. #portrait:sadie
 Oh, really? #portrait:tom
 How do I know you're not covering for Ms. Chef Frances?
 I can give you all the details she wouldn't know. #portrait:sadie
-I sold mercury to Mr. Bowler: three vials every Fridays. 
+I sold mercury to Mr. Bowler: three vials every Friday. 
 After he finished his drink, he'd head to the alley through the hallway, and we'd make the swap.
 The swap? #portrait:tom
 Mercury for money, Mr. Trilby. Do keep up. #portrait:sadie

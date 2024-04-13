@@ -45,6 +45,6 @@ It was going fine and dandy, until he ended up dead in our alley. #portrait:fran
 Why would we kill him? So people can call this "The Death Diner?" 
 So we'll lose our jobs?
 Maybe he threatened you-- #portrait:tom
-Come on, we have things to hide but we’re not murderers. #portrait:frannie
+Come on, we have things to hide, but we’re not murderers. #portrait:frannie
 I see. You’ve given me a lot to think about. #portrait:tom
 Well don't think too hard, you might hurt yourself. #portrait:frannie

@@ -1,5 +1,4 @@
 snooze... #portrait:john
-snooze... #portrait:john
 ...snooze... #portrait:john
 ...snooze #portrait:john
 ...Sir? #portrait:tom
