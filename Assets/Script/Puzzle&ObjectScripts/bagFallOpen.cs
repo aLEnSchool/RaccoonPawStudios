@@ -16,7 +16,7 @@ public class bagFallOpen : MonoBehaviour
         inRange = false;
         interact = false;
         LookThrough.SetActive(false);
-        position = new Vector3(transform.localPosition.x + 1.5f, transform.localPosition.y - 3f, transform.localPosition.z);
+        position = new Vector3(transform.localPosition.x + 2.0f, transform.localPosition.y - 3f, transform.localPosition.z);
     }
 
     // Update is called once per frame
