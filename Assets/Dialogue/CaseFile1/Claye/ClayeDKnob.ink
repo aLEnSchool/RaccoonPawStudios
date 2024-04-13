@@ -1,3 +1,4 @@
+I can't decide what I like more: food or rocks. #portrait:claye
 Mr. Stone, why do you have the missing doorknob? #portrait:tom
 Doorknob? What doorknob? #portrait:claye
 This one that was in your bag? #portrait:tom
