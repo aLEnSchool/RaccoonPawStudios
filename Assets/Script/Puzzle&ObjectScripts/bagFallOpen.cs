@@ -27,6 +27,7 @@ public class bagFallOpen : MonoBehaviour
             if (!DialogueManager.GetInstance().dialogueIsPlaying) //if dialogue is done
             {
                 transform.localPosition = position; //drop bag 
+                gameObject.GetComponent<HighlightObjectController>().enabled = true; // turn on bag highlight
             }
 
             if (inRange) //if in range
