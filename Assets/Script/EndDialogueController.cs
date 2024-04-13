@@ -44,6 +44,8 @@ public class EndDialogueController : MonoBehaviour
 
     private bool transition = false;
 
+    [SerializeField] FadeToBlack fadeToBlack;
+
     private void Awake()
     {
         if (instance != null)
@@ -93,8 +95,7 @@ public class EndDialogueController : MonoBehaviour
 
         if (transition)
         {
-            StopCoroutine(displayLineCoroutine);
-            SceneManager.LoadScene("Fin");
+            StartCoroutine(switchScene());
         }
     }
 
@@ -184,5 +185,15 @@ public class EndDialogueController : MonoBehaviour
         typeWriteSound.Stop();
         canContinueToNextLine = true;
         inLine = false;
+    }
+
+    private IEnumerator switchScene()
+    {
+        // fade to black
+        StartCoroutine(fadeToBlack.fadeOut());
+        yield return new WaitForSeconds(1.0f);
+
+        StopCoroutine(displayLineCoroutine);
+        SceneManager.LoadScene("Fin");
     }
 }

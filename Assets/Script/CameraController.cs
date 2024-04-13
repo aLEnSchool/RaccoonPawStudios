@@ -28,6 +28,7 @@ public class Came : MonoBehaviour
     private void Start()
     {
         yPos = 0f;
+        StartCoroutine(screenFade.fadeIn());
     }
     // Update is called once per frame
     void FixedUpdate()
