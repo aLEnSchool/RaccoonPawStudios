@@ -29,6 +29,10 @@ public class LookThroughController : MonoBehaviour
 
         if (PlayerDataController.instance.rosaCanOpen)
         {
+            if (!DialogueManager.GetInstance().dialogueIsPlaying) { 
+                gameObject.GetComponent<HighlightObjectController>().enabled = true;
+                gameObject.transform.position = new Vector3(54.17f, -0.41329f, 0f);
+            }
             if (inRange)
             {
                 if (Input.GetKeyDown(KeyCode.E))
@@ -55,7 +59,7 @@ public class LookThroughController : MonoBehaviour
                 Debug.Log("STOP");
             }
 
-            rosaBag.GetComponent<HighlightObjectController>().enabled = true;
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

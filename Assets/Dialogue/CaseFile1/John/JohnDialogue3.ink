@@ -30,13 +30,13 @@ We just got a new young one.
 We thought we were done after the fifteenth child. 
 But now they’ve chosen us yet again to raise another young hat. 
 We barely have the room or funding to raise another. 
-It’s been rough, detective. 
+It’s been rough, Mr. Trilby. 
 It has been rough.
 (Ah. To be chosen.)  #portrait:tom
 (My dada always said I  was the greatest gift to pop up on his 
 doorstep.) 
 (But I know enough to know that isn’t always the case.)
-(And sixteen kids?)
+(And fifteen kids?)
 (I don’t know what I’d do with that many hats to raise.)
 That doesn't sound easy.
 You must be overwhelmed. 
@@ -44,5 +44,5 @@ You might lash out.
 Do things you wouldn't normally do...
 ... #portrait:john
 Sir? #portrait:tom
-... #portrait:john
+...snooze. #portrait:john
 I'll come back later. #portrait:tom

@@ -16,14 +16,14 @@ Your husband? Sleeping boonie? #portrait:tom
 Charming. #portrait:tom
 Well, we can discuss the details of your date later. 
 You wouldn't happen to have a lighter on brim do you?
-I- why? #portrait:rosa
+I--why? #portrait:rosa
 That's a yes, then. #portrait:tom
-I- Well- No- For what? #portrait:rosa
+I--well--no--for what? #portrait:rosa
 Nothing bad. Just need to light a candle. Is that okay with you? #portrait:tom
 ... #portrait:rosa
-I... Just give it back when you're done. 
+...Just give it back when you're done. 
 Thank you. #portrait:tom
 What's your name?
-Rosa #portrait:rosa
+Rosa. #portrait:rosa
 Thank you, Mrs. Rosa. #portrait:tom
 

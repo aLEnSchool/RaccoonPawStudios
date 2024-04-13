@@ -407,8 +407,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18770003, y: 1.3016, z: 0}
-    m_Extent: {x: 4.6482, y: 3.5702, z: 0}
+    m_Center: {x: 0.19535017, y: 1.3011, z: 0}
+    m_Extent: {x: 4.65235, y: 3.5613, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -1096,9 +1096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60534129}
-  - component: {fileID: 60534128}
   - component: {fileID: 60534127}
-  - component: {fileID: 60534126}
   m_Layer: 0
   m_Name: Bag closed (1)
   m_TagString: Untagged
@@ -1106,51 +1104,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!61 &60534126
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60534125}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.075736, y: 5.109812}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 50.8, y: 47.004883}
-    newSize: {x: 50.8, y: 47.004883}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 40.04251, y: 36.78526}
-  m_EdgeRadius: 0
 --- !u!212 &60534127
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1193,7 +1146,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f69c7a6c64a18e642b7439f7df54f98e, type: 3}
-  m_Color: {r: 0.72659314, g: 0.9811321, b: 0.7893175, a: 1}
+  m_Color: {r: 1, g: 0.9898008, b: 0.63836473, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1203,23 +1156,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &60534128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60534125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b20d39dcc4b7474c8c0ebc62e8c3b9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inRange: 0
-  LookThrough: {fileID: 774671156}
-  rosaBag: {fileID: 0}
-  itemfound: 0
-  interact: 0
 --- !u!4 &60534129
 Transform:
   m_ObjectHideFlags: 0
@@ -1232,8 +1168,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 799593671}
+  m_Children: []
   m_Father: {fileID: 2077813654}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &61328624
@@ -6279,8 +6214,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18994999, y: 1.3003501, z: 0}
-    m_Extent: {x: 4.64735, y: 3.56955, z: 0}
+    m_Center: {x: 0.19085002, y: 1.2972499, z: 0}
+    m_Extent: {x: 4.64705, y: 3.57275, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -6714,8 +6649,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19335008, y: 1.2946501, z: 0}
-    m_Extent: {x: 4.64725, y: 3.5643501, z: 0}
+    m_Center: {x: 0.19650006, y: 1.2983001, z: 0}
+    m_Extent: {x: 4.6456003, y: 3.573, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -12171,8 +12106,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.18110001, y: 2.02415, z: 0}
-    m_Extent: {x: 2.2315001, y: 2.33995, z: 0}
+    m_Center: {x: 0.17490005, y: 2.0266001, z: 0}
+    m_Extent: {x: 2.2272, y: 2.3393, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -12537,37 +12472,6 @@ MonoBehaviour:
   menuIcon: {fileID: 1983789954}
   menuShow: 0
   playertemp: {fileID: 0}
---- !u!1 &799593670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 799593671}
-  m_Layer: 0
-  m_Name: Bag
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &799593671
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799593670}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8, y: -0.7, z: 2.30169}
-  m_LocalScale: {x: 22.024004, y: 22.024004, z: 22.024004}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 60534129}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799865953
 GameObject:
   m_ObjectHideFlags: 0
@@ -13431,7 +13335,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.11526072, y: -1.0643172}
+  m_Offset: {x: -0.14977372, y: -1.0643172}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13442,7 +13346,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.6532993, y: 8.358636}
+  m_Size: {x: 3.4164503, y: 8.358636}
   m_EdgeRadius: 0
 --- !u!114 &845420251
 MonoBehaviour:
@@ -15674,8 +15578,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.025900006, y: 1.36895, z: 0}
-    m_Extent: {x: 2.321, y: 1.99445, z: 0}
+    m_Center: {x: -0.025699973, y: 1.37605, z: 0}
+    m_Extent: {x: 2.3198, y: 1.99665, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -16959,8 +16863,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.19039989, y: 1.30465, z: 0}
-    m_Extent: {x: 4.6436996, y: 3.56645, z: 0}
+    m_Center: {x: 0.18560004, y: 1.2991999, z: 0}
+    m_Extent: {x: 4.6452, y: 3.5642, z: 0}
   m_PointLightInnerAngle: 67.31711
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 2.72
@@ -31242,7 +31146,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.66111183, y: 1.10183}
@@ -31638,8 +31542,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 7.3268003, y: 1.2955999, z: 0}
-    m_Extent: {x: 8.1581, y: 2.0967, z: 0}
+    m_Center: {x: 7.333, y: 1.2985, z: 0}
+    m_Extent: {x: 8.1649, y: 2.0997999, z: 0}
   m_PointLightInnerAngle: 74.203766
   m_PointLightOuterAngle: 163.73029
   m_PointLightInnerRadius: 6.55
@@ -33832,7 +33736,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30431992, y: -1.4669213}
+  m_Offset: {x: 0.95156527, y: -1.2027378}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -33843,7 +33747,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.3179693, y: 8.126899}
+  m_Size: {x: 3.446158, y: 8.655266}
   m_EdgeRadius: 0
 --- !u!114 &2038814051
 MonoBehaviour:
@@ -34511,7 +34415,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.075736, y: 5.109812}
+  m_Offset: {x: -0.56381226, y: 5.109812}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -34522,7 +34426,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40.04251, y: 36.78526}
+  m_Size: {x: 27.24377, y: 36.78526}
   m_EdgeRadius: 0
 --- !u!114 &2077813657
 MonoBehaviour:
